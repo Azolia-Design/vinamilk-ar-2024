@@ -1,0 +1,107 @@
+---
+import { Image } from "astro:assets";
+import homeFtBg from '../../assests/home-ft.jpg';
+const {content} = Astro.props;
+---
+<section class="home-res">
+    <div class="container grid">
+        <h1 class="heading h-64 txt-bold txt-up txt-blue home-res-title">
+            {content.title}
+        </h1>
+        <div class="home-res-grid">
+            <div class="home-res-box"></div>
+            <div class="home-res-box"></div>
+            <div class="home-res-box"></div>
+            <div class="home-res-box"></div>
+            <div class="home-res-box"></div>
+            <div class="home-res-box"></div>
+            <div class="home-res-box"></div>
+            <div class="home-res-box"></div>
+            <div class="home-res-box"></div>
+            <div class="home-res-box"></div>
+            <div class="home-res-box"></div>
+            <div class="home-res-box"></div>
+        </div>
+    </div>
+    <div class="home-res-img">
+        <Image src={homeFtBg} alt="" />
+    </div>
+</section>
+<style lang="scss">
+    .home-res {
+        padding-top: 8.6rem;
+        &-title {
+            grid-column: 1/-1;
+            text-align: center;
+            margin-inline: auto;
+            margin-bottom: 5.2rem;
+        }
+        &-grid {
+            grid-column: 3/11;
+            display: grid;
+            grid-template-columns: repeat(8, 1fr);
+            column-gap: var(--grid-gap);
+            row-gap: var(--grid-gap);
+        }
+        &-box {
+            border-radius: 1.4rem;
+            background-color: var(--cl-blue);
+            height: 100%;
+            &:nth-child(1) {
+                grid-column: span 8;
+                min-height: 36rem;
+            }
+            &:nth-child(2) {
+                grid-column: span 8;
+                min-height: 27rem;
+            }
+            &:nth-child(3) {
+                grid-column: span 5;
+                min-height: 25.6rem;
+            }
+            &:nth-child(4) {
+                grid-column: span 3;
+            }
+            &:nth-child(5) {
+                grid-column: span 5;
+                min-height: 18rem;
+            }
+            &:nth-child(6) {
+                grid-column: span 3;
+                grid-row: span 2;
+                min-height: 28rem;
+            }
+            &:nth-child(7) {
+                grid-column: span 5;
+                grid-row: span 2;
+                min-height: 22rem;
+            }
+            &:nth-child(8) {
+                grid-column: span 3;
+                grid-row: span 2;
+                min-height: 23rem;
+            }
+            &:nth-child(9) {
+                grid-column: span 5;
+                grid-row: span 2;
+                min-height: 23.7rem;
+            }
+            &:nth-child(10) {
+                grid-column: span 3;
+                min-height: 12rem;
+            }
+            &:nth-child(11) {
+                grid-column: span 3;
+                min-height: 27.6rem;
+            }
+            &:nth-child(12) {
+                grid-column: span 5;
+                min-height: 27.6rem;
+            }
+
+        }
+        &-img {
+            margin-top: 12.5rem;
+        }
+    }
+</style>

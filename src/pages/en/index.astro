@@ -1,0 +1,14 @@
+---
+import Layout from "../../layouts/Layout.astro";
+import HomeHero from "../../components/home/HomeHero.astro";
+import HomeRes from "../../components/home/HomeRes.astro";
+const data = {
+	res: {
+		title: 'Highlights'
+	},
+}
+---
+<Layout title="Homepage" lang="en">
+	<HomeHero />
+	<HomeRes content={data.res}/>
+</Layout>

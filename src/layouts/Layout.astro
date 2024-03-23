@@ -1,0 +1,97 @@
+---
+import Header from '../components/global/Header.astro';
+import Footer from '../components/global/Footer.astro';
+const props = Astro.props;
+const data = {
+	header: {
+		vn: {
+			menu: [
+				{text: "Thông điệp", url: "./messages"},
+				{text: "Chương 1", url: "./chap-1"},
+				{text: "Chương 2", url: "./chap-1"},
+				{text: "Chương 3", url: "./chap-1"},
+				{text: "Chương 4", url: "./chap-1"},
+				{text: "Chương 5", url: "./chap-1"},
+				{text: "Chương 6", url: "./chap-1"},
+				{text: "Liên hệ", url: "./contact"}
+			]
+		},
+		en: {
+			menu: [
+				{text: "Messages", url: "./messages"},
+				{text: "Chapter 1", url: "./chap-1"},
+				{text: "Chapter 2", url: "./chap-1"},
+				{text: "Chapter 3", url: "./chap-1"},
+				{text: "Chapter 4", url: "./chap-1"},
+				{text: "Chapter 5", url: "./chap-1"},
+				{text: "Chapter 6", url: "./chap-1"},
+				{text: "Contact", url: "./contact"}
+			]
+		}
+	},
+	footer: {
+		vn: {
+			info: [
+				{
+					type: "tel", 
+					label_text: "Điện thoại",
+					url: "tel:(+84.28) 54 155 555",
+					body_text: "(+84.28) 54 155 555"
+				},
+				{
+					type: "head", 
+					label_text: "Trụ sở",
+					url: "https://maps.app.goo.gl/Uib4zMrHvZf1hWtbA",
+					body_text: "10 Tân Trào, Phường Tân Phú, Quận 7, TP Hồ Chí Minh"
+				},
+				{
+					type: "fax", 
+					label_text: "Fax",
+					url: "tel:(+84.28) 54 155 555",
+					body_text: "(+84.28) 54 155 555"
+				}
+			],
+			copy: {text: '@2023 Công ty cổ phần sữa Việt Nam - All Rights Reserved'}
+		},
+		en: {
+			info: [
+				{
+					type: "tel", 
+					label_text: "Tel",
+					url: "tel:(+84.28) 54 155 555",
+					body_text: "(+84.28) 54 155 555"
+				},
+				{
+					type: "head", 
+					label_text: "Headquarter",
+					url: "https://maps.app.goo.gl/Uib4zMrHvZf1hWtbA",
+					body_text: "10 Tan Trao, Tan Phu Ward, District 7, Ho Chi Minh City, Vietnam"
+				},
+				{
+					type: "fax", 
+					label_text: "Fax",
+					url: "tel:(+84.28) 54 155 555",
+					body_text: "(+84.28) 54 155 555"
+				}
+			],
+			copy: {text: '@2023 Vietnam Dairy Products Joint Stock Company - All Rights Reserved'}
+		}
+	}
+}
+---
+<html lang={props.lang || 'vn'}>
+	<head>
+		<meta charset="utf-8" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<meta name="viewport" content="width=device-width" />
+		<meta name="generator" content={Astro.generator} />
+		<title>{props.title}</title>
+        <link rel="stylesheet" href="../style/main.scss">
+	</head>
+	<body>
+		<Header content={props.lang == 'en' ? data.header.en : data.header.vn} lang={props.lang || 'vn'}/>
+        <slot />
+		<Footer content={props.lang == 'en' ? data.footer.en : data.footer.vn} lang={props.lang || 'vn'}/>
+	</body>
+    <script src="../js/main.js"></script>
+</html>

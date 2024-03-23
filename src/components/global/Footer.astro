@@ -1,0 +1,112 @@
+---
+import { getRelativeLocaleUrl } from 'astro:i18n';
+import { Image } from 'astro:assets';
+import Logo from '../../assests/logo.png';
+const {content, lang} = Astro.props;
+---
+<footer class="footer">
+    <div class="container grid footer-top-wrap">
+        <div class="footer-logo">
+            <a href={getRelativeLocaleUrl(lang, './')} class="footer-logo-link">
+                <Image src={Logo} alt='' />
+            </a>
+        </div>
+        {content.info.map(el => (
+            <div class={`footer-grp footer-grp-${el.type}`}>
+                <div class="heading h-24 txt-med txt-blue footer-grp-label">
+                    {el.label_text}
+                </div>
+                <div class="footer-grp-inner">
+                    <a href={el.url} class="footer-grp-inner-link" target={el.type == 'head' && "_blank"}>
+                        <span class="txt txt-16 txt-blue footer-grp-inner-link-txt">
+                            {el.body_text}
+                        </span>
+                    </a>
+                </div>
+            </div>
+        ))}
+        <div class="footer-grp footer-grp-site">
+            <div class="heading h-24 txt-med txt-blue footer-grp-label">
+                Website
+            </div>
+            <div class="footer-grp-inner">
+                <a href="https://www.vinamilk.com.vn" class="footer-grp-inner-link" target="_blank">
+                    <span class="txt txt-16 txt-blue footer-grp-inner-link-txt">
+                        www.vinamilk.com.vn
+                    </span>
+                </a>
+                <a href="https://www.vuoncaovietnam.com" class="footer-grp-inner-link" target="_blank">
+                    <span class="txt txt-16 txt-blue footer-grp-inner-link-txt">
+                        www.vuoncaovietnam.com
+                    </span>
+                </a>
+                <a href="https://www.youtube.com/user/vinamilk" class="footer-grp-inner-link" target="_blank">
+                    <span class="txt txt-16 txt-blue footer-grp-inner-link-txt">
+                        www.youtube.com/user/vinamilk
+                    </span>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="footer-copy">
+        <div class="container">
+            <div class="txt txt-14 txt-white footer-copy-txt">
+                {content.copy.text}
+            </div>
+        </div>
+    </div>
+</footer>
+<style lang="scss">
+    .footer {
+        &-top-wrap {
+            padding-block: 8.8rem;
+            row-gap: 3rem;
+        }
+        &-logo {
+            grid-column: 1/3;
+            grid-row: 1/3;
+            align-self: start;
+            justify-self: start;
+            width: 100%;
+            margin-top: .6rem;
+            &-link {
+                
+            }
+        }
+        &-grp {
+            &-label {
+                margin-bottom: .5rem;
+            }
+            &-inner {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                row-gap: 0;
+            }
+            &-tel {
+                grid-column: 5/8;
+                grid-row: 1/2;
+            }
+            &-head {
+                grid-column: 8/13;
+                grid-row: 1/2;
+            }
+            &-fax {
+                grid-column: 5/8;
+                grid-row: 2/3;
+            }
+            &-site {
+                grid-column: 8/13;
+                grid-row: 2/3;
+            }
+        }
+        &-copy {
+            background-color: var(--cl-blue);
+            padding-block: 1.4rem;
+            &-txt {
+                text-align: center;
+                margin-inline: auto;
+            }
+        }
+    }
+</style>

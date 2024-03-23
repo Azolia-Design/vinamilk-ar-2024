@@ -1,0 +1,26 @@
+---
+import { Image } from "astro:assets";
+import homeHeroBg from '../../assests/home-hero.jpg';
+---
+<section class="home-hero">
+    <div class="container">
+        <div class="home-hero-img">
+            <Image src={homeHeroBg} alt="" class="img-h img-fit img-fit-bot"/>
+        </div>
+    </div>
+</section>
+<style lang="scss">
+    .home-hero {
+        padding-top: 11rem;
+        height: 100vh;
+        .container {
+            max-width: none;
+            height: 100%;
+        }
+        &-img {
+            height: 100%;
+            margin-inline: -13rem;
+            position: relative;
+        }
+    }
+</style>
