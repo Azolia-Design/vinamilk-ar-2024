@@ -3,12 +3,16 @@ import Layout from "../../layouts/Layout.astro";
 import HomeHero from "../../components/home/HomeHero.astro";
 import HomeRes from "../../components/home/HomeRes.astro";
 const data = {
+	hero: {
+		title: 'Để tâm \nthay đổi',
+		sub: 'Báo cáo thường niên 2023'
+	},
 	res: {
 		title: 'Highlights'
 	},
 }
 ---
 <Layout title="Homepage" lang="en">
-	<HomeHero />
+	<HomeHero content={data.hero}/>
 	<HomeRes content={data.res}/>
 </Layout>
