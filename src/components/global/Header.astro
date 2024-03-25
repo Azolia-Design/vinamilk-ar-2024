@@ -4,8 +4,8 @@ import { Image } from "astro:assets";
 import Logo from '../../assests/logo.png';
 const {content, lang} = Astro.props;
 ---
-<header class="header">
-    <div class="container grid">
+<header class="header" data-lang={lang}>
+    <div class="container">
         <div class="header-logo">
             <a href={getRelativeLocaleUrl(lang, './')} class="header-logo-link">
                 <Image src={Logo} alt="" class="img-h"/>
@@ -14,19 +14,43 @@ const {content, lang} = Astro.props;
         <div class="header-menu">
             <div class="header-menu-inner">
                 {content.menu.map(el => (
-                    <a href={getRelativeLocaleUrl(lang, el.url)} class="header-menu-link">
-                        <span class="heading h-24 txt-med txt-blue header-menu-link-txt">
-                            {el.text}
-                        </span>
-                    </a>
+                    <div class="header-menu-inner-item">
+                        <a href={getRelativeLocaleUrl(lang, el.url)} class="header-menu-link txt-blue">
+                            <span class="heading h-19 txt-med header-menu-link-txt">
+                                {el.text}
+                            </span>
+                            {el.type == 'drop' && (
+                                <div class="ic ic-8">
+                                    <svg width="100%" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M4.86602 6.5C4.48112 7.16667 3.51887 7.16667 3.13397 6.5L1.40192 3.5C1.01702 2.83333 1.49815 2 2.26795 2L5.73205 2C6.50185 2 6.98298 2.83333 6.59808 3.5L4.86602 6.5Z" fill="currentColor"/>
+                                    </svg>
+                                </div>
+                            )}
+                        </a>
+                    </div>
                 ))}
             </div>
-        </div>
-        <div class="header-lang">
-            <div class="header-lang-wrap">
-                <button class="header-lang-toggle">
-
-                </button>
+            <div class="header-dl-wrap">
+                <a href="#" target="_blank" class="btn header-dl-btn">
+                    <span class="heading h-19 txt-med header-dl-btn-txt">{content.dl.text}</span>
+                    <div class="ic ic-10">
+                        <svg width="100%" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path fill-rule="evenodd" clip-rule="evenodd" d="M4.9998 0.350098C5.35879 0.350098 5.6498 0.641113 5.6498 1.0001V4.84934L6.94409 3.57681C7.20008 3.32513 7.61162 3.32862 7.8633 3.58461C8.11498 3.84059 8.11149 4.25214 7.8555 4.50382L5.45551 6.86344C5.20259 7.11211 4.79702 7.11211 4.5441 6.86345L2.14409 4.50382C1.88811 4.25214 1.88462 3.8406 2.1363 3.58461C2.38798 3.32863 2.79952 3.32513 3.0555 3.57681L4.3498 4.84934V1.0001C4.3498 0.641113 4.64082 0.350098 4.9998 0.350098ZM1.14999 9.0001C1.14999 8.64111 1.44101 8.3501 1.79999 8.3501H8.19999C8.55898 8.3501 8.84999 8.64111 8.84999 9.0001C8.84999 9.35908 8.55898 9.6501 8.19999 9.6501H1.79999C1.44101 9.6501 1.14999 9.35908 1.14999 9.0001Z" fill="currentColor"/>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+            <div class="header-lang">
+                <div class="header-lang-wrap">
+                    <button class="header-lang-toggle">
+                        <span class="heading h-19 txt-med header-lang-toggle-txt">{lang == 'vn' ? 'VIE' : 'EN'}</span>
+                        <div class="ic ic-8">
+                            <svg width="100%" viewBox="0 0 8 8" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                <path d="M4.86602 6.5C4.48112 7.16667 3.51887 7.16667 3.13397 6.5L1.40192 3.5C1.01702 2.83333 1.49815 2 2.26795 2L5.73205 2C6.50185 2 6.98298 2.83333 6.59808 3.5L4.86602 6.5Z" fill="currentColor"/>
+                            </svg>
+                        </div>
+                    </button>
+                </div>
             </div>
         </div>
     </div>
@@ -39,46 +63,90 @@ const {content, lang} = Astro.props;
         left: 0;
         z-index: 99;
         width: 100%;
-        padding-block: 3.2rem 3.1rem;
+        padding-block: 2.4rem 2.4rem;
         box-shadow: 0 .4rem 1rem 0 rgba(0,0,0,.1);
+        .container {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            column-gap: 2.4rem;
+            padding-inline: 6rem;
+        }
         &-logo {
-            grid-column: 1/3;
-            height: 4.7rem;
+            height: 4.2rem;
             &-link {
                 height: 100%;
             }
         }
         &-menu {
-            grid-column: 4/12;
             display: flex;
             align-items: center;
             justify-content: end;
-            margin-bottom: .7rem;
+            margin-bottom: .5rem;
             &-inner {
                 display: flex;
                 align-items: center;
-                column-gap: 3rem;
+                column-gap: 1.6rem;
             }
             &-link {
-                
+                display: flex;
+                align-items: center;
+                column-gap: .2rem;
+                .ic {
+                    margin-bottom: .1rem;
+                }
+            }
+        }
+        &-dl-wrap {
+            margin-left: 2.6rem;
+            .header-dl-btn {
+                padding: .4rem .7rem .5rem;
+                column-gap: .4rem
             }
         }
         &-lang {
-            grid-column: 12/13;
-            display: flex;
-            align-items: center;
-            justify-content: end;
+            margin-left: 1.2rem;
             &-wrap {
-                margin-bottom: .2rem;
-            }
-            &-toggle {
-                width: 3.9rem;
-                height: 2.6rem;
-                border-radius: .5rem;
-                border: solid 1px var(--cl-blue);
                 
             }
-
+            &-toggle {
+                display: flex;
+                align-items: center;
+                column-gap: .2rem;
+                padding: .3rem .5rem .2rem .9rem;
+                color: var(--cl-blue);
+            }
+        }
+    }
+    [data-lang="en"] {
+        .header {
+            &-menu {
+                &-inner {
+                    column-gap: 1.5rem;
+                }
+                &-link {
+                    &-txt {
+                        font-size: 1.7rem;
+                    }
+                }
+            }
+            &-dl-wrap {
+                margin-left: 1.2rem;
+                .header-dl-btn {
+                    padding: .5rem .7rem;
+                    column-gap: .2rem;
+                    &-txt {
+                        font-size: 1.6rem;
+                    }
+                }
+            }
+            &-lang {
+                margin-left: 0rem;
+                &-toggle {
+                    column-gap: .2rem;
+                    padding: .3rem .5rem .2rem 1.2rem;
+                }
+            }
         }
     }
 </style>

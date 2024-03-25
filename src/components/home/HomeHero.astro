@@ -1,26 +1,68 @@
 ---
 import { Image } from "astro:assets";
 import homeHeroBg from '../../assests/home-hero.jpg';
+const {content} = Astro.props;
 ---
 <section class="home-hero">
     <div class="container">
         <div class="home-hero-img">
             <Image src={homeHeroBg} alt="" class="img-h img-fit img-fit-bot"/>
         </div>
+        <div class="home-hero-title-wrap">
+            <h1 class="heading txt-bold txt-up txt-blue home-hero-title">
+                <Fragment set:html={content.title.replaceAll('\n','<br>')} />
+            </h1>
+            <h2 class="txt txt-blue txt-up home-hero-sub">
+                {content.sub}
+            </h2>
+        </div>
+        
+        <!-- <div class="home-hero-pattern home-hero-pattern-left"></div>
+        <div class="home-hero-pattern home-hero-pattern-right"></div> -->
     </div>
 </section>
 <style lang="scss">
     .home-hero {
-        padding-top: 11rem;
+        padding-top: 9rem;
         height: 100vh;
         .container {
-            max-width: none;
+            position: relative;
             height: 100%;
         }
-        &-img {
+        &-title-wrap {
             height: 100%;
-            margin-inline: -13rem;
             position: relative;
+            z-index: 2;
+        }
+        &-title {
+            padding-top: 15.97826086956522vh; //147/920
+            font-size: 21rem;
+            margin-left: -.8rem;
+            line-height: .88em;
+            margin-bottom: .6rem;
+            letter-spacing: 0;
+        }
+        &-sub {
+            font-size: 3rem;
+        }
+        &-img {
+            position: absolute;
+            z-index: 1;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+        }
+        &-pattern {
+            position: absolute;
+            height: 1.35802469135802%;
+            background-color: black;
+            bottom: 0;
+            &-left {
+                right: 100%;
+                width: 50vw;
+            }
+
         }
     }
 </style>

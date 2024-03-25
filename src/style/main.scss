@@ -21,6 +21,7 @@ button {
     background-color: transparent;
     color: inherit;
     border: none;
+    cursor: pointer;
 }
 img {
     width: 100%;
@@ -43,11 +44,36 @@ img {
         }
     }
 }
+.ic {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    &-8 {
+        width: .8rem;
+        height: .8rem;
+    }
+    &-10 {
+        width: 1rem;
+        height: 1rem;
+    }
+}
+.btn {
+    display: flex;
+    align-items: center;
+    border-radius: .5rem;
+    background-color: var(--cl-blue);
+    color: var(--cl-bg);
+}
 :root {
     font-size: 0.6944444444444444vw;
     @media screen and (min-width: 1920px) {
         font-size: calc(10px * (1920px / 1440px));
     }
+    @media screen and (min-aspect-ratio: 1600 / 800) {
+        font-size: 1.1vh !important;
+    }
+    
+    
 }
 html {
     background-color: var(--cl-bg);
@@ -56,10 +82,10 @@ html {
     @media screen and (min-width: 1920px) {
         max-width: 1920px;
     }
-    --grid-gap: 2.4rem;
+    --grid-gap: 3.2rem;
     width: 100%;
     margin: 0 auto;
-    padding-inline: 13rem;
+    padding-inline: 12rem;
     &.grid {
         display: grid;
         grid-template-columns: repeat(12, 1fr);
@@ -73,6 +99,7 @@ html {
 .txt {
     font-family: 'vnm-std';
     letter-spacing: .05em;
+    font-weight: 400;
     &-14 {
         font-size: 1.4rem;
     }
@@ -93,10 +120,13 @@ html {
     }
 }
 .h {
+    &-19 {
+        font-size: 1.9rem;
+    }
     &-24 {
         font-size: 2.4rem;
     }
-    &-64 {
-        font-size: 6.4rem;
+    &-78 {
+        font-size: 7.8rem;
     }
 }
