@@ -1,12 +1,16 @@
 ---
 import { Image } from "astro:assets";
 import homeHeroBg from '../../assests/home-hero.jpg';
+import { getImage } from "astro:assets";
+import bgTexture from "../../assests/home-hero-pattern.jpg";
+const OpBgTexture = await getImage({src: bgTexture, format: 'webp', width: bgTexture.width / 2})
 const {content} = Astro.props;
 ---
 <section class="home-hero">
     <div class="container">
         <div class="home-hero-img">
             <Image src={homeHeroBg} alt="" class="img-h img-fit img-fit-bot"/>
+            <div class="home-hero-pattern home-hero-pattern-left"style={`--bg-txt: url(${OpBgTexture.src})`}></div>
         </div>
         <div class="home-hero-title-wrap">
             <h1 class="heading txt-bold txt-up txt-blue home-hero-title">
@@ -16,15 +20,13 @@ const {content} = Astro.props;
                 {content.sub}
             </h2>
         </div>
-        
-        <!-- <div class="home-hero-pattern home-hero-pattern-left"></div>
-        <div class="home-hero-pattern home-hero-pattern-right"></div> -->
     </div>
 </section>
 <style lang="scss">
     .home-hero {
         padding-top: 9rem;
         height: 100vh;
+        contain: paint;
         .container {
             position: relative;
             height: 100%;
@@ -55,14 +57,16 @@ const {content} = Astro.props;
         }
         &-pattern {
             position: absolute;
-            height: 1.35802469135802%;
-            background-color: black;
+            z-index: 3;
+            height: 1.2rem;
+            width: 100vw;
+            left: 50%;
+            transform: translateX(-50%);
+            background: var(--bg-txt);
+            background-position: top center;
+            background-size: auto 100%;
+            background-repeat: repeat-x;
             bottom: 0;
-            &-left {
-                right: 100%;
-                width: 50vw;
-            }
-
         }
     }
 </style>
