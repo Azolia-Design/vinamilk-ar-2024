@@ -1,14 +1,15 @@
 ---
 import { getRelativeLocaleUrl } from 'astro:i18n';
 import { Image } from 'astro:assets';
-import Logo from '../../assests/logo.png';
+import logoImg from '../../assets/logo-img.png';
+
 const {content, lang} = Astro.props;
 ---
 <footer class="footer">
     <div class="container grid footer-top-wrap">
         <div class="footer-logo">
             <a href={getRelativeLocaleUrl(lang, './')} class="footer-logo-link">
-                <Image src={Logo} alt='' />
+                <Image src={logoImg} alt='' />
             </a>
         </div>
         {content.info.map(el => (

@@ -2,4 +2,19 @@
     --cl-bg: #FFFFF1;
     --cl-white: #ffffff;
     --cl-blue: #0213B0;
+    --cl-blue-2: #3459FF;
+    --cl-blue-3: #38C0FF;
+    --cl-pink: #D5C2FA;
+    --cl-green: #1BBA33;
+}
+.bg-stripe {
+    --gap: 1.2rem;
+    --stroke: calc(1.2rem + .1rem);
+    background: repeating-linear-gradient(
+        -47deg,
+        transparent,
+        transparent var(--gap),
+        rgba(255,255,241,.2) var(--gap),
+        rgba(255,255,241,.2) var(--stroke)
+    );
 }

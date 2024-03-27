@@ -1,14 +1,14 @@
 ---
 import { getRelativeLocaleUrl } from 'astro:i18n';
 import { Image } from "astro:assets";
-import Logo from '../../assests/logo.png';
+import logoImg from '../../assets/logo-img.png';
 const {content, lang} = Astro.props;
 ---
 <header class="header" data-lang={lang}>
     <div class="container">
         <div class="header-logo">
             <a href={getRelativeLocaleUrl(lang, './')} class="header-logo-link">
-                <Image src={Logo} alt="" class="img-h"/>
+                <Image src={logoImg} alt="" class="img-h"/>
             </a>
         </div>
         <div class="header-menu">

@@ -1,8 +1,8 @@
 ---
 import { Image } from "astro:assets";
-import homeHeroBg from '../../assests/home-hero.jpg';
+import homeHeroBg from '../../assets/home-hero.jpg';
 import { getImage } from "astro:assets";
-import bgTexture from "../../assests/home-hero-pattern.jpg";
+import bgTexture from "../../assets/home-hero-pattern.jpg";
 const OpBgTexture = await getImage({src: bgTexture, format: 'webp', width: bgTexture.width / 2})
 const {content} = Astro.props;
 ---

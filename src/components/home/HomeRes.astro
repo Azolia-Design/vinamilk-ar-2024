@@ -1,6 +1,15 @@
 ---
 import { Image } from "astro:assets";
-import homeFtBg from '../../assests/home-ft.jpg';
+import homeResBox1 from '../../assets/Frame 280.jpg'
+import homeResBox2 from '../../assets/Frame 278.jpg'
+import homeResBox3 from '../../assets/Frame 276.jpg'
+import homeResBox4 from '../../assets/Frame 281.jpg'
+import homeResBox5 from '../../assets/Frame 279.jpg'
+import homeResBox6 from '../../assets/Frame 277.jpg'
+import homeResBox7 from '../../assets/Frame 275.jpg'
+import homeResBoxBike from '../../assets/Frame 282.png'
+import homeFtBg from '../../assets/home-ft.jpg';
+import homeResBoxBoxes from '../../assets/vnm-boxes.jpg';
 const {content} = Astro.props;
 ---
 <section class="home-res">
@@ -9,14 +18,142 @@ const {content} = Astro.props;
             {content.title}
         </h1>
         <div class="home-res-grid">
-            <div class="home-res-box"></div>
-            <div class="home-res-box"></div>
-            <div class="home-res-box"></div>
-            <div class="home-res-box"></div>
-            <div class="home-res-box"></div>
-            <div class="home-res-box"></div>
-            <div class="home-res-box"></div>
-            <div class="home-res-box"></div>
+            <div class="home-res-box">
+                <div class="box-content">
+                    <div class="heading txt-162 txt-up txt-bold number-value">
+                        47
+                    </div>
+                    <div class="txt txt-36 number-unit">
+                        Năm
+                    </div>
+                    <div class="txt txt-24 label">
+                        Đồng hành và phục vụ người tiêu dùng Việt Nam
+                    </div>
+                </div>
+                <Image src={homeResBox1} alt="" class="box-img img-fill" />
+                <Image src={homeResBox2} alt="" class="box-img img-fill" />
+                <Image src={homeResBox3} alt="" class="box-img img-fill span-2" />
+                <Image src={homeResBox4} alt="" class="box-img img-fill" />
+                <Image src={homeResBox5} alt="" class="box-img img-fill" />
+                <Image src={homeResBox6} alt="" class="box-img img-fill" />
+                <Image src={homeResBox7} alt="" class="box-img img-fill" />
+            </div>
+            <div class="home-res-box bg-stripe">
+                <div class="box-content left">
+                    <div class="txt txt-36 txt-up label">
+                        Tổng hợp doanh thu hợp nhất
+                    </div>
+                    <div class="heading txt-162 txt-up txt-bold number-value">
+                        60.479
+                    </div>
+                    <div class="txt txt-36 txt-up number-unit">
+                        Tỷ đồng
+                    </div>
+                    <div class="line line-ver"></div>
+                </div>
+                <div class="box-content right">
+                    <div class="heading txt-128 txt-up txt-bold number-value">
+                        +404
+                    </div>
+                    <div class="txt txt-20 number-unit">
+                        Tỷ đồng so với cùng kỳ
+                    </div>
+                </div>
+            </div>
+            <div class="home-res-box">
+                <div class="box-content">
+                    <div class="txt txt-20 label">
+                        Nộp ngân sách Nhà nước
+                    </div>
+                    <div class="heading txt-128 txt-up txt-bold number-value">
+                        3.820
+                    </div>
+                    <div class="txt txt-20 number-unit">
+                        Tỷ đồng
+                    </div>
+                </div>
+            </div>
+            <div class="home-res-box">
+                <div class="box-content">
+                    <div class="txt txt-20 txt-up label">
+                        Lợi nhuận trước thuế hợp nhất
+                    </div>
+                    <div class="value-wrap top">
+                        <div class="heading txt-128 txt-bold txt-up number-value">
+                            10.968
+                        </div>
+                        <div class="txt txt-20 number-unit">
+                            Tỷ đồng
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="value-wrap bot">
+                        <div class="heading txt-40 txt-up txt-bold number-value">
+                            +472
+                        </div>
+                        <div class="txt txt-20 number-unit">
+                            Tỷ đồng so với cùng kỳ
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-res-box">
+                <div class="box-content">
+                    <div class="heading txt-128 txt-up txt-bold number-value">
+                        4 Triệu
+                    </div>
+                    <div class="txt txt-24 number-unit">
+                        Đơn hàng trực tuyến
+                    </div>
+                </div>
+                <div class="box-img">
+                    <Image src={homeResBoxBike} alt="" />
+                </div>
+            </div>
+            <div class="home-res-box bg-stripe">
+                <div class="box-content">
+                    <div class="value-wrap top">
+                        <div class="txt txt-20 txt-up label">
+                            Giá trị thương hiệu Vinamilk
+                        </div>
+                        <div class="heading txt-128 txt-up txt-bold number-value">
+                            3
+                        </div>
+                        <div class="unit-wrap">
+                            <div class="txt txt-20 number-unit">
+                                tỷ đô la Mỹ
+                            </div>
+                            <div class="txt txt-13 number-unit-sub">
+                                Theo Brand Finance
+                            </div>
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                    <div class="value-wrap bot">
+                        <div class="heading txt-40 txt-up txt-bold number-value">
+                            +200
+                        </div>
+                        <div class="txt txt-20 number-unit">
+                            Triệu Đô la Mỹ so với cùng kỳ
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="home-res-box">
+                <div class="box-content">
+                    <div class="heading txt-128 txt-up txt-bold number-value">
+                        60
+                    </div>
+                    <div class="txt txt-20 number-unit">
+                        Thị trường xuất khẩu lũy kế
+                    </div>
+                </div>
+            </div>
+            <div class="home-res-box">
+                <div class="box-img">
+                    <Image src={homeResBoxBoxes} alt="" class="img-fill"/>
+                </div>
+            </div>
             <div class="home-res-box"></div>
             <div class="home-res-box"></div>
             <div class="home-res-box"></div>
@@ -45,38 +182,235 @@ const {content} = Astro.props;
         }
         &-box {
             border-radius: 1.4rem;
-            background-color: var(--cl-blue);
+            contain: paint;
+            background-color: rgba(0,0,0,.1);
             height: 100%;
             &:nth-child(1) {
                 grid-column: span 12;
-                min-height: 35.4rem;
+                display: grid;
+                grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+                .box-content {
+                    grid-column: span 1;
+                    grid-row: span 2;
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    padding-block: 2.3rem 5.3rem;
+                    padding-inline: 4.7rem;
+                    color: var(--cl-bg);
+                    text-align: center;
+                    background-color: var(--cl-blue);
+                    .number-value {
+                        margin-bottom: -2.5rem;
+                    } 
+                    .number-unit {
+                        margin-bottom: .8rem;
+                    }
+                    .label {
+                        max-width: 30.4rem;
+                    }
+                }
+                .box-img {
+                    height: 100%;
+                    &.span-2 {
+                        grid-column: span 2;
+                    }
+                }
             }
             &:nth-child(2) {
                 grid-column: span 9;
-                min-height: 32.5rem;
+                display: grid;
+                grid-template-columns: 6.6fr 3.4fr;
+                background-color: var(--cl-blue-3);
+                color: var(--cl-blue);
+                .box-content {
+                    display: flex;
+                    flex-direction: column;
+                    &.left {
+                        padding-block: 4.5rem 2.9rem;
+                        padding-inline: 4.8rem;
+                        position: relative;
+                        align-items: start;
+                        justify-content: center;
+                        .label {
+                            margin-bottom: -1.5rem;
+                            font-size: 3rem;
+                            margin-right: -1rem;
+                        }
+                        .number-value {
+                            margin-bottom: -1.4rem
+                        }
+                        .number-unit {
+                            font-size: 3rem;
+                        }
+                        .line-ver {
+                            position: absolute;
+                            height: auto;
+                            top: 4.5rem;
+                            right: 0;
+                            bottom: 2.9rem;
+                            background-color: var(--cl-blue);
+                        }
+                    }
+                    &.right {
+                        align-items: center;
+                        text-align: center;
+                        justify-content: center;
+                        margin-bottom: 1.8rem;
+                        padding-inline: 3.3rem 7.6rem;
+                        .number-value {
+                            margin-bottom: -1.6rem;
+                        }
+                        .number-unit {
+                            max-width: 15.3rem;
+                            margin-left: 2.3rem;
+                        }
+                    }
+                }
             }
             &:nth-child(3) {
                 grid-column: span 3;
+                background-color: var(--cl-pink);
+                color: var(--cl-blue);
+                .box-content {
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    padding-block: 8.4rem 6.2rem;
+                    padding-inline: 1.9rem;
+                    .label {
+                        margin-bottom: -1.1rem;
+                    }
+                    .number-value {
+                        margin-bottom: -1.3rem;
+                    }
+                }
             }
             &:nth-child(4) {
                 grid-column: span 6;
-                min-height: 25.6rem;
+                background-color: var(--cl-blue);
+                color: var(--cl-bg);
+                padding-block: 3.2rem 1.8rem;
+                padding-inline: 5rem 6.6rem;
+                .box-content {
+                    .label {
+                        margin-bottom: -1rem;
+                    }
+                    .value-wrap {
+                        display: flex;
+                        align-items: end;
+                        justify-content: start;
+                        margin-bottom: -1.2rem;
+                        &.top {
+                            .number-unit {
+                                margin-left: 1.2rem;
+                                margin-bottom: 2.8rem;
+                            }
+                        }
+                        &.bot {
+                            .number-unit {
+                                margin-left: 2.3rem;
+                                margin-bottom: 1.1rem;
+                            }
+                        }
+                    }
+                    .line {
+                        margin-bottom: .3rem;
+                        background-color: var(--cl-white);
+                    }
+                }
             }
             &:nth-child(5) {
                 grid-column: span 6;
-                min-height: 25.6rem;
+                display: grid;
+                grid-template-columns: 7.1fr 2.9fr;
+                background-color: var(--cl-green);
+                color: var(--cl-bg);
+                .box-content {
+                    padding-block: 3.4rem 5.4rem;
+                    padding-inline: 4.6rem;
+                    display: flex;
+                    align-items: start;
+                    flex-direction: column;
+                    .number-value {
+                        margin-right: -1rem;
+                    }
+                }
+                .box-img {
+                    margin-right: 2rem;
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                }
             }
             &:nth-child(6) {
                 grid-column: span 5;
-                min-height: 22rem;
+                background-color: var(--cl-blue);
+                color: var(--cl-bg);
+                .box-content {
+                    padding-block: -.6rem 3.3rem;
+                    padding-inline: 3.6rem 8.9rem;
+                    .value-wrap {
+                        display: flex;
+                        align-items: end;
+                        &.top {
+                            margin-bottom: -1.7rem;
+                            .label {
+                                margin-right: 1.4rem;
+                                margin-bottom: 2.9rem;
+                                max-width: 13.5rem;
+                                text-align: right;
+                            }
+                            .unit-wrap {
+                                margin-left: 1.2rem;
+                                margin-bottom: 2.9rem;
+                                .number-unit {
+                                    margin-bottom: .1rem;
+                                }
+                                .number-unit-sub {
+                                    color: var(--cl-blue-3);
+                                }
+                            }
+                        }
+                        &.bot {
+                            .number-unit {
+                                margin-left: 2rem;
+                                margin-bottom: 1.1rem;
+                            }
+                        }
+                    }
+                    .line {
+                        background-color: var(--cl-bg);
+                        margin-bottom: .2rem;
+                    }
+                }
             }
             &:nth-child(7) {
                 grid-column: span 3;
-                min-height: 22rem;
+                background-color: var(--cl-blue-2);
+                color: var(--cl-bg);
+                .box-content {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: center;
+                    justify-content: center;
+                    text-align: center;
+                    .number-value {
+                        margin-bottom: -.8rem;
+                    }
+                    .number-unit {
+                        margin-bottom: 2rem;
+                        max-width: 14.9rem;
+                    }
+                }
             }
             &:nth-child(8) {
                 grid-column: span 4;
-                min-height: 22rem;
+                .box-img {
+                    width: 100%;
+                    height: 100%;
+                }
             }
             &:nth-child(9) {
                 grid-column: span 3;
