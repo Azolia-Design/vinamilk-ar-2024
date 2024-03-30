@@ -8,8 +8,11 @@ import homeResBox5 from '../../assets/Frame 279.jpg'
 import homeResBox6 from '../../assets/Frame 277.jpg'
 import homeResBox7 from '../../assets/Frame 275.jpg'
 import homeResBoxBike from '../../assets/Frame 282.png'
+import homeResBoxForest from '../../assets/Frame 283.png'
+import homeResBoxRebrand from '../../assets/rebrand.jpg'
 import homeFtBg from '../../assets/home-ft.jpg';
 import homeResBoxBoxes from '../../assets/vnm-boxes.jpg';
+import homeResBoxCow from '../../assets/Frame.png'
 const {content} = Astro.props;
 ---
 <section class="home-res">
@@ -154,10 +157,51 @@ const {content} = Astro.props;
                     <Image src={homeResBoxBoxes} alt="" class="img-fill"/>
                 </div>
             </div>
-            <div class="home-res-box"></div>
-            <div class="home-res-box"></div>
-            <div class="home-res-box"></div>
-            <div class="home-res-box"></div>
+            <div class="home-res-box bg-stripe">
+                <div class="box-content">
+                    <div class="value-wrap">
+                        <div class="heading txt-96 txt-up txt-bold number-value">
+                            25
+                        </div>
+                        <div class="heading txt-48 txt-up txt-bold number-unit">
+                            Ha
+                        </div>
+                    </div>
+                    <div class="txt txt-20 label">
+                        Diện tích rừng ngập mặn được Vinamilk khoanh nuôi tái sinh
+                    </div>
+                    <div class="box-img">
+                        <Image src={homeResBoxForest} alt="" />
+                    </div>
+                </div>
+            </div>
+            <div class="home-res-box bg-stripe">
+                <div class="box-content">
+                    <div class="value-wrap">
+                        <div class="heading txt-142 txt-up txt-bold number-value">
+                            02
+                        </div>
+                        <div class="box-img">
+                            <Image src={homeResBoxCow} alt="" />
+                        </div>
+                    </div>
+                    <div class="txt txt-20 label">
+                        Đơn vị nhà máy và trang trại của Vinamilk được công nhận Trung hòa carbon theo tiêu chuẩn PAS 2060:2014
+                    </div>
+                </div>
+            </div>
+            <div class="home-res-box">
+                <div class="box-img">
+                    <Image src={homeResBoxRebrand} alt="" class="img-fill"/>
+                </div>
+            </div>
+            <div class="home-res-box bg-stripe">
+                <div class="box-content">
+                    <div class="heading txt-32 txt-up txt-bold label">
+                        Ra mắt Bộ nhận diện thương hiệu mới
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <div class="home-res-img">
@@ -348,8 +392,10 @@ const {content} = Astro.props;
                 grid-column: span 5;
                 background-color: var(--cl-blue);
                 color: var(--cl-bg);
+                display: flex;
+                align-items: center;
                 .box-content {
-                    padding-block: -.6rem 3.3rem;
+                    margin-block: -.6rem 3.3rem;
                     padding-inline: 3.6rem 8.9rem;
                     .value-wrap {
                         display: flex;
@@ -391,6 +437,7 @@ const {content} = Astro.props;
                 background-color: var(--cl-blue-2);
                 color: var(--cl-bg);
                 .box-content {
+                    height: 100%;
                     display: flex;
                     flex-direction: column;
                     align-items: center;
@@ -415,20 +462,82 @@ const {content} = Astro.props;
             &:nth-child(9) {
                 grid-column: span 3;
                 grid-row: span 2;
-                min-height: 27.6rem;
+                background-color: var(--cl-green-li);
+                color: var(--cl-bg);
+                .box-content {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    justify-content: center;
+                    height: 100%;
+                    padding-block: .3rem 1.2rem;
+                    padding-inline: 2.5rem 1.5rem;
+                    .value-wrap {
+                        display: flex;
+                        align-items: end;
+                        justify-content: start;
+                        margin-bottom: -.8rem;
+                        .number-value {
+                            margin-right: 1.8rem;
+                        }
+                        .number-unit {
+                            margin-bottom: 1.3rem;
+                        }
+                    }
+                    .label {
+                        margin-bottom: -1.8rem;
+                    }
+                    .box-img {
+                        max-width: 8.6rem;
+                        margin-right: 1.3rem;
+                        align-self: end;
+                    }
+                }
             }
             &:nth-child(10) {
                 grid-column: span 5;
                 grid-row: span 2;
-                min-height: 27.6rem;
+                
+                background-color: var(--cl-blue-3);
+                color: var(--cl-blue);
+                .box-content {
+                    padding-block: 1.1rem 4.8rem;
+                    padding-inline: 3rem 4.4rem;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    .value-wrap {
+                        display: flex;
+                        align-items: end;
+                        margin-bottom: -2.4rem;
+                        .box-img {
+                            max-width: 12.8rem;
+                            margin-left: 1.3rem;
+                            margin-bottom: 3.1rem;
+                        }
+                    }
+                }
             }
             &:nth-child(11) {
                 grid-column: span 4;
-                min-height: 12.9rem;
+                .box-img {
+                    width: 100%;
+                    height: 100%;
+                }
             }
             &:nth-child(12) {
                 grid-column: span 4;
-                height: 11.5rem;
+                background-color: var(--cl-yellow);
+                color: var(--cl-blue);
+                .box-content {
+                    display: flex;
+                    align-items: center;
+                    justify-content: center;
+                    padding-block: 2rem 1.9rem;
+                    padding-inline: 3.6rem;
+                    text-align: center;
+                }
             }
         }
         &-img {
