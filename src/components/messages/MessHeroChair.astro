@@ -1,0 +1,69 @@
+---
+import { Image } from "astro:assets";
+import chairman from '../../assets/chutich.png'
+---
+<section class="mess-hero">
+    <div class="container grid">
+        <div class="mess-hero-content">
+            <h1 class="heading txt-74 txt-up txt-bold mess-hero-title">
+                Thông điệp của chủ tịch hội đồng quản trị
+            </h1>
+            <div class="line line-decor"></div>
+            <div class="txt txt-26 mess-hero-sub">
+                Giá trị thương hiệu Vinamilk đã tăng lên mốc 3 tỷ USD từ con số 2,8 tỷ USD năm trước, khẳng định vị trí số 1 trong các thương hiệu thực phẩm tại Việt Nam, đồng thời là thương hiệu sữa lớn thứ 6 trên thế giới. 
+            </div>
+        </div>
+        <div class="mess-hero-img-wrap">
+            <div class="mess-hero-img">
+                <Image src={chairman} alt="" class="img-fill"/>
+            </div>
+        </div>
+    </div>
+    <div class="line line-decor line-section"></div>
+</section>
+<style lang="scss">
+    .mess-hero {
+        background-color: var(--cl-blue-3);
+        color: var(--cl-blue);
+        position: relative;
+        &-content {
+            grid-column: 1/6;
+            padding-block: 27.1rem 7.6rem;
+            max-width: 48.3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+        }
+        &-title {
+            margin-bottom: 2.8rem;
+        }
+        &-sub {
+            text-align: justify;
+        }
+        &-img-wrap {
+            grid-column: 7/13;
+            padding-block: 17.8rem 5.7rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &-img {
+            width: 100%;
+        }
+        .line-decor {
+            height: .4rem;
+            background-size: auto .4rem;
+            background-repeat: repeat-x;
+            margin-bottom: 3.2rem;
+        }
+        .line-section {
+            height: 1.1rem;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-size: auto 1.1rem;
+            background-repeat: repeat-x;
+            margin-bottom: 0;
+        }
+    }
+</style>

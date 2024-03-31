@@ -1,0 +1,69 @@
+---
+import { Image } from "astro:assets";
+import chairwoman from '../../assets/chair-woman.png'
+---
+<section class="mess-hero">
+    <div class="container grid">
+        <div class="mess-hero-content">
+            <h1 class="heading txt-74 txt-up txt-bold mess-hero-title">
+                Thông điệp của tổng giám đốc
+            </h1>
+            <div class="line line-decor"></div>
+            <div class="txt txt-26 mess-hero-sub">
+                Kết thúc năm 2023, Vinamilk ghi nhận tổng doanh thu hợp nhất đạt 60.479 tỷ đồng, tăng  404 tỷ đồng so với cùng kỳ và hoàn thành 95% kế hoạch. Lợi nhuận sau thuế hợp nhất đạt 9.019 tỷ đồng, tăng 472 tỷ đồng so với cùng kỳ và vượt kế hoạch 5% nhờ quản trị hiệu quả chi phí sản xuất và vận hành.
+            </div>
+        </div>
+        <div class="mess-hero-img-wrap">
+            <div class="mess-hero-img">
+                <Image src={chairwoman} alt="" class="img-fill"/>
+            </div>
+        </div>
+    </div>
+    <div class="line line-decor line-section"></div>
+</section>
+<style lang="scss">
+    .mess-hero {
+        background-color: var(--cl-pink);
+        color: var(--cl-blue);
+        position: relative;
+        &-content {
+            grid-column: 1/6;
+            padding-block: 16.9rem 7.2rem;
+            max-width: 48.3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+        }
+        &-title {
+            margin-bottom: 2.8rem;
+        }
+        &-sub {
+            text-align: justify;
+        }
+        &-img-wrap {
+            grid-column: 7/13;
+            padding-block: 7.8rem 4.8rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+        &-img {
+            width: 100%;
+        }
+        .line-decor {
+            height: .4rem;
+            background-size: auto .4rem;
+            background-repeat: repeat-x;
+            margin-bottom: 3.2rem;
+        }
+        .line-section {
+            height: 1.1rem;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-size: auto 1.1rem;
+            background-repeat: repeat-x;
+            margin-bottom: 0;
+        }
+    }
+</style>

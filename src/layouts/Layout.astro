@@ -1,7 +1,12 @@
 ---
 import '../style/main.scss';
+import 'aos/dist/aos.css';
 import Header from '../components/global/Header.astro';
 import Footer from '../components/global/Footer.astro';
+import { getImage } from "astro:assets";
+import bgTexture from "../assets/home-hero-pattern.jpg";
+import { ViewTransitions } from 'astro:transitions';
+const OpBgTexture = await getImage({src: bgTexture, format: 'webp', width: bgTexture.width / 2})
 const props = Astro.props;
 const data = {
 	header: {
@@ -89,9 +94,10 @@ const data = {
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{props.title}</title>
+		<!-- <ViewTransitions /> -->
         <link rel="stylesheet" href="../style/main.scss">
 	</head>
-	<body>
+	<body style={`--bg-txt: url(${OpBgTexture.src})`}>
 		<Header content={props.lang == 'en' ? data.header.en : data.header.vn} lang={props.lang || 'vn'}/>
         <slot />
 		<Footer content={props.lang == 'en' ? data.footer.en : data.footer.vn} lang={props.lang || 'vn'}/>

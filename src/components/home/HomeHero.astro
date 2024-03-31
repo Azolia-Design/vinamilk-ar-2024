@@ -9,14 +9,14 @@ const {content} = Astro.props;
 <section class="home-hero">
     <div class="container">
         <div class="home-hero-img">
-            <Image src={homeHeroBg} alt="" class="img-h img-fit img-fit-bot"/>
+            <Image src={homeHeroBg} alt="" class="img-h img-fit img-fit-bot" data-aos="fade-up" data-aos-delay="200" />
             <div class="home-hero-pattern home-hero-pattern-left"style={`--bg-txt: url(${OpBgTexture.src})`}></div>
         </div>
         <div class="home-hero-title-wrap">
-            <h1 class="heading txt-bold txt-up txt-blue home-hero-title">
+            <h1 class="heading txt-bold txt-up txt-blue home-hero-title" data-aos="fade-right">
                 <Fragment set:html={content.title.replaceAll('\n','<br>')} />
             </h1>
-            <h2 class="txt txt-blue txt-up home-hero-sub">
+            <h2 class="txt txt-blue txt-up home-hero-sub" data-aos="fade-right" data-aos-delay="200">
                 {content.sub}
             </h2>
         </div>

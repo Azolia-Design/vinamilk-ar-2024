@@ -1,4 +1,5 @@
 :root {
+    --cl-txt: #353535;
     --cl-bg: #FFFFF1;
     --cl-white: #ffffff;
     --cl-blue: #0213B0;
@@ -19,4 +20,7 @@
         rgba(255,255,241,.2) var(--gap),
         rgba(255,255,241,.2) var(--stroke)
     );
+}
+.line-decor {
+    background: var(--bg-txt);
 }
