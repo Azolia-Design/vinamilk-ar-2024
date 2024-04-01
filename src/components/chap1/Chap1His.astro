@@ -1,0 +1,94 @@
+---
+import { Image } from 'astro:assets'
+import chap1His1 from '../../assets/chap1His1.png'
+const {content} = Astro.props;
+console.log(content)
+---
+<section class="chap1-his">
+    <div class="container">
+        <h2 class="heading txt-78 txt-bold txt-blue chap1-his-title">
+            {content.title}
+        </h2>
+        <div class="chap1-his-main">
+            {content.list.map((el,idx) => (
+                <div class="chap1-his-item">
+                    <div class="img-wrap">
+                        <Image src={el.img.src} alt='' {...el.img.attributes}/>
+                    </div>
+                    <div class="year-wrap">
+                        <div class="heading txt-40 txt-bold txt-blue year">
+                            {el.year}
+                        </div>
+                        <div class="year-line-wrap">
+                            <div class="line line-dash"></div>
+                            <div class="year-dot"></div>
+                        </div>
+                    </div>
+                    <div class="txt txt-17 label">
+                        <Fragment set:html={el.sub.replaceAll('\n','<br/>')} />
+                    </div>
+                </div>
+            ))}
+            
+        </div>
+    </div>
+</section>
+
+<style lang="scss">
+    .chap1-his {
+        padding-top: 10.8rem;
+        &-title {
+            text-align: center;
+            margin-bottom: 6.9rem;
+        }
+        &-main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: var(--grid-gap);
+            row-gap: 5.6rem;
+        }
+        &-item {
+            .img-wrap {
+                overflow: hidden;
+                border-radius: 1.2rem;
+                margin-bottom: 1.2rem;
+            }
+            .year-wrap {
+                display: flex;
+                align-items: center;
+                margin-bottom: .7rem;
+                .year {
+                    margin-right: 2.7rem;
+                    flex: none;
+                }
+                .year-line-wrap {
+                    flex: 1;
+                    display: flex;
+                    position: relative;
+                    align-items: center;
+                    margin-bottom: .8rem;
+                    .year-dot {
+                        position: absolute;
+                        z-index: 2;
+                        right: 0;
+                        width: .8rem;
+                        height: .8rem;
+                        background-color: var(--cl-blue);
+                        transform: translateX(50%) rotate(45deg);
+                    }
+                }
+            }
+            &:nth-child(6n + 4), &:nth-child(6n + 5), &:nth-child(6n + 6) {
+                .year-wrap {
+                    .year-line-wrap {
+                        .year-dot {
+                            right: auto;
+                            left: 0;
+                            transform: translateX(-50%) rotate(45deg);
+                        }
+                    }
+                }
+            }
+        }
+    }
+</style>

@@ -17,6 +17,9 @@ import chairman from '../../assets/chutich.png'
             <div class="mess-hero-img">
                 <Image src={chairman} alt="" class="img-fill"/>
             </div>
+            <div class="heading txt-36 txt-up txt-bold mess-hero-img-name">
+                Ông Nguyễn Hạnh Phúc
+            </div>
         </div>
     </div>
     <div class="line line-decor line-section"></div>
@@ -42,13 +45,17 @@ import chairman from '../../assets/chutich.png'
         }
         &-img-wrap {
             grid-column: 7/13;
-            padding-block: 17.8rem 5.7rem;
+            padding-block: 17.6rem 6rem;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
         }
         &-img {
-            width: 100%;
+            width: 52rem;
+            &-name {
+                margin-top: 3rem;
+            }
         }
         .line-decor {
             height: .4rem;

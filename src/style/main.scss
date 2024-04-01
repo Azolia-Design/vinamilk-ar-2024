@@ -76,6 +76,9 @@ img {
         width: max(.1rem, 1px);
         height: 100%;
     }
+    &-dash {
+        border-top: dashed max(.2rem, 2px) var(--cl-blue);
+    }
 }
 :root {
     font-size: 0.6944444444444444vw;
@@ -151,6 +154,9 @@ html {
     &-74 {
         font-size: 7.4rem;
         line-height: 1em;
+    }
+    &-78 {
+        font-size: 7.8rem;
     }
     &-96 {
         font-size: 9.6rem;

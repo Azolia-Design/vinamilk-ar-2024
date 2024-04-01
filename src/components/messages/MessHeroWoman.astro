@@ -17,6 +17,9 @@ import chairwoman from '../../assets/chair-woman.png'
             <div class="mess-hero-img">
                 <Image src={chairwoman} alt="" class="img-fill"/>
             </div>
+            <div class="heading txt-36 txt-up txt-bold mess-hero-img-name">
+                Bà Mai Kiều Liên
+            </div>
         </div>
     </div>
     <div class="line line-decor line-section"></div>
@@ -42,13 +45,17 @@ import chairwoman from '../../assets/chair-woman.png'
         }
         &-img-wrap {
             grid-column: 7/13;
-            padding-block: 7.8rem 4.8rem;
+            padding-block: 7rem 5.6rem;
             display: flex;
+            flex-direction: column;
             align-items: center;
             justify-content: center;
         }
         &-img {
-            width: 100%;
+            width: 52rem;
+            &-name {
+                margin-top: 3rem;
+            }
         }
         .line-decor {
             height: .4rem;
