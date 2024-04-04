@@ -116,6 +116,9 @@ html {
     font-family: 'vnm-std';
     letter-spacing: .05em;
     font-weight: 400;
+    &-11 {
+        font-size: 1.1rem;
+    }
     &-14 {
         font-size: 1.4rem;
     }
@@ -158,6 +161,9 @@ html {
     &-78 {
         font-size: 7.8rem;
     }
+    &-82 {
+        font-size: 8.2rem;
+    }
     &-96 {
         font-size: 9.6rem;
     }
@@ -184,6 +190,12 @@ html {
     }
     &-bold {
         font-weight: 700;
+    }
+    &-italic {
+        font-style: italic;
+    }
+    &-ari {
+        font-family: Arial, sans-serif;
     }
 }
 .h {

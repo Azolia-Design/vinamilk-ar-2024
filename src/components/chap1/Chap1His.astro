@@ -1,6 +1,9 @@
 ---
 import { Image } from 'astro:assets'
-import chap1His1 from '../../assets/chap1His1.png'
+import chap1HisIc1 from '../../assets/chap1HisIc1.png'
+import chap1HisIc2 from '../../assets/chap1HisIc2.png'
+import chap1HisAwardIc1 from '../../assets/chap1HisAwardIc1.png'
+import chap1HisAwardIc2 from '../../assets/chap1HisAwardIc2.png'
 const {content} = Astro.props;
 console.log(content)
 ---
@@ -29,7 +32,112 @@ console.log(content)
                     </div>
                 </div>
             ))}
-            
+            <div class="chap1-his-lg-item">
+                <div class="heading txt-64 txt-bold lg-title">
+                    <div class="year-line-wrap">
+                        <div class="line line-dash"></div>
+                        <div class="year-dot"></div>
+                    </div>
+                    <span>Năm 2023</span>
+                    <div class="year-line-wrap holder"></div>
+                </div>
+                <div class="item-wrap">
+                    <div class="item left">
+                        <div class="box-content">
+                            <div class="heading txt-64 txt-up txt-bold title">
+                                6 Tỷ USD
+                            </div>
+                            <div class="txt txt-20 txt-med label">
+                                Giá trị vốn hóa
+                            </div>
+                            <div class="txt txt-20 sub">
+                                Doanh nghiệp ngành thực phẩm và đồ uống lớn nhất trên Sở Giao Dịch Chứng Khoán Thành phố Hồ Chí Minh (HOSE).
+                            </div>
+                        </div>
+                        <div class="img-wrap">
+                            <Image src={chap1HisIc1} alt='' />
+                        </div>
+                    </div>
+                    <div class="item right">
+                        <div class="box-content">
+                            <div class="heading txt-64 txt-up txt-bold title">
+                                3 Tỷ USD
+                            </div>
+                            <div class="txt txt-20 txt-med label">
+                                Giá trị vốn hóa
+                            </div>
+                            <div class="txt txt-16 txt-ari txt-italic sub">
+                                Theo Brand Finance
+                            </div>
+                        </div>
+                        <div class="img-wrap">
+                            <Image src={chap1HisIc2} alt='' />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chap1-his-sum">
+            <div class="box-left">
+                <div class="img-wrap">
+                    <Image src={chap1HisAwardIc1} alt='' />
+                </div>
+                <div class="heading txt-128 txt-up txt-bold title">
+                    TOP 1
+                </div>
+                <div class="txt txt-20 sub">
+                    Ngành sữa Việt Nam theo thị phần với:
+                </div>
+                <div class="txt txt-16 txt-ari txt-italic label">
+                    Theo AC Nielsen
+                </div>
+                <div class="line-ver"></div>
+            </div>
+            <div class="box-right">
+                <div class="box-item">
+                    <div class="heading txt-64 txt-up txt-bold title">
+                        15
+                    </div>
+                    <div class="txt txt-20 sub">
+                        Trang trại công nghệ cao
+                    </div>
+                </div>
+                <div class="box-item">
+                    <div class="heading txt-64 txt-up txt-bold title">
+                        140.000
+                    </div>
+                    <div class="txt txt-20 sub">
+                        Tổng đàn bò Vinamilk quản lý và khai thác
+                    </div>
+                </div>
+                <div class="box-item">
+                    <div class="heading txt-64 txt-up txt-bold title">
+                        250 SKUs
+                    </div>
+                    <div class="txt txt-20 sub">
+                        Trong danh mục sản phẩm
+                    </div>
+                </div>
+                <div class="box-item mod-lg">
+                    <div class="heading txt-82 txt-up txt-bold title">
+                        16
+                    </div>
+                    <div class="txt txt-20 sub">
+                        Nhà máy sữa hiện đại trong và ngoài nước
+                    </div>
+                </div>
+                <div class="box-item mod-mg">
+                    <div class="heading txt-64 txt-up txt-bold title">
+                        200.000
+                    </div>
+                    <div class="txt txt-20 sub">
+                        Điểm bán trong hệ thống phân phối
+                    </div>
+                </div>
+                <div class="box-img">
+                    <Image src={chap1HisAwardIc2} alt='' />
+                </div>
+            </div>
         </div>
     </div>
 </section>
@@ -37,6 +145,7 @@ console.log(content)
 <style lang="scss">
     .chap1-his {
         padding-top: 10.8rem;
+        padding-bottom: 8.8rem;
         &-title {
             text-align: center;
             margin-bottom: 6.9rem;
@@ -51,6 +160,7 @@ console.log(content)
             .img-wrap {
                 overflow: hidden;
                 border-radius: 1.2rem;
+                height: 20rem;
                 margin-bottom: 1.2rem;
             }
             .year-wrap {
@@ -87,6 +197,159 @@ console.log(content)
                             transform: translateX(-50%) rotate(45deg);
                         }
                     }
+                }
+            }
+        }
+        &-lg-item {
+            grid-column: span 3;
+            width: 100%;
+            margin-inline: auto;
+            margin-bottom: 3rem;
+            .lg-title {
+                margin-bottom: 4.8rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                color: var(--cl-blue);
+                span {
+                    display: inline-block;
+                    margin-inline: 2rem;
+                }
+                .year-line-wrap {
+                    flex: 1;
+                    display: flex;
+                    position: relative;
+                    align-items: center;
+                    margin-top: .4rem;
+                    &.holder {
+                        opacity: 0;
+                        pointer-events: none;
+                    }
+                    .year-dot {
+                        position: absolute;
+                        z-index: 2;
+                        right: 0;
+                        width: .8rem;
+                        height: .8rem;
+                        background-color: var(--cl-blue);
+                        transform: translateX(50%) rotate(45deg);
+                    }
+                }
+
+            }
+            .item-wrap {
+                max-width: 79rem;
+                width: 100%;
+                margin-inline: auto;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: var(--grid-gap);
+                .item {
+                    border-radius: 1.4rem;
+                    color: var(--cl-bg);
+                    position: relative;
+                    .box-content {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: start;
+                        padding-block: 1.6rem 2.3rem;
+                        padding-inline: 2.3rem;
+                        height: 100%;
+                        .title {
+                            margin-bottom: -1rem;
+                        }
+                        .label {
+                            margin-bottom: 2.8rem;
+                        }
+                        .sub {
+                            margin-top: auto;
+                        }
+                    }
+                    .img-wrap {
+                        position: absolute;
+                    }
+                    &.left {
+                        background-color: var(--cl-blue-3);
+                        .img-wrap {
+                            width: 12rem;
+                            top: -3.1rem;
+                            right: 2.5rem;
+                        }
+                    }
+                    &.right {
+                        background-color: var(--cl-green);
+                        .img-wrap {
+                            width: 11rem;
+                            top: 3.2rem;
+                            right: 3.4rem;
+                        }
+                    }
+                }
+            }
+            
+        }
+        &-sum {
+            border-radius: 1.4rem;
+            background-color: var(--cl-blue);
+            color: var(--cl-bg);
+            display: grid;
+            grid-template-columns: 27fr 73fr;
+            .box-left {
+                display: flex;
+                padding-inline: 4.4rem;
+                padding-bottom: 4.2rem;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                position: relative;
+                .img-wrap {
+                    width: 11rem;
+                    margin-top: 2.9rem;
+                    margin-bottom: 1.3rem;
+                }
+                .title {
+                    margin-bottom: -2rem;
+                    text-wrap: nowrap;
+                }
+                .sub {
+                    margin-bottom: 2.4rem;
+                }
+                .label {
+                    margin-top: auto;
+                }
+                .line-ver {
+                    position: absolute;
+                    top: 5.7rem;
+                    bottom: 4.6rem;
+                    right: 0;
+                    height: auto;
+                    background-color: var(--cl-bg);
+                }
+            }
+            .box-right {
+                display: grid;
+                grid-template-columns: 22fr 39fr 39fr;
+                column-gap: 6rem;
+                row-gap: 2.8rem;
+                padding-inline: 6rem 4rem;
+                padding-block: 4.4rem;
+                .box-item {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    .title {
+                        margin-bottom: .4rem;
+                        &.txt-82 {
+                            margin-bottom: -.6rem;
+                        }
+                    }
+                    &.mod-mg {
+                        margin-top: 1.6rem;
+                    }
+                }
+                .box-img {
+                    max-width: 25.5rem;
                 }
             }
         }
