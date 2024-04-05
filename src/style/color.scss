@@ -31,8 +31,9 @@
     background: var(--bg-txt);
 }
 .line-decor-css {
+    --angle: 180deg;
     background: repeating-linear-gradient(
-        180deg,
+        var(--angle),
         var(--cl-blue),
         var(--cl-blue) 25%,
         var(--cl-blue-2) 25%,
