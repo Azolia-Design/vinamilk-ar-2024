@@ -1,0 +1,306 @@
+---
+import { Image } from "astro:assets";
+import Chap2Award1 from "../../assets/Chap2Award1.png";
+import Chap2Award2 from "../../assets/Chap2Award2.png";
+import Chap2Award3 from "../../assets/Chap2Award3.png";
+import Chap2Award4 from "../../assets/Chap2Award4.png";
+import Chap2Award5 from "../../assets/Chap2Award5.png";
+import Chap2Award6 from "../../assets/Chap2Award6.png";
+---
+<section class="chap2-award">
+    <div class="container">
+        <h2 class="heading txt-78 txt-bold chap2-award-title">
+            Giải thưởng và danh hiệu 2023
+        </h2>
+        <div class="chap2-award-grid">
+            <div class="chap2-award-box" data-aos="fade-up">
+                <div class="box-content">
+                    <div class="heading txt-64 txt-bold txt-up title">
+                        Thương hiệu vàng tphcm năm 2022
+                    </div>
+                    <div class="txt txt-20 sub">
+                        (lần thứ 3 liên tiếp)
+                    </div>
+                    <Image src={Chap2Award1} alt="" />
+                </div>
+            </div>
+            <div class="chap2-award-box" data-aos="fade-up">
+                <div class="box-content">
+                    <Image src={Chap2Award2} alt="" />
+                    <div class="list">
+                        <div class="txt txt-20 list-item">
+                            <div class="dot"></div>
+                            <div>Vinamilk có sản phẩm sữa tươi đầu tiên trên thế giới đạt chứng nhận Clean Label Project</div>
+                        </div>
+                        <div class="txt txt-20 list-item">
+                            <div class="dot"></div>
+                            <div>Vinamilk là công ty đầu tiên và duy nhất của Châu Á sở hữu giải thưởng Purity Award cho sữa bột trẻ em.</div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="chap2-award-box" data-aos="fade-up">
+                <div class="box-content">
+                    <div class="heading txt-64 txt-bold txt-up title">
+                        Hàng việt nam chất lượng cao
+                    </div>
+                    <div class="txt txt-20 sub">
+                        27 năm liền
+                    </div>
+                    <Image src={Chap2Award3} alt="" />
+                </div>
+            </div>
+            <div class="chap2-award-box" data-aos="fade-up">
+                <div class="box-content">
+                    <div class="heading txt-64 txt-bold txt-up title">
+                        Top công nghệ 4.0 việt nam
+                    </div>
+                    <div class="txt txt-20 sub">
+                        Liên hiệp các Hội Khoa học và Kỹ thuật Việt Nam (VUSTA)
+                    </div>
+                    <Image src={Chap2Award4} alt="" />
+                </div>
+            </div>
+            <div class="chap2-award-box" data-aos="fade-up">
+                <div class="box-content">
+                    <div class="txt txt-inter txt-20 label">
+                        Giải thưởng
+                    </div>
+                    <div class="heading txt-64 txt-bold txt-up title">
+                        Vị ngon thượng hạng
+                    </div>
+                    <div class="txt txt-16 txt-ari sub">
+                        (Superior Taste Award do tổ chức  International Taste Institute công bố)
+                    </div>
+                    <div class="txt txt-20 body">
+                        Sữa tươi Vinamilk Green Farm, Vinamilk  100% Organic, Vfresh Nước ép Lựu Táo,  Vfresh Trà Atiso không đường và sữa  đặc Ngôi Sao Phương Nam. <br><br>
+                        Đặc biệt có 2 sản phẩm xếp hạng 3 sao: sữa đặc Ông Thọ và sữa 9 loại hạt Vinamilk Super Nut.
+                    </div>
+                    <Image src={Chap2Award5} alt="" />
+                </div>
+            </div>
+            <div class="chap2-award-box" data-aos="fade-up">
+                <div class="box-content">                    
+                    <Image src={Chap2Award6} alt="" />
+                    <div class="box-wrap">
+                        <div class="box-item">
+                            <div class="txt txt-inter txt-20 label">
+                                Giải thưởng
+                            </div>
+                            <div class="title-wrap">
+                                <div class="heading txt-64 txt-bold txt-up title">
+                                    MONDE SELECTION
+                                </div>
+                                <div class="txt txt-16 txt-ari title-unit">
+                                    (Bỉ)
+                                </div>
+                            </div>
+                            <div class="txt txt-inter txt-17 label">
+                                2 giải Gold Award cho sản phẩm Sữa 9 loại hạt Vinamilk Super Nut và Sữa tươi nguyên chất tiệt trùng
+                            </div>
+                        </div>
+                    </div>
+                    <div class="box-wrap">
+                        <div class="box-item">
+                            <div class="txt txt-inter txt-20 label">
+                                Giải thưởng
+                            </div>
+                            <div class="heading txt-40 txt-bold txt-up title">
+                                NGÀNH SỮA TOÀN CẦU VỀ ĐỔI MỚI NĂM 2023
+                            </div>
+                            <div class="txt txt-16 txt-ari title-unit">
+                                (The World Dairy Innovation Awards 2023)
+                            </div>
+                            <div class="txt txt-inter txt-17 label">
+                                Hạng mục “Sản phẩm thay thế sữa” với sản phẩm Sữa 9 loại hạt Super Nut.
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<style lang="scss">
+    .chap2-award {
+        padding-bottom: 8.2rem;
+        &-title {
+            text-align: center;
+            margin-bottom: 7.8rem;
+            color: var(--cl-blue);
+        }
+        &-grid {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            gap: var(--grid-gap);
+        }
+        &-box {
+            border-radius: 1.4rem;
+            overflow: hidden;
+            &:nth-child(1) {
+                grid-column: span 5;
+                background-color: var(--cl-green-dark);
+                color: var(--cl-bg);
+                .box-content {
+                    padding-block: 2.9rem 2.5rem;
+                    padding-inline: 2.4rem 3.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    .title {
+                        margin-bottom: 4.3rem;
+                        line-height: 6rem;
+                    }
+                    img {
+                        width: 18.5rem;
+                        margin-top: -5.2rem;
+                        pointer-events: none;
+                        margin-left: auto;
+                    }
+                }
+            }
+            &:nth-child(2) {
+                grid-column: span 7;
+                background-color: var(--cl-green-dark);
+                color: var(--cl-bg);
+                .box-content {
+                    padding-block: 6rem 5.7rem;
+                    padding-inline: 4.9rem 4rem;
+                    display: flex;
+                    img {
+                        width: 23.8rem;
+                        pointer-events: none;
+                        margin-right: 2rem;
+                    }
+                    .list {
+                        display: flex;
+                        flex-direction: column;
+                        justify-content: space-between;
+                        padding-block: 1.6rem;
+                        .list-item {
+                            display: flex;
+                            align-items: start;
+                            .dot {
+                                flex: none;
+                                width: 0.4rem;
+                                height: 0.4rem;
+                                background-color: currentColor;
+                                border-radius: 50%;
+                                margin-top: 1rem;
+                                margin-inline: 1.2rem;
+                            }
+                        }
+                    }
+                }
+            }
+            &:nth-child(3) {
+                grid-column: span 5;
+                background-color: var(--cl-green);
+                color: var(--cl-bg);
+                .box-content {
+                    padding-block: 2.6rem 3.2rem;
+                    padding-inline: 2.4rem 3.5rem;
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    .title {
+                        margin-bottom: 4.2rem;
+                        line-height: 6rem;
+                        max-width: 42rem;
+                    }
+                    img {
+                        position: absolute;
+                        width: 14.5rem;
+                        right: 0;
+                        bottom: 0;
+                        pointer-events: none;
+                    }
+                }
+                
+            }
+            &:nth-child(4) {
+                grid-column: span 7;
+                background-color: var(--cl-red-man);
+                color: var(--cl-bg);
+                .box-content {
+                    padding-block: 2.6rem 3.2rem;
+                    padding-inline: 4.2rem 4.2rem;
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    .title {
+                        margin-bottom: 4.2rem;
+                        line-height: 6rem;
+                        max-width: 37rem;
+                    }
+                    img {
+                        position: absolute;
+                        width: 20.8rem;
+                        right: 5.7rem;
+                        top: 1.4rem;
+                        pointer-events: none;
+                    }
+                }
+                
+            }
+            &:nth-child(5) {
+                grid-column: span 5;
+                background-color: var(--cl-pink-main);
+                color: var(--cl-bg);
+                .box-content {
+                    padding-block: 4rem 3.4rem;
+                    padding-inline: 2.4rem 4.4rem;
+                    display: flex;
+                    flex-direction: column;
+                    position: relative;
+                    .label {
+                        margin-bottom: 1.1rem
+                    }
+                    .title {
+                        margin-bottom: 1.9rem;
+                        line-height: 6rem;
+                        max-width: 32rem;
+                    }
+                    .sub {
+                        max-width: 30rem;
+                        margin-bottom: 3.4rem;
+                    }
+                    .body {
+                        max-width: 42rem;
+                    }
+                    img {
+                        position: absolute;
+                        width: 15.9rem;
+                        right: 0rem;
+                        top: 1.4rem;
+                        pointer-events: none;
+                    }
+                }
+                
+            }
+            &:nth-child(6) {
+                grid-column: span 7;
+                background-color: var(--cl-pink-main);
+                color: var(--cl-bg);
+                .box-content {
+                    padding-block: 2rem 3.2rem;
+                    padding-inline: 3.2rem 2.4rem;
+                    display: flex;
+                    flex-direction: column;
+                    img {
+                        width: 100%;
+                        max-width: 36.7rem;
+                        border-radius: .8rem;
+                        border: solid .4rem var(--cl-yellow);
+                    }
+                    .box-wrap {
+                        margin-top: 1.2rem;
+                        width: 100%;
+                        display: flex
+
+                    }
+                }
+                
+            }
+        }
+    }
+</style>

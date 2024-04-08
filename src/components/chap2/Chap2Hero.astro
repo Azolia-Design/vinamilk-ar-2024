@@ -1,49 +1,43 @@
 ---
 import { Image } from "astro:assets";
-import chap1HeroImg from '../../assets/chap1HeroImg.png';
+import chap2HeroImg from '../../assets/chap2HeroImg.png';
 ---
-<section class="chap1-hero">
+<section class="chap2-hero">
     <div class="container grid">
-        <div class="chap1-hero-content">
+        <div class="chap2-hero-content">
             <h1 class="heading txt-96 txt-bold title">
-                Thông tin chung
+                Báo cáo hoạt động
             </h1>
             <div class="hero-list">
                 <a href="#" class="hero-list-item">
                     <div class="txt txt-16 hero-list-txt">
-                        Lịch sử hình thành và phát triển
+                        Tổng quan ngành sữa Việt Nam năm 2023
                     </div>
                     <div class="line"></div>
                 </a>
                 <a href="#" class="hero-list-item">
                     <div class="txt txt-16 hero-list-txt">
-                        Mô hình kinh doanh của Vinamilk
+                        Giải thưởng và danh hiệu 2023
                     </div>
                     <div class="line"></div>
                 </a>
                 <a href="#" class="hero-list-item">
                     <div class="txt txt-16 hero-list-txt">
-                        Tóm tắt thông tin tài chính
-                    </div>
-                    <div class="line"></div>
-                </a>
-                <a href="#" class="hero-list-item">
-                    <div class="txt txt-16 hero-list-txt">
-                        Giới thiệu HĐQT và ban Điều hành
+                        Các hoạt động cộng đồng năm 2023
                     </div>
                     <div class="line"></div>
                 </a>
             </div>
         </div>
-        <div class="chap1-hero-img">
-            <Image src={chap1HeroImg} alt="" class="img-h img-fit img-fit-bot"/>
+        <div class="chap2-hero-img">
+            <Image src={chap2HeroImg} alt="" class="img-h img-fit img-fit-bot"/>
         </div>
     </div>
     <div class="line line-decor"></div>
 </section>
 
 <style lang="scss">
-    .chap1-hero {
+    .chap2-hero {
         padding-top: 9rem;
         height: 100vh;
         contain: paint;
@@ -72,9 +66,9 @@ import chap1HeroImg from '../../assets/chap1HeroImg.png';
         }
         &-content {
             grid-column: 1/8;
+            display: flex;
             position: relative;
             z-index: 2;
-            display: flex;
             flex-direction: column;
             align-items: start;
             padding-top: 9.7rem;
