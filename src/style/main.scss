@@ -77,8 +77,10 @@ img {
         height: 100%;
     }
     &-dash {
-        border-top: dashed max(.2rem, 2px) var(--cl-blue);
-    }
+        --border-cl: var(--cl-blue);
+        --border-w: max(.2rem, 2px);
+        border-top: dashed var(--border-w) var(--border-cl);
+    }    
 }
 :root {
     font-size: 0.6944444444444444vw;
@@ -86,7 +88,7 @@ img {
         font-size: calc(10px * (1920px / 1440px));
     }
     @media screen and (min-aspect-ratio: 1600 / 800) {
-        font-size: 1.1vh !important;
+        //font-size: 1.1vh !important;
     }
 }
 html {
@@ -176,6 +178,9 @@ html {
     }
     &-162 {
         font-size: 16.2rem;
+    }
+    &-260 {
+        font-size: 26rem;
     }
     &-up {
         text-transform: uppercase;

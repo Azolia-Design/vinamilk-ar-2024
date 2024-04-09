@@ -9,6 +9,7 @@
     --cl-pink-3: #F2ABC4;
     --cl-pink-sat: #FE2776;
     --cl-pink-main: #85249E;
+    --cl-pink-rgb: #FE2776;
     --cl-green: #1BBA33;
     --cl-green-dark: #0B431E;
     --cl-green-li: #8BC443;
@@ -17,17 +18,20 @@
     --cl-yellow-dark: #FB9702;
     --cl-red-man: #6E0730;
     --cl-purple-light: #D3E1FF;
+    --cl-brown-1: #422D1C;
+    --cl-brown-2: #9D6D46;
 }
 .bg-stripe {
     --angle: -47deg;
     --gap: 1.2rem;
     --stroke: calc(1.2rem + .1rem);
+    --cl: rgba(255,255,241,.2);
     background: repeating-linear-gradient(
         var(--angle),
         transparent,
         transparent var(--gap),
-        rgba(255,255,241,.2) var(--gap),
-        rgba(255,255,241,.2) var(--stroke)
+        var(--cl) var(--gap),
+        var(--cl) var(--stroke)
     );
 }
 .line-decor {
