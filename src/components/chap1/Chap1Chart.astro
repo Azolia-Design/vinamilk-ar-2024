@@ -1,6 +1,9 @@
 ---
+import { getImage } from "astro:assets";
+import chartPattern from '../../assets/chart-pattern.svg';
+const chartPatternBg = await getImage({src: chartPattern, format: 'webp', width: chartPattern.width})
 ---
-<section class="chap1-cha">
+<section class="chap1-cha" style={`--chart-bg: url(${chartPatternBg.src})`}>
     <div class="container">
         <h2 class="heading txt-78 txt-bold txt-up txt-blue chap1-cha-title">
             Tóm tắt thông tin tài chính 2019-2023
@@ -23,7 +26,7 @@
                         </div>
                     </div>
                     <div class="cha-col">
-                        <div class="cha-col-inner" style="--col-h: 68.6%">
+                        <div class="cha-col-inner" style="--col-h: 77.8%">
                             <div class="txt txt-11 cha-value">
                                 59.723
                             </div>
@@ -33,7 +36,7 @@
                         </div>
                     </div>
                     <div class="cha-col">
-                        <div class="cha-col-inner" style="--col-h: 68.6%">
+                        <div class="cha-col-inner" style="--col-h: 80%">
                             <div class="txt txt-11 cha-value">
                                 61.012
                             </div>
@@ -43,7 +46,7 @@
                         </div>
                     </div>
                     <div class="cha-col">
-                        <div class="cha-col-inner" style="--col-h: 68.6%">
+                        <div class="cha-col-inner" style="--col-h: 77%">
                             <div class="txt txt-11 cha-value">
                                 60.075
                             </div>
@@ -53,7 +56,7 @@
                         </div>
                     </div>
                     <div class="cha-col">
-                        <div class="cha-col-inner" style="--col-h: 68.6%">
+                        <div class="cha-col-inner last" style="--col-h: 78%">
                             <div class="txt txt-11 cha-value">
                                 60.479
                             </div>
@@ -72,7 +75,7 @@
                 </div>
                 <div class="cha-main" style="--col-bg: #2DFFB4">
                     <div class="cha-col">
-                        <div class="cha-col-inner" style="--col-h: 68.6%">
+                        <div class="cha-col-inner" style="--col-h: 53%">
                             <div class="txt txt-11 cha-value">
                                 14.853
                             </div>
@@ -82,7 +85,7 @@
                         </div>
                     </div>
                     <div class="cha-col">
-                        <div class="cha-col-inner" style="--col-h: 68.6%">
+                        <div class="cha-col-inner" style="--col-h: 57%">
                             <div class="txt txt-11 cha-value">
                                 15.871
                             </div>
@@ -92,7 +95,7 @@
                         </div>
                     </div>
                     <div class="cha-col">
-                        <div class="cha-col-inner" style="--col-h: 68.6%">
+                        <div class="cha-col-inner" style="--col-h: 54%">
                             <div class="txt txt-11 cha-value">
                                 15.132
                             </div>
@@ -102,7 +105,7 @@
                         </div>
                     </div>
                     <div class="cha-col">
-                        <div class="cha-col-inner" style="--col-h: 68.6%">
+                        <div class="cha-col-inner" style="--col-h: 45.6%">
                             <div class="txt txt-11 cha-value">
                                 12.757
                             </div>
@@ -112,7 +115,7 @@
                         </div>
                     </div>
                     <div class="cha-col">
-                        <div class="cha-col-inner" style="--col-h: 68.6%">
+                        <div class="cha-col-inner last" style="--col-h: 47.8%">
                             <div class="txt txt-11 cha-value">
                                 13.377
                             </div>
@@ -131,7 +134,7 @@
                 </div>
                 <div class="cha-main" style="--col-bg: #D5C2FA">
                     <div class="cha-col">
-                        <div class="cha-col-inner" style="--col-h: 68.6%">
+                        <div class="cha-col-inner" style="--col-h: 50%">
                             <div class="txt txt-11 cha-value">
                                 10.554
                             </div>
@@ -141,7 +144,7 @@
                         </div>
                     </div>
                     <div class="cha-col">
-                        <div class="cha-col-inner" style="--col-h: 68.6%">
+                        <div class="cha-col-inner" style="--col-h: 52.2%">
                             <div class="txt txt-11 cha-value">
                                 11.236
                             </div>
@@ -151,7 +154,7 @@
                         </div>
                     </div>
                     <div class="cha-col">
-                        <div class="cha-col-inner" style="--col-h: 68.6%">
+                        <div class="cha-col-inner" style="--col-h: 50.5%">
                             <div class="txt txt-11 cha-value">
                                 10.633
                             </div>
@@ -161,7 +164,7 @@
                         </div>
                     </div>
                     <div class="cha-col">
-                        <div class="cha-col-inner" style="--col-h: 68.6%">
+                        <div class="cha-col-inner" style="--col-h: 40.4%">
                             <div class="txt txt-11 cha-value">
                                 8.578
                             </div>
@@ -171,7 +174,7 @@
                         </div>
                     </div>
                     <div class="cha-col">
-                        <div class="cha-col-inner" style="--col-h: 68.6%">
+                        <div class="cha-col-inner last" style="--col-h: 42.6%">
                             <div class="txt txt-11 cha-value">
                                 9.019
                             </div>
@@ -190,7 +193,7 @@
                 </div>
                 <div class="cha-main" style="--col-bg: #FFEE53">
                     <div class="cha-col">
-                        <div class="cha-col-inner" style="--col-h: 68.6%">
+                        <div class="cha-col-inner" style="--col-h: 76%">
                             <div class="txt txt-11 cha-value">
                                 44.700
                             </div>
@@ -200,7 +203,7 @@
                         </div>
                     </div>
                     <div class="cha-col">
-                        <div class="cha-col-inner" style="--col-h: 68.6%">
+                        <div class="cha-col-inner" style="--col-h: 81.7%">
                             <div class="txt txt-11 cha-value">
                                 48.432
                             </div>
@@ -210,7 +213,7 @@
                         </div>
                     </div>
                     <div class="cha-col">
-                        <div class="cha-col-inner" style="--col-h: 68.6%">
+                        <div class="cha-col-inner" style="--col-h: 90%">
                             <div class="txt txt-11 cha-value">
                                 53.332
                             </div>
@@ -220,7 +223,7 @@
                         </div>
                     </div>
                     <div class="cha-col">
-                        <div class="cha-col-inner" style="--col-h: 68.6%">
+                        <div class="cha-col-inner" style="--col-h: 81.7%">
                             <div class="txt txt-11 cha-value">
                                 48.483
                             </div>
@@ -230,7 +233,7 @@
                         </div>
                     </div>
                     <div class="cha-col">
-                        <div class="cha-col-inner" style="--col-h: 68.6%">
+                        <div class="cha-col-inner last" style="--col-h: 91.1%">
                             <div class="txt txt-11 cha-value">
                                 52.673
                             </div>
@@ -249,7 +252,7 @@
                 </div>
                 <div class="cha-main" style="--col-bg: #F1D6C0">
                     <div class="cha-col">
-                        <div class="cha-col-inner" style="--col-h: 68.6%">
+                        <div class="cha-col-inner" style="--col-h: 70.1%">
                             <div class="txt txt-11 cha-value">
                                 4.565
                             </div>
@@ -259,7 +262,7 @@
                         </div>
                     </div>
                     <div class="cha-col">
-                        <div class="cha-col-inner" style="--col-h: 68.6%">
+                        <div class="cha-col-inner" style="--col-h: 73.9%">
                             <div class="txt txt-11 cha-value">
                                 4.770
                             </div>
@@ -269,7 +272,7 @@
                         </div>
                     </div>
                     <div class="cha-col">
-                        <div class="cha-col-inner" style="--col-h: 68.6%">
+                        <div class="cha-col-inner" style="--col-h: 70%">
                             <div class="txt txt-11 cha-value">
                                 4.517
                             </div>
@@ -279,7 +282,7 @@
                         </div>
                     </div>
                     <div class="cha-col">
-                        <div class="cha-col-inner" style="--col-h: 68.6%">
+                        <div class="cha-col-inner" style="--col-h: 56%">
                             <div class="txt txt-11 cha-value">
                                 3.632
                             </div>
@@ -289,7 +292,7 @@
                         </div>
                     </div>
                     <div class="cha-col">
-                        <div class="cha-col-inner" style="--col-h: 68.6%">
+                        <div class="cha-col-inner last" style="--col-h: 58.6%">
                             <div class="txt txt-11 cha-value">
                                 3.796
                             </div>
@@ -308,7 +311,7 @@
                 </div>
                 <div class="cha-main" style="--col-bg: #F2ABC4">
                     <div class="cha-col">
-                        <div class="cha-col-inner" style="--col-h: 68.6%">
+                        <div class="cha-col-inner" style="--col-h: 70%">
                             <div class="txt txt-11 cha-value">
                                 74
                             </div>
@@ -318,7 +321,7 @@
                         </div>
                     </div>
                     <div class="cha-col">
-                        <div class="cha-col-inner" style="--col-h: 68.6%">
+                        <div class="cha-col-inner" style="--col-h: 66.9%">
                             <div class="txt txt-11 cha-value">
                                 71
                             </div>
@@ -328,7 +331,7 @@
                         </div>
                     </div>
                     <div class="cha-col">
-                        <div class="cha-col-inner" style="--col-h: 68.6%">
+                        <div class="cha-col-inner" style="--col-h: 72.2%">
                             <div class="txt txt-11 cha-value">
                                 76
                             </div>
@@ -338,7 +341,7 @@
                         </div>
                     </div>
                     <div class="cha-col">
-                        <div class="cha-col-inner" style="--col-h: 68.6%">
+                        <div class="cha-col-inner" style="--col-h: 89.6%">
                             <div class="txt txt-11 cha-value">
                                 94
                             </div>
@@ -348,7 +351,7 @@
                         </div>
                     </div>
                     <div class="cha-col">
-                        <div class="cha-col-inner" style="--col-h: 68.6%">
+                        <div class="cha-col-inner last" style="--col-h: 86%">
                             <div class="txt txt-11 cha-value">
                                 91
                             </div>
@@ -413,6 +416,22 @@
                             text-align: center;
                             display: flex;
                             justify-content: center;
+                            &.last {
+                                position: relative;
+                                &::after {
+                                    content: '';
+                                    display: block;
+                                    position: absolute;
+                                    inset: 0;
+                                    background-image: var(--chart-bg);
+                                    background-size: 100% auto;
+                                    mix-blend-mode: color-dodge;
+                                    opacity: .7;
+                                    filter: invert(1);
+                                }
+                                
+                                
+                            }
                             .cha-value {
                                 position: absolute;
                                 bottom: 100%;

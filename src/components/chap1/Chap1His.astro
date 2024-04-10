@@ -15,7 +15,7 @@ const {content} = Astro.props;
             {content.list.map((el,idx) => (
                 <div class="chap1-his-item">
                     <div class="img-wrap">
-                        <Image src={el.img.src} alt='' {...el.img.attributes}/>
+                        <Image src={el.img.src} alt='' {...el.img.attributes} class='img-fill'/>
                     </div>
                     <div class="year-wrap">
                         <div class="heading txt-40 txt-bold txt-blue year">
@@ -26,11 +26,27 @@ const {content} = Astro.props;
                             <div class="year-dot"></div>
                         </div>
                     </div>
-                    <div class="txt txt-17 label">
+                    <div class="txt txt-17 label txt-inter">
                         <Fragment set:html={el.sub.replaceAll('\n','<br/>')} />
                     </div>
                 </div>
             ))}
+            <div class="chap1-his-line-wrap line-1">
+                <div class="chap1-his-line-inner left"></div>
+            </div>
+            <div class="chap1-his-line-wrap line-2">
+                <div class="chap1-his-line-inner right">
+                    <div class="year-dot"></div>
+                </div>
+            </div>
+            <div class="chap1-his-line-wrap line-3">
+                <div class="chap1-his-line-inner left"></div>
+            </div>
+            <div class="chap1-his-line-wrap line-4">
+                <div class="chap1-his-line-inner right">
+                    <div class="blank"></div>
+                </div>
+            </div>
             <div class="chap1-his-lg-item">
                 <div class="heading txt-64 txt-bold lg-title">
                     <div class="year-line-wrap">
@@ -154,7 +170,75 @@ const {content} = Astro.props;
             grid-template-columns: repeat(3, 1fr);
             column-gap: var(--grid-gap);
             row-gap: 5.6rem;
+            position: relative;
+            .chap1-his-line-wrap {
+                position: absolute;
+                margin-top: 23.2rem;
+                margin-bottom: -29rem;
+                height: calc(100% - 23.2rem + 29rem);
+                .chap1-his-line-inner {
+                    height: 100%;
+                    --border-cl: var(--cl-blue);
+                    --border-w: max(.2rem, 2px);
+                    margin-top: max(-.1rem, -1px);
+                    border-top: dashed var(--border-w) var(--border-cl);
+                    border-bottom: dashed var(--border-w) var(--border-cl);
+                    width: 3.4rem;
+                    position: relative;
+                    &.left {
+                        border-right: dashed var(--border-w) var(--border-cl);
+                        border-top-right-radius: 1.2rem;
+                        border-bottom-right-radius: 1.2rem;
+                    }
+                    &.right {
+                        border-left: dashed var(--border-w) var(--border-cl);
+                        border-top-left-radius: 1.2rem;
+                        border-bottom-left-radius: 1.2rem;
+                        position: relative;
+                        .year-dot {
+                            position: absolute;
+                            z-index: 2;
+                            right: 0;
+                            bottom: 0;
+                            width: .8rem;
+                            height: .8rem;
+                            background-color: var(--cl-blue);
+                            transform: translate(50%, 50%) rotate(45deg);
+                        }
+                    }
+                }
+                &.line-1 {
+                    right: -3.4rem;
+                    grid-row: 1/2;
+                }
+                &.line-2 {
+                    left: -5rem;
+                    grid-row: 2/3;
+                }
+                &.line-3 {
+                    right: -3.4rem;
+                    grid-row: 3/4;
+                }
+                &.line-4 {
+                    left: -5rem;
+                    grid-row: 4/5;
+                    margin-bottom: -9.6rem;
+                    height: calc(100% - 23.2rem + 9.6rem);
+                    .chap1-his-line-inner {
+                        width: 5rem;
+                        .blank {
+                            position: absolute;
+                            top: -.8rem;
+                            background-color: var(--cl-bg);
+                            right: 0;
+                            width: 1.6rem;
+                            height: 1.6rem;
+                        }
+                    }
+                }
+            }
         }
+        
         &-item {
             .img-wrap {
                 overflow: hidden;
@@ -185,6 +269,11 @@ const {content} = Astro.props;
                         background-color: var(--cl-blue);
                         transform: translateX(50%) rotate(45deg);
                     }
+                }
+            }
+            &:nth-child(6n + 3) {
+                .year-dot {
+                    display: none;
                 }
             }
             &:nth-child(6n + 4), &:nth-child(6n + 5), &:nth-child(6n + 6) {
