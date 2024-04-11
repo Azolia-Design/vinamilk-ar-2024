@@ -1,43 +1,31 @@
 ---
 import { Image } from "astro:assets";
-import chap2HeroImg from '../../assets/chap2HeroImg.png';
+import chap3HeroImg from '../../assets/chap3HeroImg.jpg';
 ---
-<section class="chap2-hero">
+<section class="chap3-hero">
     <div class="container grid">
-        <div class="chap2-hero-content">
+        <div class="chap3-hero-content">
             <h1 class="heading txt-96 txt-bold title">
-                Báo cáo hoạt động
+                Chiến lược giai đoạn 2022-2026
             </h1>
             <div class="hero-list">
                 <a href="#" class="hero-list-item">
                     <div class="txt txt-16 hero-list-txt">
-                        Tổng quan ngành sữa Việt Nam năm 2023
-                    </div>
-                    <div class="line"></div>
-                </a>
-                <a href="#" class="hero-list-item">
-                    <div class="txt txt-16 hero-list-txt">
-                        Giải thưởng và danh hiệu 2023
-                    </div>
-                    <div class="line"></div>
-                </a>
-                <a href="#" class="hero-list-item">
-                    <div class="txt txt-16 hero-list-txt">
-                        Các hoạt động cộng đồng năm 2023
+                        Chiến lược phát triển giai đoạn 2022-2026
                     </div>
                     <div class="line"></div>
                 </a>
             </div>
         </div>
-        <div class="chap2-hero-img">
-            <Image src={chap2HeroImg} alt="" class="img-h img-fit img-fit-bot"/>
+        <div class="chap3-hero-img">
+            <Image src={chap3HeroImg} alt="" class="img-h img-fit img-fit-bot"/>
         </div>
     </div>
     <div class="line line-decor"></div>
 </section>
 
 <style lang="scss">
-    .chap2-hero {
+    .chap3-hero {
         padding-top: 9rem;
         height: 100vh;
         contain: paint;
@@ -74,13 +62,14 @@ import chap2HeroImg from '../../assets/chap2HeroImg.png';
             padding-top: 9.7rem;
             color: var(--cl-blue);
             .title {
-                margin-bottom: 2rem;
-                line-height: 7.4rem;
+                margin-bottom: 4.5rem;
+                line-height: 8.5rem;
+                margin-right: -1rem;
             }
             .hero-list {
                 display: flex;
                 flex-direction: column;
-                min-width: 27.6rem;
+                min-width: 27.6rem
             }
             .hero-list-item {
                 padding-block: .8rem .9rem;

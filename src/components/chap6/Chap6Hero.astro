@@ -1,0 +1,96 @@
+---
+import { Image } from "astro:assets";
+import chap6HeroImg from '../../assets/chap6HeroImg.jpg';
+---
+<section class="chap6-hero">
+    <div class="container grid">
+        <div class="chap6-hero-content">
+            <h1 class="heading txt-96 txt-bold title">
+                Báo cáo tài chính
+            </h1>
+            <div class="hero-btn-list">
+                <a href="#" class="btn btn-outline hero-btn-list-item">
+                    <span class="heading txt-32 txt-med">Tải báo cáo báo cáo Tài chính theo VAS</span>
+                    <div class="ic ic-20">    
+                        <svg width="100%" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 20.5H16.8" stroke="currentColor" stroke-width="2.51875" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.8996 5V15.4622M10.8996 15.4622L15.3246 10.8904M10.8996 15.4622L6.47461 10.8904" stroke="currentColor" stroke-width="2.51875" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                                             
+                    </div>
+                </a>
+                <a href="#" class="btn btn-outline hero-btn-list-item">
+                    <span class="heading txt-32 txt-med">Tải báo cáo Tài chính theo IFRS</span>
+                    <div class="ic ic-20">    
+                        <svg width="100%" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 20.5H16.8" stroke="currentColor" stroke-width="2.51875" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.8996 5V15.4622M10.8996 15.4622L15.3246 10.8904M10.8996 15.4622L6.47461 10.8904" stroke="currentColor" stroke-width="2.51875" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                                             
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="chap6-hero-img">
+            <Image src={chap6HeroImg} alt="" class="img-h img-fit img-fit-bot"/>
+        </div>
+    </div>
+    <div class="line line-decor"></div>
+</section>
+
+<style lang="scss">
+    .chap6-hero {
+        padding-top: 9rem;
+        margin-bottom: 7.6rem;
+        height: 100vh;
+        contain: paint;
+        .container {
+            position: relative;
+            height: 100%;
+        }
+        &-img {
+            position: absolute;
+            z-index: 1;
+            top: -6.3rem;
+            left: 0;
+            width: 100%;
+            height: calc(100% + 6.3rem);
+            pointer-events: none;
+        }
+        & > .line-decor {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1.1rem;
+            z-index: 2;
+            background-size: auto 1.1rem;
+            background-repeat: repeat-x;
+        }
+        &-content {
+            grid-column: 1/8;
+            display: flex;
+            position: relative;
+            z-index: 2;
+            flex-direction: column;
+            align-items: start;
+            padding-top: 9.7rem;
+            color: var(--cl-blue);
+            .title {
+                margin-bottom: 3.9rem;
+                line-height: 8.5rem;
+                margin-right: -1rem;
+            }
+            .hero-btn-list {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                row-gap: 1.5rem;
+            }
+            .hero-btn-list-item {
+                align-items: center;
+                padding-block: .2rem .4rem;
+                padding-inline: 1.8rem 1rem;
+                column-gap: .5rem;
+            }
+        }
+    }
+</style>

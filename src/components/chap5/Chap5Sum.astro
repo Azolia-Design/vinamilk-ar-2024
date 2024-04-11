@@ -1,0 +1,33 @@
+---
+import { Image } from "astro:assets";
+import Chap3Sum1 from '../../assets/Chap3Sum1.jpg'
+---
+<section class="chap5-sum">
+    <div class="container">
+        <h2 class="heading txt-78 txt-bold chap5-sum-title">
+            Hoạt động phát triển bền vững tại Vinamilk trong năm 2023 với các mục tiêu phát triển bền vững của Liên Hợp Quốc
+        </h2>
+        <div class="chap5-sum-main">
+        </div>
+    </div>
+</section>
+
+<style lang="scss">
+    .chap5-sum {
+        padding-block: 9rem 10.5rem;
+        &-title {
+            text-align: center;
+            margin-bottom: 8.4rem;
+            color: var(--cl-blue);
+            max-width: 99.4rem;
+            margin-inline: auto;
+            line-height: 7.5rem;
+        }
+        &-main {
+            display: grid;
+            grid-template-columns: repeat(12, 1fr);
+            column-gap: var(--grid-gap);
+            row-gap: var(--grid-gap);
+        }
+    }
+</style>

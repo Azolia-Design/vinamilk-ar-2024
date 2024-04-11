@@ -1,0 +1,12 @@
+---
+import { getImage } from "astro:assets";
+import Layout from "../layouts/Layout.astro";
+import Chap3Hero from "../components/chap3/Chap3Hero.astro";
+import Chap3Sum from "../components/chap3/Chap3Sum.astro";
+import DownloadPDF from "../components/DownloadPDF.astro";
+---
+<Layout title="Báo cáo hoạt động">
+	<Chap3Hero />
+	<Chap3Sum />
+	<DownloadPDF link="#"/>
+</Layout>

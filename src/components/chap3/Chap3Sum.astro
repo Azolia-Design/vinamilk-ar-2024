@@ -1,0 +1,174 @@
+---
+import { Image } from "astro:assets";
+import Chap3Sum1 from '../../assets/Chap3Sum1.jpg'
+---
+<section class="chap3-sum">
+    <div class="container">
+        <h2 class="heading txt-78 txt-bold chap3-sum-title">
+            Chiến lược phát triển giai đoạn 2022-2026
+        </h2>
+        <div class="chap3-sum-main">
+            <div class="box-content">
+                <div class="bg-stripe top"></div>
+                <div class="box-inner">
+                    <div class="txt txt-28 txt-med title">
+                        Phát triển sản phẩm và trải nghiệm ưu việt cho người tiêu dùng
+                    </div>
+                    <p class="txt txt-17 body">
+                        • Tái cấu trúc danh mục sản phẩm dựa trên cấu
+                        trúc thương hiệu cho dài hạn. <br><br>
+                        • Rà soát chất lượng sản phẩm và tối ưu quy
+                        trình tung sản phẩm mới.<br><br>
+                        • Cải thiện cơ cấu giá, quy cách bao bì theo từng
+                        kênh và từng vùng miền nhằm tối ưu hóa cấu
+                        trúc sản phẩm dựa trên nhu cầu của thị trường và khả năng tăng trưởng trong tương lai.<br><br>
+                        • Xây dựng danh mục sản phẩm mới chuẩn bị cho việc mở rộng danh mục trong giai đoạn
+                        5 năm tiếp theo.
+                    </p>
+                </div>
+                <div class="bg-stripe bottom"></div>
+            </div>
+            <div class="box-content">
+                <Image src={Chap3Sum1} alt=""  class="img-fill"/>
+            </div>
+            <div class="box-content">
+                <div class="bg-stripe top"></div>
+                <div class="box-inner">
+                    <div class="txt txt-28 txt-med title">
+                        Khởi tạo cơ hội kinh doanh mới
+                    </div>
+                    <p class="txt txt-17 body">
+                        • Tối ưu hóa năng lực vận hành và mở rộng dịch vụ phân phối đa kênh trực tiếp đến người tiêu  dùng. <br><br>
+                        • Xây dựng hợp tác chiến lược với đối tác tiềm năng cho các cơ hội mở rộng danh mục sản  phẩm. <br><br>
+                        • Tăng cường hoạt động xúc tiến thương mại để tìm kiếm khách hàng xuất khẩu mới. <br><br>
+                        • Đẩy mạnh công tác hỗ trợ khách hàng để cùng khách hàng vượt qua giai đoạn khó khăn, duy trì nhập khẩu và kinh doanh sản phẩm của  Vinamilk.  <br><br>
+                        • Khai thác các cơ hội tại các thị trường tiềm năng thông qua các hoạt động đầu tư liên  doanh, M&A. <br><br>
+                        • Tìm kiếm cơ hội mở rộng hoạt động sản xuất  kinh doanh tại những thị trường đã có sự hiện  diện như Mỹ, Campuchia, Philippines.
+                    </p>
+                </div>
+                <div class="bg-stripe bottom"></div>
+            </div>
+            <div class="box-content">
+                <div class="bg-stripe top"></div>
+                <div class="box-inner">
+                    <div class="txt txt-28 txt-med title">
+                        Đẩy mạnh ứng dụng công nghệ vào nông nghiệp bền vững
+                    </div>
+                    <p class="txt txt-17 body">
+                        • Tái cơ cấu tổ chức mô hình kinh doanh, trong đó tập trung điều chỉnh yêu cầu chức năng,  năng lực và đánh giá hiệu quả hoạt động của  đội ngũ bán hàng. <br><br>
+                        • Tái cơ cấu tổ chức phân phối, trong đó tập trung điều chỉnh vai trò và hoạt động của nhà  phân phối trong chuỗi cung ứng của Vinamilk. <br><br>
+                        • Xây dựng nền tảng năng lực làm chủ công nghệ, chuẩn bị cho các dự án tối ưu hóa hoạt  động kinh doanh bằng tự động hóa và phân tích dữ liệu, bắt đầu với hoạt động bán hàng và tiếp thị kỹ thuật số. 
+                    </p>
+                </div>
+                <div class="bg-stripe bottom"></div>
+            </div>
+            <div class="box-content">
+                <div class="bg-stripe top"></div>
+                <div class="box-inner">
+                    <div class="txt txt-28 txt-med title">
+                        Trở thành đích đến của nhân tài
+                    </div>
+                    <p class="txt txt-17 body">
+                        • Xây dựng giá trị thương hiệu và chuẩn bị nền tảng tái cơ cấu tổ chức, trong đó có đánh giá  lại yêu cầu năng lực của các vị trí quản lý, xây dựng cơ chế lập kế hoạch kinh doanh và đánh giá hiệu quả hoạt động.
+                    </p>
+                </div>
+                <div class="bg-stripe bottom"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style lang="scss">
+    .chap3-sum {
+        padding-block: 8rem 10.5rem;
+        &-title {
+            text-align: center;
+            margin-bottom: 8.4rem;
+            color: var(--cl-blue);
+        }
+        &-main {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto 11.2rem auto auto;
+            column-gap: var(--grid-gap);
+            row-gap: var(--grid-gap);
+            .box-content {
+                border-radius: 1.4rem;
+                overflow: hidden;
+                position: relative;
+                min-height: 100%;
+                .box-inner {
+                    padding-block: 6rem;
+                    padding-inline: 5rem;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    .title {
+                        color: var(--cl-blue);
+                        margin-bottom: 3rem;
+                    }
+                    .body {
+                        max-width: 45.1rem;
+                        line-height: 2.8rem;
+                        color: var(--cl-txt)
+                    }
+                }
+                .bg-stripe {
+                    position: absolute;
+                    width: 100%;
+                    height: 1.8rem;
+                    --angle: 90deg;
+                    --gap: 3.4rem;
+                    --stroke: 6.8rem;
+                    &.top {
+                        top: 0;
+                        left: 0;
+                    }
+                    &.bottom {
+                        bottom: 0;
+                        left: 0;
+                    }
+                }
+                &:nth-child(1) {
+                    grid-row: span 2;
+                    background-color: var(--cl-purple-light);
+                    .bg-stripe {
+                        background-color: var(--cl-green-dark);
+                        --cl: var(--cl-green);
+                    }
+                }
+                &:nth-child(2) {
+                    
+                }
+                &:nth-child(3) {
+                    grid-column: 1/2;
+                    grid-row: span 2;
+                    background-color: var(--cl-pink-3);
+                    .bg-stripe {
+                        background-color: var(--cl-pink-main);
+                        --cl: var(--cl-pink-real);
+                    }
+                }
+                &:nth-child(4) {
+                    grid-column: 2/3;
+                    grid-row: 2/4;
+                    background-color: var(--cl-cyan);
+                    .bg-stripe {
+                        background-color: var(--cl-green-dark);
+                        --cl: var(--cl-green-li);
+                    }
+                }
+                &:nth-child(5) {
+                    grid-column: 2/3;
+                    grid-row: 4/5;
+                    background-color: var(--cl-blue-3);
+                    .bg-stripe {
+                        background-color: var(--cl-blue);
+                        --cl: var(--cl-blue-2);
+                    }
+                }
+            }
+        }
+    }
+</style>
