@@ -1,0 +1,82 @@
+---
+import { Image } from "astro:assets";
+import ContactHeroLogo from '../../assets/ctc-hero-logo.png';
+import ContactHeroImg from '../../assets/ctcHero.png';
+---
+<section class="contact-hero">
+    <div class="container grid">
+        <div class="contact-hero-logo">
+            <Image src={ContactHeroLogo} alt="" />
+        </div>
+        <div class="contact-hero-content">
+            <div class="heading txt-40 txt-bold label">
+                Trụ sở
+            </div>
+            <div class="txt txt-20 txt-inter body">
+                10 Tân Trào, Phường Tân Phú, Quận 7, TP. Hồ Chí Minh
+            </div>
+            <div class="txt txt-20 txt-inter body">
+                ĐT: <a href="tel:(+84. 28) 54 155 555" target="_blank" class="txt-link">(+84. 28) 54 155 555</a>
+            </div>
+            <div class="txt txt-20 txt-inter body">
+                Fax: <a href="tel:(+84. 28) 54 161 226" target="_blank" class="txt-link">(+84. 28) 54 161 226</a>
+            </div>
+            <div class="txt txt-20 txt-inter body">
+                Website: <a href="www.vinamilk.com.vn/" target="_blank" class="txt-link">www.vinamilk.com.vn/</a><br>
+                <a href="www.vuoncaovietnam.com/" target="_blank" class="txt-link">www.vuoncaovietnam.com/</a><br>
+                <a href="www.youtube.com/user/vinamilk" target="_blank" class="txt-link">www.youtube.com/user/vinamilk</a>
+            </div>
+        </div>
+        <div class="contact-hero-img">
+            <Image src={ContactHeroImg} alt="" class="img-h img-fit img-fit-bot"/>
+        </div>
+    </div>
+    <div class="line line-decor"></div>
+</section>
+
+<style lang="scss">
+    .contact-hero {
+        padding-top: 9rem;
+        height: 100vh;
+        contain: paint;
+        background-color: var(--cl-purple-light);
+        .container {
+            position: relative;
+            height: 100%;
+        }
+        &-img {
+            position: absolute;
+            z-index: 1;
+            top: -6.3rem;
+            left: 0;
+            width: 100%;
+            height: calc(100% + 6.3rem);
+            pointer-events: none;
+        }
+        & > .line-decor {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1.1rem;
+            z-index: 2;
+            background-size: auto 1.1rem;
+            background-repeat: repeat-x;
+        }
+        &-logo {
+            grid-column: 1/6;
+            margin-top: 9.3rem;
+        }
+        &-content {
+            grid-column: 7/13;
+            display: flex;
+            position: relative;
+            z-index: 2;
+            flex-direction: column;
+            align-items: start;
+            padding-top: 8.4rem;
+            color: var(--cl-blue);
+            row-gap: 2rem;
+        }
+    }
+</style>
