@@ -65,15 +65,24 @@ const {content, lang} = Astro.props;
         width: 100%;
         padding-block: 2.4rem 2.4rem;
         box-shadow: 0 .4rem 1rem 0 rgba(0,0,0,.1);
+        @media screen and (max-width: 767px) {
+            padding-block: 1.4rem 1.3rem;
+        }
         .container {
             display: flex;
             align-items: center;
             justify-content: space-between;
             column-gap: 2.4rem;
             padding-inline: 6rem;
+            @media screen and (max-width: 767px) {
+                padding-inline: 1.3rem;
+            }
         }
         &-logo {
             height: 4.2rem;
+            @media screen and (max-width: 767px) {
+                height: 3rem;
+            }
             &-link {
                 height: 100%;
             }
@@ -83,6 +92,9 @@ const {content, lang} = Astro.props;
             align-items: center;
             justify-content: end;
             margin-bottom: .5rem;
+            @media screen and (max-width: 767px) {
+                display: none;
+            }
             &-inner {
                 display: flex;
                 align-items: center;

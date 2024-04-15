@@ -44,7 +44,7 @@ const {content} = Astro.props;
             <div class="home-res-box bg-stripe" data-aos="fade-up-right">
                 <div class="box-content left">
                     <div class="txt txt-36 txt-up label">
-                        Tổng hợp doanh thu hợp nhất
+                        Tổng doanh thu hợp nhất
                     </div>
                     <div class="heading txt-162 txt-up txt-bold number-value">
                         60.479
@@ -211,11 +211,18 @@ const {content} = Astro.props;
 <style lang="scss">
     .home-res {
         padding-top: 8.2rem;
+        @media screen and (max-width: 767px) {
+            padding-top: 3.8rem;
+        }
         &-title {
             grid-column: 1/-1;
             text-align: center;
             margin-inline: auto;
             margin-bottom: 8.5rem;
+            @media screen and (max-width: 767px) {
+                margin-bottom: 3.8rem;
+                font-size: 3.6rem;
+            }
         }
         &-grid {
             grid-column: 1/-1;
@@ -223,16 +230,27 @@ const {content} = Astro.props;
             grid-template-columns: repeat(12, 1fr);
             column-gap: var(--grid-gap);
             row-gap: var(--grid-gap);
+            @media screen and (max-width: 767px) {
+                grid-template-columns: repeat(6, 1fr);
+            }
         }
         &-box {
             border-radius: 1.4rem;
             contain: paint;
             background-color: rgba(0,0,0,.1);
             height: 100%;
+            @media screen and (max-width: 767px) {
+                border-radius: 1.2rem;
+            }
+            @media screen and (max-width: 767px) {
+            }
             &:nth-child(1) {
                 grid-column: span 12;
                 display: grid;
-                grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
+                grid-template-columns: repeat(4, 1fr);
+                @media screen and (max-width: 767px) {
+                    grid-column: span 6;
+                }
                 .box-content {
                     grid-column: span 1;
                     grid-row: span 2;
@@ -245,14 +263,40 @@ const {content} = Astro.props;
                     color: var(--cl-bg);
                     text-align: center;
                     background-color: var(--cl-blue);
+                    @media screen and (max-width: 767px) {
+                        grid-column: span 4;
+                        grid-row: span 1;
+                        display: grid;
+                        grid-template-columns: 7.1rem 1fr;
+                        column-gap: 2.4rem;
+                        padding-block: .3rem .5rem;
+                        padding-inline: 4.7rem 2.3rem;
+                        text-align: left;
+                    }
                     .number-value {
                         margin-bottom: -2.5rem;
+                        @media screen and (max-width: 767px) {
+                            grid-column: 1/2;
+                            grid-row: 1/3;
+                            margin-bottom: 0;
+                            font-size: 9.6rem;
+                        }
                     } 
                     .number-unit {
                         margin-bottom: .8rem;
+                        @media screen and (max-width: 767px) {
+                            font-size: 2.4rem;
+                            margin-bottom: .4rem;
+                            align-self: end;
+                        }
                     }
                     .label {
                         max-width: 30.4rem;
+                        @media screen and (max-width: 767px) {
+                            font-size: 1.4rem;
+                            max-width: 19.6rem;
+                            align-self: start;
+                        }
                     }
                 }
                 .box-img {
@@ -268,6 +312,9 @@ const {content} = Astro.props;
                 grid-template-columns: 6.6fr 3.4fr;
                 background-color: var(--cl-blue-3);
                 color: var(--cl-blue);
+                @media screen and (max-width: 767px) {
+                    grid-column: span 6;
+                }
                 .box-content {
                     display: flex;
                     flex-direction: column;
@@ -277,16 +324,32 @@ const {content} = Astro.props;
                         position: relative;
                         align-items: start;
                         justify-content: center;
+                        @media screen and (max-width: 767px) {
+                            padding-block: 1.4rem 1.1rem;
+                            padding-inline: 1.1rem 2.5rem;
+                        }
                         .label {
                             margin-bottom: -1.5rem;
                             font-size: 3rem;
                             margin-right: -1rem;
+                            @media screen and (max-width: 767px) {
+                                margin-bottom: -.2rem;
+                                font-size: 1.4rem;
+                                margin-right: -2rem;
+                            }
                         }
                         .number-value {
-                            margin-bottom: -1.4rem
+                            margin-bottom: -1.4rem;
+                            @media screen and (max-width: 767px) {
+                                font-size: 6.6rem;
+                                margin-bottom: -.1rem;
+                            }
                         }
                         .number-unit {
                             font-size: 3rem;
+                            @media screen and (max-width: 767px) {
+                                font-size: 1.4rem;
+                            }
                         }
                         .line-ver {
                             position: absolute;
@@ -295,6 +358,10 @@ const {content} = Astro.props;
                             right: 0;
                             bottom: 2.9rem;
                             background-color: var(--cl-blue);
+                            @media screen and (max-width: 767px) {
+                                top: 2.2rem;
+                                bottom: 1.1rem;
+                            }
                         }
                     }
                     &.right {
@@ -303,12 +370,26 @@ const {content} = Astro.props;
                         justify-content: center;
                         margin-bottom: 1.8rem;
                         padding-inline: 3.3rem 7.6rem;
+                        @media screen and (max-width: 767px) {
+                            margin-bottom: 0;
+                            padding-inline: 1.3rem 2rem;
+                        }
                         .number-value {
                             margin-bottom: -1.6rem;
+                            @media screen and (max-width: 767px) {
+                                margin-bottom: -1rem;
+                                font-size: 6.6rem;
+                            }
                         }
                         .number-unit {
                             max-width: 15.3rem;
                             margin-left: 2.3rem;
+                            @media screen and (max-width: 767px) {
+                                max-width: 11.1rem;
+                                font-size: 1.4rem;
+                                margin-left: 0;
+                                text-align: center;
+                            }
                         }
                     }
                 }
@@ -317,17 +398,38 @@ const {content} = Astro.props;
                 grid-column: span 3;
                 background-color: var(--cl-pink);
                 color: var(--cl-blue);
+                @media screen and (max-width: 767px) {
+                    grid-column: span 2;
+                    margin-right: -3.5rem;
+                }
                 .box-content {
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
                     padding-block: 8.4rem 6.2rem;
                     padding-inline: 1.9rem;
+                    @media screen and (max-width: 767px) {
+                        padding-block: 1.3rem 1.1rem;
+                        padding-inline: 1.1rem 1.6rem;
+                    }
                     .label {
                         margin-bottom: -1.1rem;
+                        @media screen and (max-width: 767px) {
+                            font-size: 1.4rem;
+                            margin-bottom: -.9rem;
+                        }
                     }
                     .number-value {
                         margin-bottom: -1.3rem;
+                        @media screen and (max-width: 767px) {
+                            font-size: 6.4rem;
+                            margin-bottom: -.1rem;
+                        }
+                    }
+                    .number-unit {
+                        @media screen and (max-width: 767px) {
+                            font-size: 1.4rem;
+                        }
                     }
                 }
             }
@@ -337,9 +439,20 @@ const {content} = Astro.props;
                 color: var(--cl-bg);
                 padding-block: 3.2rem 1.8rem;
                 padding-inline: 5rem 6.6rem;
+                @media screen and (max-width: 767px) {
+                    grid-column: span 4;
+                    margin-left: 3.4rem;
+                    padding-block: .9rem .7rem;
+                    padding-inline: .9rem .4rem;
+                }
                 .box-content {
                     .label {
                         margin-bottom: -1rem;
+                        @media screen and (max-width: 767px) {
+                            margin-bottom: -.5rem;
+                            font-size: 1.4rem;
+                            max-width: 13.2rem;
+                        }
                     }
                     .value-wrap {
                         display: flex;
@@ -347,21 +460,51 @@ const {content} = Astro.props;
                         justify-content: start;
                         margin-bottom: -1.2rem;
                         &.top {
+                            @media screen and (max-width: 767px) {
+                                margin-bottom: 0;
+                            }
+                            .number-value {
+                                @media screen and (max-width: 767px) {
+                                    font-size: 6rem;
+                                }
+                            }
                             .number-unit {
                                 margin-left: 1.2rem;
                                 margin-bottom: 2.8rem;
+                                @media screen and (max-width: 767px) {
+                                    font-size: 1.4rem;
+                                    margin-left: .2rem;
+                                    margin-bottom: 1.2rem;
+                                }
                             }
                         }
                         &.bot {
+                            @media screen and (max-width: 767px) {
+                                margin-bottom: 0;
+                            }
+                            .number-value {
+                                @media screen and (max-width: 767px) {
+                                   font-size: 2.4rem;
+                                }
+                            }
                             .number-unit {
                                 margin-left: 2.3rem;
                                 margin-bottom: 1.1rem;
+                                @media screen and (max-width: 767px) {
+                                    font-size: 1.4rem;
+                                    margin-left: .2rem;
+                                    letter-spacing: .01em;
+                                    margin-bottom: .3rem;
+                                }
                             }
                         }
                     }
                     .line {
                         margin-bottom: .3rem;
                         background-color: var(--cl-white);
+                        @media screen and (max-width: 767px) {
+                            display: none;
+                        }
                     }
                 }
             }
@@ -371,14 +514,32 @@ const {content} = Astro.props;
                 grid-template-columns: 7.1fr 2.9fr;
                 background-color: var(--cl-green);
                 color: var(--cl-bg);
+                @media screen and (max-width: 767px) {
+                    grid-column: span 6;
+                    grid-template-columns: 6.6fr 3.4fr;
+                }
                 .box-content {
                     padding-block: 3.4rem 5.4rem;
                     padding-inline: 4.6rem;
                     display: flex;
                     align-items: start;
                     flex-direction: column;
+                    @media screen and (max-width: 767px) {
+                        padding-block: .7rem 1.9rem;
+                        padding-inline: 4rem 2.4rem;
+                    }
                     .number-value {
                         margin-right: -1rem;
+                        @media screen and (max-width: 767px) {
+                            font-size: 6.6rem;
+                            margin-left: 0;
+                            margin-bottom: -.7rem;
+                        }
+                    }
+                    .number-unit {
+                        @media screen and (max-width: 767px) {
+                            font-size: 1.4rem;
+                        }
                     }
                 }
                 .box-img {
@@ -386,6 +547,9 @@ const {content} = Astro.props;
                     display: flex;
                     align-items: center;
                     justify-content: center;
+                    @media screen and (max-width: 767px) {
+                        margin-right: 2.5rem;
+                    }
                 }
             }
             &:nth-child(6) {
@@ -394,25 +558,55 @@ const {content} = Astro.props;
                 color: var(--cl-bg);
                 display: flex;
                 align-items: center;
+                @media screen and (max-width: 767px) {
+                    grid-column: span 6;
+                }
                 .box-content {
                     margin-block: -.6rem 3.3rem;
                     padding-inline: 3.6rem 8.9rem;
+                    @media screen and (max-width: 767px) {
+                        margin-block: 0 2rem;
+                        padding-inline: 4.2rem;
+                        width: 100%;
+                    }
                     .value-wrap {
                         display: flex;
                         align-items: end;
                         &.top {
                             margin-bottom: -1.7rem;
+                            @media screen and (max-width: 767px) {
+                                margin-bottom: -1.2rem;
+                            }
                             .label {
                                 margin-right: 1.4rem;
                                 margin-bottom: 2.9rem;
                                 max-width: 13.5rem;
                                 text-align: right;
+                                @media screen and (max-width: 767px) {
+                                    margin-right: 1rem;
+                                    font-size: 1.4rem;
+                                    margin-bottom: 2.1rem;
+                                    max-width: 9.1rem;
+                                }
+                            }
+                            .number-value {
+                                @media screen and (max-width: 767px) {
+                                    font-size: 9.6rem;
+                                }
                             }
                             .unit-wrap {
                                 margin-left: 1.2rem;
                                 margin-bottom: 2.9rem;
+                                @media screen and (max-width: 767px) {
+                                    margin-left: .9rem;
+                                    margin-bottom: 2.3rem;
+                                }
                                 .number-unit {
                                     margin-bottom: .1rem;
+                                    @media screen and (max-width: 767px) {
+                                        margin-bottom: 0;
+                                        font-size: 1.4rem;
+                                    }
                                 }
                                 .number-unit-sub {
                                     color: var(--cl-blue-3);
@@ -420,9 +614,19 @@ const {content} = Astro.props;
                             }
                         }
                         &.bot {
+                            .number-value {
+                                @media screen and (max-width: 767px) {
+                                    font-size: 3.2rem;
+                                }
+                            }
                             .number-unit {
                                 margin-left: 2rem;
                                 margin-bottom: 1.1rem;
+                                @media screen and (max-width: 767px) {
+                                    font-size: 1.4rem;
+                                    margin-left: 1.1rem;
+                                    margin-bottom: .8rem;
+                                }
                             }
                         }
                     }
@@ -436,6 +640,9 @@ const {content} = Astro.props;
                 grid-column: span 3;
                 background-color: var(--cl-blue-2);
                 color: var(--cl-bg);
+                @media screen and (max-width: 767px) {
+                    grid-column: span 2;
+                }
                 .box-content {
                     height: 100%;
                     display: flex;
@@ -445,15 +652,26 @@ const {content} = Astro.props;
                     text-align: center;
                     .number-value {
                         margin-bottom: -.8rem;
+                        @media screen and (max-width: 767px) {
+                            font-size: 9.6rem;
+                            margin-bottom: -1.3rem;
+                        }
                     }
                     .number-unit {
                         margin-bottom: 2rem;
                         max-width: 14.9rem;
+                        @media screen and (max-width: 767px) {
+                            font-size: 1.4rem;
+                            margin-bottom: 1.3rem;
+                            max-width: 8.3rem;
+                        }
                     }
                 }
             }
             &:nth-child(8) {
                 grid-column: span 4;
+                @media screen and (max-width: 767px) {
+                }
                 .box-img {
                     width: 100%;
                     height: 100%;
@@ -464,6 +682,10 @@ const {content} = Astro.props;
                 grid-row: span 2;
                 background-color: var(--cl-green-li);
                 color: var(--cl-bg);
+                @media screen and (max-width: 767px) {
+                    grid-column: span 6;
+                    grid-row: span 1;
+                }
                 .box-content {
                     display: flex;
                     flex-direction: column;
@@ -472,34 +694,59 @@ const {content} = Astro.props;
                     height: 100%;
                     padding-block: .3rem 1.2rem;
                     padding-inline: 2.5rem 1.5rem;
+                    @media screen and (max-width: 767px) {
+                        padding-block: 0 .9rem;
+                        padding-inline: 3.2rem 5.6rem;
+                    }
                     .value-wrap {
                         display: flex;
                         align-items: end;
                         justify-content: start;
                         margin-bottom: -.8rem;
+                        @media screen and (max-width: 767px) {
+                            margin-bottom: -1.2rem;
+                        }
                         .number-value {
                             margin-right: 1.8rem;
+                            @media screen and (max-width: 767px) {
+                                margin-right: .9rem;
+                                font-size: 9.6rem;
+                            }
                         }
                         .number-unit {
                             margin-bottom: 1.3rem;
+                            @media screen and (max-width: 767px) {
+                                margin-bottom: 1.18rem;
+                                font-size: 4.8rem;
+                            }
                         }
                     }
                     .label {
                         margin-bottom: -1.8rem;
+                        @media screen and (max-width: 767px) {
+                            margin-bottom: 0;
+                            font-size: 1.4rem;
+                        }
                     }
                     .box-img {
                         max-width: 8.6rem;
                         margin-right: 1.3rem;
                         align-self: end;
+                        @media screen and (max-width: 767px) {
+                            display: none;
+                        }
                     }
                 }
             }
             &:nth-child(10) {
                 grid-column: span 5;
                 grid-row: span 2;
-                
                 background-color: var(--cl-blue-3);
                 color: var(--cl-blue);
+                @media screen and (max-width: 767px) {
+                    grid-column: span 6;
+                    grid-row: span 1;
+                }
                 .box-content {
                     padding-block: 1.1rem 4.8rem;
                     padding-inline: 3rem 4.4rem;
@@ -507,20 +754,44 @@ const {content} = Astro.props;
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
+                    @media screen and (max-width: 767px) {
+                        padding-block: .1rem 1rem;
+                        padding-inline: 3.2rem 2rem;
+                    }
                     .value-wrap {
                         display: flex;
                         align-items: end;
                         margin-bottom: -2.4rem;
+                        @media screen and (max-width: 767px) {
+                            margin-bottom: -1.3rem;
+                            .number-value {
+                                font-size: 9.6rem;
+                            }
+                        }
                         .box-img {
                             max-width: 12.8rem;
                             margin-left: 1.3rem;
                             margin-bottom: 3.1rem;
+                            @media screen and (max-width: 767px) {
+                                max-width: 9.1rem;
+                                margin-left: 2rem;
+                                margin-bottom: 1.5rem;
+                            }
+                        }
+                    }
+                    .label {
+                        @media screen and (max-width: 767px) {
+                            font-size: 1.4rem;
                         }
                     }
                 }
             }
             &:nth-child(11) {
                 grid-column: span 4;
+                @media screen and (max-width: 767px) {
+                    grid-column: span 6;
+                    height: 12.9rem;
+                }
                 .box-img {
                     width: 100%;
                     height: 100%;
@@ -530,6 +801,9 @@ const {content} = Astro.props;
                 grid-column: span 4;
                 background-color: var(--cl-yellow);
                 color: var(--cl-blue);
+                @media screen and (max-width: 767px) {
+                    grid-column: span 6;
+                }
                 .box-content {
                     display: flex;
                     align-items: center;
@@ -537,11 +811,23 @@ const {content} = Astro.props;
                     padding-block: 2rem 1.9rem;
                     padding-inline: 3.6rem;
                     text-align: center;
+                    @media screen and (max-width: 767px) {
+                        padding-block: .9rem 1rem;
+                        padding-inline: 3rem;
+                        .label {
+                            font-size: 3.2rem;
+                        }
+                    }
                 }
             }
         }
         &-img {
             margin-top: 9.6rem;
+            @media screen and (max-width: 767px) {
+                margin-top: 2.4rem;
+                margin-left: -8rem;
+                margin-right: -8rem;
+            }
         }
     }
 </style>
