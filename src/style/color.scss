@@ -62,3 +62,11 @@
 .cl-blue-2 {
     color: var(--cl-blue-2);
 }
+[data-aos="anim-zoom-up"] {
+    transform: scale(0);
+    transform-origin: center bottom;
+  	transition-property: transform;
+}
+[data-aos="anim-zoom-up"].aos-animate {
+    transform: scale(1)
+}

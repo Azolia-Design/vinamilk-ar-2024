@@ -8,12 +8,12 @@ const {content} = Astro.props;
 ---
 <section class="chap1-his">
     <div class="container">
-        <h2 class="heading txt-78 txt-bold txt-blue chap1-his-title">
+        <h2 class="heading txt-78 txt-bold txt-blue chap1-his-title" data-aos="fade-up">
             {content.title}
         </h2>
         <div class="chap1-his-main">
             {content.list.map((el,idx) => (
-                <div class="chap1-his-item">
+                <div class="chap1-his-item" data-aos="fade-up" data-aos-delay={idx % 3 == 0 ? '100' : idx % 3 == 1 ? '200' : '300'}>
                     <div class="img-wrap">
                         <Image src={el.img.src} alt='' {...el.img.attributes} class='img-fill'/>
                     </div>
@@ -31,24 +31,24 @@ const {content} = Astro.props;
                     </div>
                 </div>
             ))}
-            <div class="chap1-his-line-wrap line-1">
+            <div class="chap1-his-line-wrap line-1" data-aos="fade-up" data-aos-delay="300">
                 <div class="chap1-his-line-inner left"></div>
             </div>
-            <div class="chap1-his-line-wrap line-2">
+            <div class="chap1-his-line-wrap line-2" data-aos="fade-up" data-aos-delay="100">
                 <div class="chap1-his-line-inner right">
                     <div class="year-dot"></div>
                 </div>
             </div>
-            <div class="chap1-his-line-wrap line-3">
+            <div class="chap1-his-line-wrap line-3" data-aos="fade-up" data-aos-delay="300">
                 <div class="chap1-his-line-inner left"></div>
             </div>
-            <div class="chap1-his-line-wrap line-4">
+            <div class="chap1-his-line-wrap line-4" data-aos="fade-up">
                 <div class="chap1-his-line-inner right">
                     <div class="blank"></div>
                 </div>
             </div>
             <div class="chap1-his-lg-item">
-                <div class="heading txt-64 txt-bold lg-title">
+                <div class="heading txt-64 txt-bold lg-title" data-aos="fade-up">
                     <div class="year-line-wrap">
                         <div class="line line-dash"></div>
                         <div class="year-dot"></div>
@@ -57,7 +57,7 @@ const {content} = Astro.props;
                     <div class="year-line-wrap holder"></div>
                 </div>
                 <div class="item-wrap">
-                    <div class="item left">
+                    <div class="item left" data-aos="fade-up">
                         <div class="box-content">
                             <div class="heading txt-64 txt-up txt-bold title">
                                 6 Tỷ USD
@@ -73,7 +73,7 @@ const {content} = Astro.props;
                             <Image src={chap1HisIc1} alt='' />
                         </div>
                     </div>
-                    <div class="item right">
+                    <div class="item right" data-aos="fade-up" data-aos-delay="200">
                         <div class="box-content">
                             <div class="heading txt-64 txt-up txt-bold title">
                                 3 Tỷ USD
@@ -92,7 +92,7 @@ const {content} = Astro.props;
                 </div>
             </div>
         </div>
-        <div class="chap1-his-sum">
+        <div class="chap1-his-sum" data-aos="fade-up">
             <div class="box-left">
                 <div class="img-wrap">
                     <Image src={chap1HisAwardIc1} alt='' />

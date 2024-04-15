@@ -4,7 +4,7 @@ import { Image } from "astro:assets";
 import logoImg from '../../assets/logo-img.png';
 const {content, lang} = Astro.props;
 ---
-<header class="header" data-lang={lang}>
+<header class="header" data-lang={lang} data-aos="fade-down">
     <div class="container">
         <div class="header-logo">
             <a href={getRelativeLocaleUrl(lang, './')} class="header-logo-link">
