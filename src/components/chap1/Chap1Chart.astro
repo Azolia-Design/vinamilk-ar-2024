@@ -370,6 +370,9 @@ const chartPatternBg = await getImage({src: chartPattern, format: 'webp', width:
 <style lang="scss">
     .chap1-cha {
         padding-bottom: 9rem;
+        @media screen and (max-width: 767px) {
+            padding-bottom: 4rem;
+        }
         &-title {
             margin-bottom: 6.8rem;
             max-width: 78rem;
@@ -377,6 +380,11 @@ const chartPatternBg = await getImage({src: chartPattern, format: 'webp', width:
             width: 100%;
             margin-inline: auto;
             text-align: center;
+            @media screen and (max-width: 767px) {
+                font-size: 4.2rem;
+                line-height: 1em;
+                margin-bottom: 2.4rem;
+            }
         }
         &-main {
             max-width: 99.4rem;
@@ -385,10 +393,21 @@ const chartPatternBg = await getImage({src: chartPattern, format: 'webp', width:
             grid-template-columns: repeat(2, 1fr);
             column-gap: var(--grid-gap);
             row-gap: 4.4rem;
+            @media screen and (max-width: 767px) {
+                grid-template-columns: 1fr;
+                row-gap: 2.5rem;
+            }
             .cha-item {
                 color: var(--cl-blue-2);
                 .label-wrap {
                     line-height: 1.2em;
+                    margin-bottom: 3.2rem;
+                    @media screen and (max-width: 767px) {
+                        .label-txt, .label-unit {
+                            font-size: 1.4rem;
+                            display: inline;
+                        }
+                    }
                 }
                 .cha-main {
                     height: 23rem;
@@ -396,6 +415,10 @@ const chartPatternBg = await getImage({src: chartPattern, format: 'webp', width:
                     justify-content: space-between;
                     position: relative;
                     padding-inline: 3rem;
+                    @media screen and (max-width: 767px) {
+                        height: 18rem;
+                        padding-inline: 2rem;
+                    }
                     .line {
                         background-color: var(--cl-blue);
                         position: absolute;
@@ -409,13 +432,16 @@ const chartPatternBg = await getImage({src: chartPattern, format: 'webp', width:
                         align-items: center;
                         justify-content: end;
                         &-inner {
-                            width: 4.8rem;;
+                            width: 4.8rem;
                             height: var(--col-h);
                             background-color: var(--col-bg);
                             position: relative;
                             text-align: center;
                             display: flex;
                             justify-content: center;
+                            @media screen and (max-width: 767px) {
+                                width: 4rem;
+                            }
                             &.last {
                                 position: relative;
                                 &::after {
@@ -428,6 +454,9 @@ const chartPatternBg = await getImage({src: chartPattern, format: 'webp', width:
                                     mix-blend-mode: color-dodge;
                                     opacity: .7;
                                     filter: invert(1);
+                                    @media screen and (max-width: 767px) {
+                                        background-size: 102% auto;
+                                    }
                                 }
                                 
                                 

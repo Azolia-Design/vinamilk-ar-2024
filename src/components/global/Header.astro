@@ -53,6 +53,16 @@ const {content, lang} = Astro.props;
                 </div>
             </div>
         </div>
+        <div class="header-toggle">
+            <a href="#" class="header-toggle-ic">
+                <svg width="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                    <path d="M2 12H22" stroke="#292929" stroke-miterlimit="10"/>
+                    <path d="M22 12L2 12" stroke="#292929" stroke-miterlimit="10"/>
+                    <path d="M2 7.50001C4 7.50001 5 7.5 7 7.5C9 7.5 10.08 7.5 12.04 7.5C14 7.5 14.9782 7.49999 17 7.5C19.0218 7.50001 20 7.50001 22.08 7.50001" stroke="#292929" stroke-miterlimit="10"/>
+                    <path d="M22.1499 16.25C19.9999 16.25 18.9999 16.25 16.9999 16.25C14.9999 16.25 13.9368 16.25 11.9999 16.25C9.99988 16.25 8.99988 16.25 6.99988 16.25C4.99988 16.25 3.99988 16.25 1.85986 16.25" stroke="#292929" stroke-miterlimit="10"/>
+                </svg>
+            </a>
+        </div>
     </div>
 </header>
 <style lang="scss">
@@ -127,6 +137,19 @@ const {content, lang} = Astro.props;
                 column-gap: .2rem;
                 padding: .3rem .5rem .2rem .9rem;
                 color: var(--cl-blue);
+            }
+        }
+        &-toggle {
+            display: none;
+            @media screen and (max-width: 767px) {
+                display: block;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                .header-toggle-ic {
+                    width: 2.4rem;
+                    height: 2.4rem;
+                }
             }
         }
     }

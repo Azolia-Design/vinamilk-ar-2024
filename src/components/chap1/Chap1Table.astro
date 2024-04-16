@@ -121,6 +121,9 @@
 <style lang="scss">
     .chap1-tab {
         padding-bottom: 12.4rem;
+        @media screen and (max-width: 767px) {
+            padding-bottom: 5rem;
+        }
         &-main {
             display: flex;
             flex-direction: column;
@@ -129,14 +132,28 @@
                 grid-template-columns: 4.8fr 1.04fr 1.04fr 1.04fr 1.04fr 1.04fr;
                 align-items: center;
                 column-gap: var(--grid-gap);
+                @media screen and (max-width: 767px) {
+                    column-gap: 1rem;
+                }
                 &.title-wrap {
                     position: relative;
                     height: 5.6rem;
+                    @media screen and (max-width: 767px) {
+                        height: auto;
+                        padding-block: 1.3rem 2rem;
+                    }
                     .title {
                         color: var(--cl-green);
+                        @media screen and (max-width: 767px) {
+                            font-size: 1.2rem;
+                            line-height: 1.2em;
+                        }
                     }
                     .value {
                         color: var(--cl-blue);
+                        @media screen and (max-width: 767px) {
+                            font-size: 1rem;
+                        }
                     }
                     .line-decor-css {
                         height: .6rem;
@@ -157,8 +174,16 @@
                 &.head-wrap {
                     background-color: var(--cl-purple-light);
                     height: 4.8rem;
+                    @media screen and (max-width: 767px) {
+                        height: auto;
+                    }
                     .title {
                         padding-inline: .8rem;
+                        @media screen and (max-width: 767px) {
+                            font-size: 1rem;
+                            line-height: 1.2em;
+                            padding-block: 1rem;
+                        }
                     }
                 }
                 &.cell-wrap {
@@ -167,6 +192,18 @@
                     .title {
                         padding-block: 1rem;
                         padding-left: .8rem;
+                        @media screen and (max-width: 767px) {
+                            font-size: 1rem;
+                            line-height: 1.2em;
+                            padding-block: 1rem;
+                        }
+                    }
+                    .value {
+                        @media screen and (max-width: 767px) {
+                            font-size: 1rem;
+                            line-height: 1.2em;
+                            padding-block: 1rem;
+                        }
                     }
                     .line {
                         position: absolute;

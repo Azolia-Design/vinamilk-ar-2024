@@ -42,6 +42,10 @@ import chap6HeroImg from '../../assets/chap6HeroImg.jpg';
         margin-bottom: 7.6rem;
         height: 100vh;
         contain: paint;
+        @media screen and (max-width: 767px) {
+            padding-top: 10.9rem;
+            min-height: 62.5rem;
+        }
         .container {
             position: relative;
             height: 100%;
@@ -54,6 +58,10 @@ import chap6HeroImg from '../../assets/chap6HeroImg.jpg';
             width: 100%;
             height: calc(100% + 6.3rem);
             pointer-events: none;
+            @media screen and (max-width: 767px) {
+                width: 200%;                
+                margin-left: -100%;
+            }
         }
         & > .line-decor {
             position: absolute;
@@ -64,6 +72,10 @@ import chap6HeroImg from '../../assets/chap6HeroImg.jpg';
             z-index: 2;
             background-size: auto 1.1rem;
             background-repeat: repeat-x;
+            @media screen and (max-width: 767px) {
+                height: .6rem;
+                background-size: auto .6rem;
+            }
         }
         &-content {
             grid-column: 1/8;
@@ -74,22 +86,40 @@ import chap6HeroImg from '../../assets/chap6HeroImg.jpg';
             align-items: start;
             padding-top: 9.7rem;
             color: var(--cl-blue);
+            @media screen and (max-width: 767px) {
+                grid-column: 1/-1;
+                padding-top: 0;
+            }
             .title {
                 margin-bottom: 3.9rem;
                 line-height: 8.5rem;
                 margin-right: -1rem;
+                @media screen and (max-width: 767px) {
+                    font-size: 4.2rem;
+                    line-height: 1.2em;
+                    margin-bottom: 2rem;
+                }
             }
             .hero-btn-list {
                 display: flex;
                 flex-direction: column;
                 align-items: start;
                 row-gap: 1.5rem;
+                @media screen and (max-width: 767px) {
+                    width: 100%;
+                    row-gap: 1rem;
+                }
             }
             .hero-btn-list-item {
                 align-items: center;
                 padding-block: .2rem .4rem;
                 padding-inline: 1.8rem 1rem;
                 column-gap: .5rem;
+                @media screen and (max-width: 767px) {
+                    .heading {
+                        font-size: 2rem;
+                    }
+                }
             }
         }
     }

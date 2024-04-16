@@ -81,10 +81,18 @@ import Chap3Sum1 from '../../assets/Chap3Sum1.jpg'
 <style lang="scss">
     .chap3-sum {
         padding-block: 8rem 10.5rem;
+        @media screen and (max-width: 767px) {
+            padding-block: 3.5rem 7.6rem;
+        }
         &-title {
             text-align: center;
             margin-bottom: 8.4rem;
             color: var(--cl-blue);
+            @media screen and (max-width: 767px) {
+                font-size: 4.2rem;
+                line-height: 1em;
+                margin-bottom: 4.2rem;
+            }
         }
         &-main {
             display: grid;
@@ -92,11 +100,19 @@ import Chap3Sum1 from '../../assets/Chap3Sum1.jpg'
             grid-template-rows: auto 11.2rem auto auto;
             column-gap: var(--grid-gap);
             row-gap: var(--grid-gap);
+            @media screen and (max-width: 767px) {
+                grid-template-columns: 1fr;
+                grid-template-rows: unset;
+            }
             .box-content {
                 border-radius: 1.4rem;
                 overflow: hidden;
                 position: relative;
                 min-height: 100%;
+                @media screen and (max-width: 767px) {
+                    grid-column: span 1 !important;
+                    grid-row: span 1 !important;
+                }
                 .box-inner {
                     padding-block: 6rem;
                     padding-inline: 5rem;
@@ -104,9 +120,17 @@ import Chap3Sum1 from '../../assets/Chap3Sum1.jpg'
                     display: flex;
                     flex-direction: column;
                     justify-content: center;
+                    @media screen and (max-width: 767px) {
+                        padding-block: 5.4rem;
+                        padding-inline: 1.8rem;
+                    }
                     .title {
                         color: var(--cl-blue);
                         margin-bottom: 3rem;
+                        @media screen and (max-width: 767px) {
+                            font-size: 2rem;
+                            margin-bottom: 2rem;
+                        }
                     }
                     .body {
                         max-width: 45.1rem;
@@ -139,7 +163,9 @@ import Chap3Sum1 from '../../assets/Chap3Sum1.jpg'
                     }
                 }
                 &:nth-child(2) {
-                    
+                    @media screen and (max-width: 767px) {
+                        grid-row: 3/4 !important;
+                    }
                 }
                 &:nth-child(3) {
                     grid-column: 1/2;

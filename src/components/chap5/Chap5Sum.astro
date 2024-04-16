@@ -104,7 +104,7 @@ import chap5Bot from '../../assets/chap5Bot.jpg';
                             03
                         </div>
                         <div class="line-ver"></div>
-                        <div class="heading txt-36 txt-bold txt-up title">
+                        <div class="heading txt-36 txt-bold txt-up title mb-sm">
                             SỨC KHỎE TỐT VÀ CUỘC SỐNG HẠNH PHÚC
                         </div>
                     </div>
@@ -139,7 +139,7 @@ import chap5Bot from '../../assets/chap5Bot.jpg';
                             04
                         </div>
                         <div class="line-ver"></div>
-                        <div class="heading txt-36 txt-bold txt-up title">
+                        <div class="heading txt-36 txt-bold txt-up title mb-sm">
                             GIÁO DỤC CHẤT LƯỢNG
                         </div>
                     </div>
@@ -204,7 +204,7 @@ import chap5Bot from '../../assets/chap5Bot.jpg';
                             06
                         </div>
                         <div class="line-ver"></div>
-                        <div class="heading txt-36 txt-bold txt-up title">
+                        <div class="heading txt-36 txt-bold txt-up title mb-sm">
                             NƯỚC SẠCH VÀ ĐIỀU KIỆN VỆ SINH
                         </div>
                     </div>
@@ -244,7 +244,7 @@ import chap5Bot from '../../assets/chap5Bot.jpg';
                             07
                         </div>
                         <div class="line-ver"></div>
-                        <div class="heading txt-36 txt-bold txt-up title">
+                        <div class="heading txt-36 txt-bold txt-up title mb-sm">
                             NĂNG LƯỢNG SẠCH VÀ GIÁ HỢP LÝ
                         </div>
                     </div>
@@ -279,7 +279,7 @@ import chap5Bot from '../../assets/chap5Bot.jpg';
                             08
                         </div>
                         <div class="line-ver"></div>
-                        <div class="heading txt-36 txt-bold txt-up title">
+                        <div class="heading txt-36 txt-bold txt-up title mb-sm">
                             VIỆC LÀM BỀN VỮNG VÀ TĂNG TRƯỞNG KINH TẾ
                         </div>
                     </div>
@@ -344,7 +344,7 @@ import chap5Bot from '../../assets/chap5Bot.jpg';
                             09
                         </div>
                         <div class="line-ver"></div>
-                        <div class="heading txt-36 txt-bold txt-up title">
+                        <div class="heading txt-36 txt-bold txt-up title mb-sm">
                             CÔNG NGHIỆP, ĐỔI MỚI VÀ CƠ SỞ HẠ TẦNG
                         </div>
                     </div>
@@ -369,7 +369,7 @@ import chap5Bot from '../../assets/chap5Bot.jpg';
                             10
                         </div>
                         <div class="line-ver"></div>
-                        <div class="heading txt-36 txt-bold txt-up title">
+                        <div class="heading txt-36 txt-bold txt-up title mb-sm">
                             GIẢM BẤT BÌNH ĐẲNG
                         </div>
                     </div>
@@ -394,7 +394,7 @@ import chap5Bot from '../../assets/chap5Bot.jpg';
                             12
                         </div>
                         <div class="line-ver"></div>
-                        <div class="heading txt-36 txt-bold txt-up title">
+                        <div class="heading txt-36 txt-bold txt-up title mb-sm">
                             TIÊU DÙNG VÀ SẢN XUẤT CÓ TRÁCH NHIỆM
                         </div>
                     </div>
@@ -464,7 +464,7 @@ import chap5Bot from '../../assets/chap5Bot.jpg';
                             13
                         </div>
                         <div class="line-ver"></div>
-                        <div class="heading txt-36 txt-bold txt-up title">
+                        <div class="heading txt-36 txt-bold txt-up title mb-sm">
                             ỨNG PHÓ VỚI BIẾN ĐỔI KHÍ HẬU
                         </div>
                     </div>
@@ -509,7 +509,7 @@ import chap5Bot from '../../assets/chap5Bot.jpg';
                             14
                         </div>
                         <div class="line-ver"></div>
-                        <div class="heading txt-36 txt-bold txt-up title">
+                        <div class="heading txt-36 txt-bold txt-up title mb-sm">
                             ĐỜI SỐNG DƯỚI NƯỚC
                         </div>
                     </div>
@@ -539,7 +539,7 @@ import chap5Bot from '../../assets/chap5Bot.jpg';
                             15
                         </div>
                         <div class="line-ver"></div>
-                        <div class="heading txt-36 txt-bold txt-up title">
+                        <div class="heading txt-36 txt-bold txt-up title mb-sm">
                             ĐỜI SỐNG TRÊN CẠN
                         </div>
                     </div>
@@ -589,7 +589,7 @@ import chap5Bot from '../../assets/chap5Bot.jpg';
                             16
                         </div>
                         <div class="line-ver"></div>
-                        <div class="heading txt-36 txt-bold txt-up title">
+                        <div class="heading txt-36 txt-bold txt-up title mb-sm">
                             HÒA BÌNH, CÔNG LÝ VÀ THỂ CHẾ HIỆU QUẢ
                         </div>
                     </div>
@@ -619,7 +619,7 @@ import chap5Bot from '../../assets/chap5Bot.jpg';
                             17
                         </div>
                         <div class="line-ver"></div>
-                        <div class="heading txt-36 txt-bold txt-up title">
+                        <div class="heading txt-36 txt-bold txt-up title mb-sm">
                             HỢP TÁC ĐẠT MỤC TIÊU
                         </div>
                     </div>
@@ -659,6 +659,9 @@ import chap5Bot from '../../assets/chap5Bot.jpg';
 <style lang="scss">
     .chap5-sum {
         padding-block: 9rem 10.5rem;
+        @media screen and (max-width: 767px) {
+            padding-block: 4.9rem 5.5rem;
+        }
         .container {
             z-index: 2;
             position: relative;
@@ -670,12 +673,20 @@ import chap5Bot from '../../assets/chap5Bot.jpg';
             max-width: 99.4rem;
             margin-inline: auto;
             line-height: 7.5rem;
+            @media screen and (max-width: 767px) {
+                font-size: 4.2rem;
+                line-height: 1em;
+                margin-bottom: 4.2rem;
+            }
         }
         &-main {
             display: grid;
             grid-template-columns: repeat(12, 1fr);
             column-gap: var(--grid-gap);
             row-gap: var(--grid-gap);
+            @media screen and (max-width: 767px) {
+                grid-template-columns: 1fr;
+            }
         }
         &-item {
             display: flex;
@@ -684,6 +695,10 @@ import chap5Bot from '../../assets/chap5Bot.jpg';
             color: var(--cl-bg);
             --item-cl: var(--bg-cl);
             min-height: 100%;
+            @media screen and (max-width: 767px) {
+                grid-column: span 1 !important;
+                grid-row: span 1 !important;
+            }
             .head-wrap {
                 display: flex;
                 column-gap: .8rem;
@@ -710,6 +725,12 @@ import chap5Bot from '../../assets/chap5Bot.jpg';
                     }
                     .title {
                         margin-top: .4rem;
+                        &.mb-sm {
+                            @media screen and (max-width: 767px) {
+                                font-size: 2.6rem;
+                                line-height: 1.2em;
+                            }
+                        }
                     }
                 }
             }
@@ -720,6 +741,10 @@ import chap5Bot from '../../assets/chap5Bot.jpg';
                 overflow: hidden;
                 flex-grow: 1;
                 background-color: var(--item-cl);
+                @media screen and (max-width: 767px) {
+                    padding-block: 1.6rem 2rem;
+                    padding-inline: 1.2rem 1.6rem;
+                }
                 .list {
                     padding-left: 1.6rem;
                     .body {
@@ -789,6 +814,10 @@ import chap5Bot from '../../assets/chap5Bot.jpg';
             pointer-events: none;
             position: relative;
             z-index: 1;
+            @media screen and (max-width: 767px) {
+                margin-top: 5.4rem;
+                width: 200%;
+            }
         }
     }
 </style>

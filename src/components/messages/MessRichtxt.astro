@@ -57,16 +57,24 @@ import signChair from '../../assets/sign-chair.png';
 <style lang="scss">
     .mess-richtxt {
         padding-block: 7.4rem 8.7rem;
+        @media screen and (max-width: 767px) {
+            padding-block: 4.3rem 5.4rem;
+        }
         &-title {
             margin-bottom: 1.8rem;
             color: var(--cl-blue);
+            @media screen and (max-width: 767px) {
+                margin-bottom: 2.8rem;
+            }
         }
         &-main {
             grid-column: 1/-1;
-            
             .richtxt {
                 columns: 2;
                 column-gap: var(--grid-gap);
+                @media screen and (max-width: 767px) {
+                    columns: 1;
+                }
                 p {
                     color: var(--cl-txt);
                     margin-bottom: 2rem;

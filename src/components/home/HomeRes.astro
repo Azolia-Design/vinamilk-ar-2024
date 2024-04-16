@@ -211,8 +211,10 @@ const {content} = Astro.props;
 <style lang="scss">
     .home-res {
         padding-top: 8.2rem;
+        padding-bottom: 6rem;
         @media screen and (max-width: 767px) {
             padding-top: 3.8rem;
+            padding-bottom: 6rem;
         }
         &-title {
             grid-column: 1/-1;
@@ -246,9 +248,10 @@ const {content} = Astro.props;
             }
             &:nth-child(1) {
                 grid-column: span 12;
-                display: grid;
-                grid-template-columns: repeat(4, 1fr);
+                display: grid;                
+                grid-template-columns: 2fr 1fr 1fr 1fr 1fr;
                 @media screen and (max-width: 767px) {
+                    grid-template-columns: repeat(4, 1fr);
                     grid-column: span 6;
                 }
                 .box-content {

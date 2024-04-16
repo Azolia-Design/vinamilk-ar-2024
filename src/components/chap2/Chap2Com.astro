@@ -516,15 +516,26 @@ import Chap2Com10 from "../../assets/Chap2Com10.jpg";
 <style lang="scss">
     .chap2-com {
         padding-bottom: 21.6rem;
+        @media screen and (max-width: 767px) {
+            padding-bottom: 5rem;
+        }
         &-title {
             text-align: center;
             margin-bottom: 4.8rem;
             color: var(--cl-blue);
+            @media screen and (max-width: 767px) {
+                font-size: 4.2rem;
+                line-height: 1em;
+                margin-bottom: 2rem;
+            }
         }
         &-main {
             .para {
                 max-width: 68.7rem;
                 margin-bottom: 3.2rem;
+                @media screen and (max-width: 767px) {
+                    margin-bottom: 2.4rem;
+                }
             }
             .box-content {
                 border-radius: 1.4rem;
@@ -537,6 +548,11 @@ import Chap2Com10 from "../../assets/Chap2Com10.jpg";
                 color: var(--cl-bg);
                 position: relative;
                 margin-bottom: 6.7rem;
+                @media screen and (max-width: 767px) {
+                    margin-bottom: 3.4rem;
+                    display: flex;
+                    flex-direction: column;
+                }
                 .box-left {
                     padding-block: 1.2rem 4.8rem;
                     padding-right: 4.8rem;
@@ -544,15 +560,32 @@ import Chap2Com10 from "../../assets/Chap2Com10.jpg";
                     flex-direction: column;
                     align-items: end;
                     position: relative;
+                    @media screen and (max-width: 767px) {
+                        padding-block: 0 1.3rem;
+                        padding-inline: 2rem 4rem;
+                    }
                     .number-value {
                         margin-bottom: -1.7rem;
+                        @media screen and (max-width: 767px) {
+                            margin-bottom: -1.5rem;
+                            font-size: 12.8rem;
+                            margin-right: 5.3rem;
+
+                        }
                     }
                     .number-unit {
                         margin-bottom: .6rem;
                         margin-right: .7rem;
+                        @media screen and (max-width: 767px) {
+                            margin-bottom: .2rem;
+                            margin-right: 5.5rem;
+                        }
                     }
                     .number-unit-sub {
                         margin-right: .7rem;
+                        @media screen and (max-width: 767px) {
+                            margin-right: 5.5rem;
+                        }
                     }
                     .line-ver {
                         position: absolute;
@@ -561,6 +594,14 @@ import Chap2Com10 from "../../assets/Chap2Com10.jpg";
                         height: auto;
                         right: 0;
                         background-color: currentColor;
+                        @media screen and (max-width: 767px) {
+                            width: auto;
+                            height: 1px;
+                            top: auto;
+                            bottom: 0;
+                            left: 2rem;
+                            right: 4rem;
+                        }
                     }
                 }
                 .box-right {
@@ -569,7 +610,29 @@ import Chap2Com10 from "../../assets/Chap2Com10.jpg";
                     display: grid;
                     grid-template-columns: 3.2fr 2.3fr 4.5fr;
                     row-gap: 3.2rem;
+                    @media screen and (max-width: 767px) {
+                        padding-block: 1rem 12.5rem;
+                        padding-inline: 2rem 1.2rem;
+                        grid-template-columns: 1.4fr 1fr;
+                        column-gap: 2rem;
+                        row-gap: .5rem;
+                    }
                     .box-item {
+                        @media screen and (max-width: 767px) {
+                            grid-column: span 2;
+                        }
+                        &:nth-child(1) {
+                            @media screen and (max-width: 767px) {
+                                .sub {
+                                    margin-right: -1.2rem;
+                                }
+                            }
+                        }
+                        &:nth-child(1) ,&:nth-child(2) {
+                            @media screen and (max-width: 767px) {
+                                grid-column: span 1;
+                            }
+                        }
                         .value-wrap {
                             display: flex;
                             align-items: end;
@@ -577,6 +640,9 @@ import Chap2Com10 from "../../assets/Chap2Com10.jpg";
                             .number-unit {
                                 margin-left: .9rem;
                                 margin-bottom: 1.7rem;
+                                @media screen and (max-width: 767px) {
+                                    margin-left: .6rem;
+                                }
                             }
                         }
                     }
@@ -586,19 +652,40 @@ import Chap2Com10 from "../../assets/Chap2Com10.jpg";
                     width: 25.1rem;
                     right: 7rem;
                     bottom: 1.9rem;
+                    @media screen and (max-width: 767px) {
+                        width: 17.7rem;
+                        right: 1rem;
+                        bottom: 1.6rem;
+                    }
                 }
             }
             .main-title {
                 color: var(--cl-green);
                 max-width: 78.9rem;
+                @media screen and (max-width: 767px) {
+                    font-size: 2.8rem;
+                    line-height: 1.2em;
+                }
                 &.title-1 {
                     margin-bottom: 5.5rem;
+                    @media screen and (max-width: 767px) {
+                        margin-bottom: 1.6rem;
+                    }
                 }
                 &.title-2 {
                     margin-bottom: 3.2rem;
+                    @media screen and (max-width: 767px) {
+                        margin-bottom: 2.2rem;
+                        margin-top: 4.2rem;
+                    }
                 }
                 &.title-3 {
                     margin-bottom: 3.2rem;
+                    @media screen and (max-width: 767px) {
+                        margin-top: 2rem;
+                        margin-bottom: 2rem;
+                        margin-right: -1rem;
+                    }
                 }
             }
             .box-grid {
@@ -608,18 +695,49 @@ import Chap2Com10 from "../../assets/Chap2Com10.jpg";
                 grid-template-columns: 1.6fr 3fr 2.1fr 3.3fr;
                 align-items: center;
                 column-gap: 3rem;
+                @media screen and (max-width: 767px) {
+                    grid-template-columns: 8rem 2.5rem 1fr;
+                    padding-block: 2rem 3.5rem;
+                    padding-inline: 2rem 1.8rem;
+                    column-gap: 2rem;
+                    row-gap: 1.4rem;
+                }
                 .box-item {
+                    @media screen and (max-width: 767px) {
+                        align-self: start;
+                    }
                     .title {
                         margin-bottom: -1.3rem;
+                        @media screen and (max-width: 767px) {
+                            font-size: 6.6rem;
+                            line-height: 1.2em;
+                            margin-bottom: -.9rem;
+                        }
+                    }
+                    .sub {
+                        @media screen and (max-width: 767px) {
+                            font-size: 1.4rem;
+                        }
                     }
                     .value-wrap {
                         display: flex;
                         align-items: end;
                         margin-bottom: -1.3rem;
+                        .number-value {
+                            @media screen and (max-width: 767px) {
+                                font-size: 6.6rem;
+                                line-height: 1.2em;
+                            }
+                        }
                         .number-unit {
                             margin-right: 1rem;
                             margin-bottom: 1.7rem;
                             max-width: 3.8rem;
+                            @media screen and (max-width: 767px) {
+                                margin-right: .4rem;
+                                margin-bottom: 1.3rem;
+                                flex: none;
+                            }
                         }
                     }
                     .number-unit-sub {
@@ -634,23 +752,67 @@ import Chap2Com10 from "../../assets/Chap2Com10.jpg";
                 background-color: var(--cl-green-dark);
                 color: var(--cl-bg);
                 margin-bottom: 3.2rem;
+                @media screen and (max-width: 767px) {
+                    margin-bottom: 1rem;
+                    .box-item {
+                        &:nth-child(2) {
+                            @media screen and (max-width: 767px) {
+                                grid-column: span 2;
+                            }
+                        }
+                        &:nth-child(3) {
+                            @media screen and (max-width: 767px) {
+                                grid-column: span 2;
+                            }
+                        }
+                    }
+                }
             }
             .box-3 {
                 background-color: var(--cl-green);
                 color: var(--cl-bg);
                 margin-bottom: 3.2rem;
+                @media screen and (max-width: 767px) {
+                    margin-bottom: 4.4rem;
+                    .box-item {
+                        &:nth-child(2) {
+                            @media screen and (max-width: 767px) {
+                                grid-column: span 2;
+                            }
+                        }
+                        &:nth-child(4) {
+                            @media screen and (max-width: 767px) {
+                                grid-column: span 2;
+                                .title {
+                                    white-space: nowrap;
+                                }
+                            }
+                        }
+                    }
+                }
             }
             .col-content {
                 display: grid;
                 grid-template-columns: repeat(3, 1fr);
                 column-gap: var(--grid-gap);
+                @media screen and (max-width: 767px) {
+                    grid-template-columns: 1fr;
+                    row-gap: 2.4rem;
+                }
                 &.col-count-2 {
                     grid-template-columns: repeat(2, 1fr);
+                    @media screen and (max-width: 767px) {
+                        grid-template-columns: 1fr;
+                    }
                 }
                 .col-content-inner {
                     display: grid;
                     column-gap: var(--grid-gap);
                     grid-template-columns: repeat(2, 1fr);
+                    @media screen and (max-width: 767px) {
+                        grid-template-columns: 1fr;
+                        row-gap: 2.4rem;
+                    }
                 }
                 .col-item {
                     display: flex;
@@ -684,6 +846,9 @@ import Chap2Com10 from "../../assets/Chap2Com10.jpg";
             }
             .img-1 {
                 margin-bottom: 4.8rem;
+                @media screen and (max-width: 767px) {
+                    margin-bottom: 2.4rem;
+                }
             }
             .col-4 {
                 margin-bottom: 3.2rem;
@@ -699,6 +864,9 @@ import Chap2Com10 from "../../assets/Chap2Com10.jpg";
             }
             .col-7 {
                 margin-bottom: 4.8rem;
+                @media screen and (max-width: 767px) {
+                    margin-bottom: 3.2rem;
+                }
             }
             .col-8 {
                 .col-item {

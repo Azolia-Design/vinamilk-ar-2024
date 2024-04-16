@@ -304,10 +304,17 @@
     .contact-main {
         padding-top: 10rem;
         padding-bottom: 12.3rem;
+        @media screen and (max-width: 767px) {
+            padding-top: 5.3rem;
+            padding-bottom: 5.3rem;
+        }
         &-main {
             display: flex;
             flex-direction: column;
             row-gap: 3.6rem;
+            @media screen and (max-width: 767px) {
+                row-gap: 1.6rem;
+            }
         }
         &-item {
             .head-wrap {
@@ -321,6 +328,13 @@
                 padding-block: .8rem;
                 padding-inline: 2rem;
                 border-radius: 1.4rem;
+                @media screen and (max-width: 767px) {
+                    .title {
+                        font-size: 2.4rem;
+                        text-align: center;
+                        max-width: 25.9rem;
+                    }
+                }
                 .ic {
                     transition: transform 400ms ease;
                 }
@@ -343,11 +357,20 @@
                     grid-template-columns: repeat(3, 1fr);
                     column-gap: var(--grid-gap);
                     row-gap: 4.4rem;
+                    @media screen and (max-width: 767px) {
+                        row-gap: 2.4rem;
+                        grid-template-columns: 1fr;
+                        padding-top: 3rem;
+                        padding-bottom: 2rem;
+                    }
                     .ctc-main-sub-item {
                         display: flex;
                         flex-direction: column;
                         row-gap: 1.8rem;
                         max-width: 34.2rem;
+                        @media screen and (max-width: 767px) {
+                            row-gap: 1.2rem;
+                        }
                         .ctc-main-body-sub-txt {
                             color: var(--cl-blue);
                         }

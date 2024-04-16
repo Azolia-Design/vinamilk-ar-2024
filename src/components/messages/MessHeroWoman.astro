@@ -36,12 +36,25 @@ import chairwoman from '../../assets/chair-woman.png'
             display: flex;
             flex-direction: column;
             justify-content: end;
+            @media screen and (max-width: 767px) {
+                grid-column: 1/-1;
+                padding-block: 4.3rem 2.7rem;
+            }
         }
         &-title {
             margin-bottom: 2.8rem;
+            @media screen and (max-width: 767px) {
+                font-size: 4.2rem;
+                line-height: 4.2rem;
+                margin-bottom: 2rem;
+            }
         }
         &-sub {
             text-align: justify;
+            @media screen and (max-width: 767px) {
+                font-size: 1.7rem;
+                line-height: 1.2em;
+            }
         }
         &-img-wrap {
             grid-column: 7/13;
@@ -50,11 +63,23 @@ import chairwoman from '../../assets/chair-woman.png'
             flex-direction: column;
             align-items: center;
             justify-content: center;
+            @media screen and (max-width: 767px) {
+                grid-column: 1/-1;
+                padding-block: 0 5.4rem;
+            }
         }
         &-img {
             width: 52rem;
+            @media screen and (max-width: 767px) {
+                width: 23.7rem;
+            }
             &-name {
                 margin-top: 3rem;
+                @media screen and (max-width: 767px) {
+                    margin-top: 1.4rem;
+                    font-size: 1.7rem;
+                    line-height: 1.2em;
+                }
             }
         }
         .line-decor {
@@ -62,6 +87,9 @@ import chairwoman from '../../assets/chair-woman.png'
             background-size: auto .4rem;
             background-repeat: repeat-x;
             margin-bottom: 3.2rem;
+            @media screen and (max-width: 767px) {
+                margin-bottom: 2rem;
+            }
         }
         .line-section {
             height: 1.1rem;

@@ -452,6 +452,9 @@ import chap1MemBot5 from '../../assets/chap1MemBot5.jpg'
         position: relative;
         background-color: var(--cl-blue);
         padding-block: 6.2rem 4.5rem;
+        @media screen and (max-width: 767px) {
+            padding-block: 2.7rem 1.6rem;
+        }
         .line-decor-css {
             position: absolute;
             left: 0;
@@ -466,6 +469,16 @@ import chap1MemBot5 from '../../assets/chap1MemBot5.jpg'
                 var(--cl-blue-3) 18rem,
                 var(--cl-blue-3) 36rem,
             );
+            @media screen and (max-width: 767px) {
+                height: .4rem;
+                background: repeating-linear-gradient(
+                    var(--angle),
+                    var(--cl-blue-2),
+                    var(--cl-blue-2) 8rem,
+                    var(--cl-blue-3) 8rem,
+                    var(--cl-blue-3) 16rem,
+                );
+            }
             &.bot {
                 top: auto;
                 bottom: 0;
@@ -476,6 +489,11 @@ import chap1MemBot5 from '../../assets/chap1MemBot5.jpg'
             text-align: center;
             margin-inline: auto;
             color: var(--cl-bg);
+            @media screen and (max-width: 767px) {
+                font-size: 3.2rem;
+                line-height: 1em;
+                margin-bottom: 2rem;
+            }
         }
         .img-wrap {
             display: grid;
@@ -511,9 +529,16 @@ import chap1MemBot5 from '../../assets/chap1MemBot5.jpg'
                         display: flex;
                         align-items: center;
                         justify-content: center;
+                        @media screen and (max-width: 767px) {
+                            width: 1.4rem;
+                            height: 1.4rem;
+                        }
                         .pin-txt {
                             color: var(--cl-bg);
                             text-align: center;
+                            @media screen and (max-width: 767px) {
+                                font-size: .7rem;
+                            }
                         }
                     }
                 }
@@ -525,6 +550,10 @@ import chap1MemBot5 from '../../assets/chap1MemBot5.jpg'
             grid-template-columns: repeat(3, 1fr);
             column-gap: var(--grid-gap);
             padding-block: 1.2rem 14.8rem;
+            @media screen and (max-width: 767px) {
+                grid-template-columns: 1fr;
+                padding-block: 3.2rem 4rem;
+            }
             .item-wrap {
                 display: flex;
                 align-items: center;
@@ -574,23 +603,40 @@ import chap1MemBot5 from '../../assets/chap1MemBot5.jpg'
     }
     .chap1-mem-bot {
         padding-bottom: 9rem;
+        @media screen and (max-width: 767px) {
+            padding-bottom: 4rem;
+        }
         .title {
             margin-bottom: 7rem;
             text-align: center;
             margin-inline: auto;
             color: var(--cl-blue);
+            @media screen and (max-width: 767px) {
+                font-size: 4.2rem;
+                line-height: 1em;
+                margin-bottom: 3.7rem;
+            }
         }
         &-main {
             display: grid;
             column-gap: var(--grid-gap);
             grid-template-columns: repeat(2, 1fr);
             margin-inline: auto;
+            @media screen and (max-width: 767px) {
+                grid-template-columns: 1fr;
+            }
             .col {
                 display: flex;
                 flex-direction: column;
                 row-gap: 3rem;
+                @media screen and (max-width: 767px) {
+                    row-gap: 2rem;
+                }
                 &:nth-child(2) {
                     margin-top: 22rem;
+                    @media screen and (max-width: 767px) {
+                        margin-top: 2rem;
+                    }
                 }
                 .item-wrap {
                     border-radius: 1.2rem;
@@ -605,6 +651,9 @@ import chap1MemBot5 from '../../assets/chap1MemBot5.jpg'
                     .img-wrap {
                         height: 33rem;
                         position: relative;
+                        @media screen and (max-width: 767px) {
+                            height: 20rem;
+                        }
                         .overlay {
                             position: absolute;
                             inset: 0;
@@ -637,16 +686,36 @@ import chap1MemBot5 from '../../assets/chap1MemBot5.jpg'
                         background-color: var(--cl-blue);
                         color: var(--cl-bg);
                         position: relative;
+                        @media screen and (max-width: 767px) {
+                            padding-block: 2rem 1.4rem;
+                            padding-inline: 1.6rem;
+                        }
                         .name-wrap {
                             width: 50%;
                             .name-label {
                                 margin-bottom: -.2rem;
+                                @media screen and (max-width: 767px) {
+                                    font-size: 1.6rem;
+                                }
+                            }
+                            .name-title {
+                                @media screen and (max-width: 767px) {
+                                    font-size: 2.2rem;
+                                }
                             }
                         }
                         .sub-wrap {
                             width: 50%;
                             padding-left: 2.4rem;
                             margin-bottom: .3rem;
+                            @media screen and (max-width: 767px) {
+                                margin-bottom: .17rem;
+                                padding-left: 1.2rem;
+                                .sub {
+                                    font-size: 1.2rem;
+                                    line-height: 1.4rem;
+                                }
+                            }
                         }
                         .line-decor-css {
                             height: .7rem;

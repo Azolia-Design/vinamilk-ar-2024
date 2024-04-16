@@ -2,6 +2,7 @@
 import Layout from "../layouts/Layout.astro";
 import HomeHero from "../components/home/HomeHero.astro";
 import HomeRes from "../components/home/HomeRes.astro";
+import DownloadPDF from "../components/DownloadPDF.astro";
 const data = {
 	hero: {
 		title: 'Để tâm \nthay đổi',
@@ -15,4 +16,5 @@ const data = {
 <Layout title="Trang chủ">
 	<HomeHero content={data.hero}/>
 	<HomeRes content={data.res}/>
+	<DownloadPDF link="#"/>
 </Layout>

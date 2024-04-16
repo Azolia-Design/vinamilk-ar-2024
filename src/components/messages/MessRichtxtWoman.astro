@@ -142,17 +142,25 @@ import rtWoman2 from '../../assets/rt-woman-2.jpg';
 </section>
 <style lang="scss">
     .mess-richtxt {
-        padding-block: 8.3rem 16.3rem;
+        padding-block: 8.3rem 10.3rem;
+        @media screen and (max-width: 767px) {
+            padding-block: 4.3rem 5.4rem;
+        }
         &-title {
             margin-bottom: 1.8rem;
             color: var(--cl-blue);
+            @media screen and (max-width: 767px) {
+                margin-bottom: 2.8rem;
+            }
         }
         &-main {
             grid-column: 1/-1;
-            
             .richtxt {
                 columns: 2;
                 column-gap: var(--grid-gap);
+                @media screen and (max-width: 767px) {
+                    columns: 1;
+                }
                 p {
                     color: var(--cl-txt);
                     margin-bottom: 2rem;
@@ -179,11 +187,17 @@ import rtWoman2 from '../../assets/rt-woman-2.jpg';
                     margin-block: 3.2rem 4rem;
                     &.spacer {
                         margin-block: 4.8rem 26rem;
+                        @media screen and (max-width: 767px) {
+                            margin-block: 2rem 3.2rem;
+                        }
                     }
                 }
                 .title-grp {
                     h3 {
                         margin-bottom: 0;
+                        @media screen and (max-width: 767px) {
+                            margin-bottom: 1.2rem;
+                        }
                     }
                 }
                 .grid {
@@ -191,6 +205,11 @@ import rtWoman2 from '../../assets/rt-woman-2.jpg';
                     display: grid;
                     grid-template-columns: repeat(2, 1fr);
                     column-gap: var(--grid-gap);
+                    @media screen and (max-width: 767px) {
+                        grid-template-columns: 1fr;
+                        row-gap: 2rem;
+                        margin-block: 2.4rem;
+                    }
                     &-item {
                         border-radius: 1.4rem;
                         overflow: hidden;
@@ -198,6 +217,10 @@ import rtWoman2 from '../../assets/rt-woman-2.jpg';
                         .box-content {
                             padding-block: 2rem;
                             padding-inline: 2rem;
+                            @media screen and (max-width: 767px) {
+                                padding-block: 2.4 3.2rem;
+                                padding-inline: 3.2rem;
+                            }
                         }
                         &.left {
                             background-color: var(--cl-blue-2);
@@ -216,6 +239,9 @@ import rtWoman2 from '../../assets/rt-woman-2.jpg';
                             .number-value {
                                 margin-right: -1rem;
                                 margin-bottom: -.1rem;
+                                @media screen and (max-width: 767px) {
+                                    font-size: 8rem;
+                                }
                             }
                         }
                     }

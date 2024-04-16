@@ -29,6 +29,10 @@ import chap3HeroImg from '../../assets/chap3HeroImg.jpg';
         padding-top: 9rem;
         height: 100vh;
         contain: paint;
+        @media screen and (max-width: 767px) {
+            padding-top: 10.9rem;
+            min-height: 62.5rem;
+        }
         .container {
             position: relative;
             height: 100%;
@@ -41,6 +45,10 @@ import chap3HeroImg from '../../assets/chap3HeroImg.jpg';
             width: 100%;
             height: calc(100% + 6.3rem);
             pointer-events: none;
+            @media screen and (max-width: 767px) {
+                width: 200%;                
+                margin-inline: -75%;
+            }
         }
         & > .line-decor {
             position: absolute;
@@ -51,6 +59,10 @@ import chap3HeroImg from '../../assets/chap3HeroImg.jpg';
             z-index: 2;
             background-size: auto 1.1rem;
             background-repeat: repeat-x;
+            @media screen and (max-width: 767px) {
+                height: .6rem;
+                background-size: auto .6rem;
+            }
         }
         &-content {
             grid-column: 1/8;
@@ -61,15 +73,28 @@ import chap3HeroImg from '../../assets/chap3HeroImg.jpg';
             align-items: start;
             padding-top: 9.7rem;
             color: var(--cl-blue);
+            @media screen and (max-width: 767px) {
+                grid-column: 1/-1;
+                padding-top: 0;
+            }
             .title {
                 margin-bottom: 4.5rem;
                 line-height: 8.5rem;
                 margin-right: -1rem;
+                @media screen and (max-width: 767px) {
+                    font-size: 4.2rem;
+                    line-height: 1.2em;
+                    margin-bottom: .4rem;
+                }
             }
             .hero-list {
                 display: flex;
                 flex-direction: column;
-                min-width: 27.6rem
+                min-width: 27.6rem;
+                @media screen and (max-width: 767px) {
+                    width: 100%;
+                    min-width: none;
+                }
             }
             .hero-list-item {
                 padding-block: .8rem .9rem;
