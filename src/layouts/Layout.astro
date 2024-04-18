@@ -12,27 +12,145 @@ const data = {
 	header: {
 		vn: {
 			menu: [
-				{text: "Thông điệp", url: "./messages", type: 'drop'},
-				{text: "Thông tin chung", url: "./chap1", type: 'drop'},
-				{text: "Báo cáo hoạt động 2023", url: "./chap2", type: 'drop'},
-				{text: "Chiến lược 2022-2026", url: "./chap3", type: ''},
-				{text: "Quản trị công ty", url: "./chap4", type: ''},
-				{text: "Phát triển bền vững", url: "./chap5", type: ''},
-				{text: "Báo cáo tài chính", url: "./chap6", type: ''},
-				{text: "Liên hệ", url: "./contact", type: ''}
+				{text: "Thông điệp", url: "./messages", type: 'drop',
+					items: [
+						{
+							text: 'Thông điệp từ Chủ tịch HĐQT',
+							id: 'Sc1'
+						},
+						{
+							text: 'Thông điệp của Tổng giám đốc',
+							id: 'Sc2'
+						},
+					]
+				},
+				{text: "Thông tin chung", url: "./chap1", type: 'drop',
+					items: [
+						{
+							text: 'Lịch sử hình thành và phát triển',
+							id: 'Sc1'
+						},
+						{
+							text: 'Mô hình kinh doanh của Vinamilk',
+							id: 'Sc2'
+						},
+						{
+							text: 'Tóm tắt thông tin tài chính',
+							id: 'Sc3'
+						},
+						{
+							text: 'Giới thiệu HĐQT và Ban Điều Hành',
+							id: 'Sc4'
+						},
+					]
+				},
+				{text: "Báo cáo hoạt động 2023", url: "./chap2", type: 'drop',
+					items: [
+						{
+							text: 'Tổng quan ngành sữa',
+							id: 'Sc1'
+						},
+						{
+							text: 'Báo cáo của HĐQT và Ban Điều Hành',
+							id: 'Sc2'
+						},
+						{
+							text: 'Giải thưởng và danh hiệu 2022',
+							id: 'Sc3'
+						},
+						{
+							text: 'Trách nhiệm xã hội & Hoạt động cộng đồng',
+							id: 'Sc4'
+						},
+					]
+				},
+				{text: "Chiến lược 2022-2026", url: "./chap3", type: '',
+					items: []
+				},
+				{text: "Quản trị công ty", url: "./chap4", type: '',
+					items: []
+				},
+				{text: "Phát triển bền vững", url: "./chap5", type: '',
+					items: []
+				},
+				{text: "Báo cáo tài chính", url: "./chap6", type: '',
+					items: []
+				},
+				{text: "Liên hệ", url: "./contact", type: '',
+				items: []
+				}
 			],
 			dl: {text: 'Tải báo cáo'}
 		},
 		en: {
 			menu: [
-				{text: "Messages", url: "./messages", type: 'drop'},
-				{text: "General information", url: "./chap1", type: 'drop'},
-				{text: "Business review in 2023", url: "./chap2", type: 'drop'},
-				{text: "Development strategy in 2022-2026", url: "./chap3", type: ''},
-				{text: "Corporate governance", url: "./chap4", type: ''},
-				{text: "Sustainable development", url: "./chap5", type: ''},
-				{text: "Financial statements", url: "./chap6", type: ''},
-				{text: "Contact", url: "./contact", type: ''}
+				{text: "Messages", url: "./messages", type: 'drop',
+					items: [
+						{
+							text: 'Thông điệp từ Chủ tịch HĐQT',
+							id: 'Sc1'
+						},
+						{
+							text: 'Thông điệp của Tổng giám đốc',
+							id: 'Sc2'
+						},
+					]
+				},
+				{text: "General information", url: "./chap1", type: 'drop',
+					items: [
+						{
+							text: 'Lịch sử hình thành và phát triển',
+							id: 'Sc1'
+						},
+						{
+							text: 'Mô hình kinh doanh của Vinamilk',
+							id: 'Sc2'
+						},
+						{
+							text: 'Tóm tắt thông tin tài chính',
+							id: 'Sc3'
+						},
+						{
+							text: 'Giới thiệu HĐQT và Ban Điều Hành',
+							id: 'Sc4'
+						},
+					]
+				},
+				{text: "Business review in 2023", url: "./chap2", type: 'drop',
+					items: [
+						{
+							text: 'Tổng quan ngành sữa',
+							id: 'Sc1'
+						},
+						{
+							text: 'Báo cáo của HĐQT và Ban Điều Hành',
+							id: 'Sc2'
+						},
+						{
+							text: 'Giải thưởng và danh hiệu 2022',
+							id: 'Sc3'
+						},
+						{
+							text: 'Trách nhiệm xã hội & Hoạt động cộng đồng',
+							id: 'Sc4'
+						},
+					]
+				},
+				{text: "Development strategy in 2022-2026", url: "./chap3", type: '',
+					items: []
+				},
+				{text: "Corporate governance", url: "./chap4", type: '',
+					items: []
+				},
+				{text: "Sustainable development", url: "./chap5", type: '',
+					items: []
+				},
+				{text: "Financial statements", url: "./chap6", type: '',
+					items: []
+				},
+				{text: "Contact", url: "./contact", type: '',
+					items: []
+				}
 			],
 			dl: {text: 'Get full report'}
 		}
@@ -97,7 +215,7 @@ const data = {
 		<!-- <ViewTransitions /> -->
         <link rel="stylesheet" href="../style/main.scss">
 	</head>
-	<body style={`--bg-txt: url(${OpBgTexture.src})`}>
+	<body style={`--bg-txt: url(${OpBgTexture.src})`} class="body">
 		<Header content={props.lang == 'en' ? data.header.en : data.header.vn} lang={props.lang || 'vn'}/>
         <slot />
 		<Footer content={props.lang == 'en' ? data.footer.en : data.footer.vn} lang={props.lang || 'vn'}/>

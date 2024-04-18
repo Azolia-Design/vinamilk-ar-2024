@@ -1,7 +1,7 @@
 ---
 import Layout from "../../layouts/Layout.astro";
-import HomeHero from "../../components/home/HomeHero.astro";
-import HomeRes from "../../components/home/HomeRes.astro";
+import HomeHeroEng from "../../components/home/HomeHeroEng.astro";
+import HomeResEng from "../../components/home/HomeResEng.astro";
 const data = {
 	hero: {
 		title: 'Để tâm \nthay đổi',
@@ -13,6 +13,6 @@ const data = {
 }
 ---
 <Layout title="Homepage" lang="en">
-	<HomeHero content={data.hero}/>
-	<HomeRes content={data.res}/>
+	<HomeHeroEng />
+	<HomeResEng />
 </Layout>

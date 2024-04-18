@@ -151,6 +151,12 @@ html {
         }
     }
 }
+.body {
+    &.lockscroll {
+        overflow: hidden;
+        height: 100vh;
+    }
+}
 .heading {
     font-family: 'vnm-sans';
     letter-spacing: .05em;
@@ -161,6 +167,9 @@ html {
     font-weight: 400;
     &-11 {
         font-size: 1.1rem;
+    }
+    &-12 {
+        font-size: 1.2rem;
     }
     &-14 {
         font-size: 1.4rem;

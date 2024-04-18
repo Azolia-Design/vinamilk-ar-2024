@@ -15,7 +15,7 @@ const {content, lang} = Astro.props;
             <div class="header-menu-inner">
                 {content.menu.map(el => (
                     <div class="header-menu-inner-item">
-                        <a href={getRelativeLocaleUrl(lang, el.url)} class="header-menu-link txt-blue">
+                        <a href={getRelativeLocaleUrl(lang, el.url)} class={`header-menu-link txt-blue ${el.type == 'drop' ? 'type-drop' : ''}`}>
                             <span class="heading h-19 txt-med header-menu-link-txt">
                                 {el.text}
                             </span>
@@ -27,6 +27,24 @@ const {content, lang} = Astro.props;
                                 </div>
                             )}
                         </a>
+                        {el.type == 'drop' && (
+                            <div class="header-menu-inner-drop">
+                                <div class="header-menu-drop-item">
+                                    <div class="drop-inner">
+                                        {el.items.map(item => (
+                                            <a href={`${getRelativeLocaleUrl(lang, el.url)}#${item.id}`} class="drop-inner-item">
+                                                <div class="ic ic-10">
+                                                    <svg width="100%" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                                        <path d="M8.5 4.13397C9.16667 4.51887 9.16667 5.48113 8.5 5.86603L4 8.4641C3.33334 8.849 2.5 8.36788 2.5 7.59808L2.5 2.40192C2.5 1.63212 3.33333 1.151 4 1.5359L8.5 4.13397Z" fill="#0213B0"/>
+                                                    </svg>
+                                                </div>
+                                                <span class="txt txt-17">{item.text}</span>
+                                            </a> 
+                                        ))}
+                                    </div>
+                                </div>
+                            </div>
+                        )}
                     </div>
                 ))}
             </div>
@@ -50,24 +68,76 @@ const {content, lang} = Astro.props;
                             </svg>
                         </div>
                     </button>
+                    <div class="header-lang-drop">
+                        <div class="drop-inner">
+                            <a href={`${getRelativeLocaleUrl('vn', Astro.url.pathname.replace('/en/','/') )}`} class={`drop-inner-item ${lang == 'vn' ? 'active' : ''}`}>
+                                <div class="ic ic-10">
+                                    <svg width="100%" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.5 4.13397C9.16667 4.51887 9.16667 5.48113 8.5 5.86603L4 8.4641C3.33334 8.849 2.5 8.36788 2.5 7.59808L2.5 2.40192C2.5 1.63212 3.33333 1.151 4 1.5359L8.5 4.13397Z" fill="#0213B0"/>
+                                    </svg>
+                                </div>
+                                <span class="heading h-19 txt-med txt-up">VIE</span>
+                            </a> 
+                            <a href={`${getRelativeLocaleUrl('en', Astro.url.pathname )}`} class={`drop-inner-item ${lang == 'en' ? 'active' : ''}`}>
+                                <div class="ic ic-10">
+                                    <svg width="100%" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                        <path d="M8.5 4.13397C9.16667 4.51887 9.16667 5.48113 8.5 5.86603L4 8.4641C3.33334 8.849 2.5 8.36788 2.5 7.59808L2.5 2.40192C2.5 1.63212 3.33333 1.151 4 1.5359L8.5 4.13397Z" fill="#0213B0"/>
+                                    </svg>
+                                </div>
+                                <span class="heading h-19 txt-med txt-up">ENG</span>
+                            </a> 
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="header-address">
+                <div class="heading txt-18 txt-bold label">
+                    Trụ sở
+                </div>
+                <div class="txt txt-12 body">
+                    10 Tân Trào, Phường Tân Phú, Quận 7, TP. Hồ Chí Minh
+                </div>
+                <div class="heading txt-18 txt-bold label">
+                    Điện thoại
+                </div>
+                <div class="txt txt-12 body">
+                    <a href="tel:(+84. 28) 54 155 555" target="_blank" class="txt-link">(+84. 28) 54 155 555</a>
+                </div>
+                <div class="heading txt-18 txt-bold label">
+                    Fax
+                </div>
+                <div class="txt txt-12 body">
+                    <a href="tel:(+84. 28) 54 161 226" target="_blank" class="txt-link">(+84. 28) 54 161 226</a>
+                </div>
+                <div class="heading txt-18 txt-bold label">
+                    Website
+                </div>
+                <div class="txt txt-12 body">
+                    <a href="www.vinamilk.com.vn/" target="_blank" class="txt-link">www.vinamilk.com.vn/</a><br>
+                    <a href="www.vuoncaovietnam.com/" target="_blank" class="txt-link">www.vuoncaovietnam.com/</a><br>
+                    <a href="www.youtube.com/user/vinamilk" target="_blank" class="txt-link">www.youtube.com/user/vinamilk</a>
                 </div>
             </div>
         </div>
         <div class="header-toggle">
             <a href="#" class="header-toggle-ic">
-                <svg width="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <svg width="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="ic-open">
                     <path d="M2 12H22" stroke="#292929" stroke-miterlimit="10"/>
                     <path d="M22 12L2 12" stroke="#292929" stroke-miterlimit="10"/>
                     <path d="M2 7.50001C4 7.50001 5 7.5 7 7.5C9 7.5 10.08 7.5 12.04 7.5C14 7.5 14.9782 7.49999 17 7.5C19.0218 7.50001 20 7.50001 22.08 7.50001" stroke="#292929" stroke-miterlimit="10"/>
                     <path d="M22.1499 16.25C19.9999 16.25 18.9999 16.25 16.9999 16.25C14.9999 16.25 13.9368 16.25 11.9999 16.25C9.99988 16.25 8.99988 16.25 6.99988 16.25C4.99988 16.25 3.99988 16.25 1.85986 16.25" stroke="#292929" stroke-miterlimit="10"/>
                 </svg>
+                <svg width="100%" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg" class="ic-close">
+                    <path d="M19.0711 4.99927L4.92894 19.1414" stroke="#292929" stroke-miterlimit="10"/>
+                    <path d="M5.07538 4.57544C6.55439 6.05445 7.29389 6.79395 8.7729 8.27296C10.2519 9.75196 11.0505 10.5506 12.5 12C13.9494 13.4495 14.6728 14.1729 16.1679 15.668C17.6631 17.1631 18.3864 17.8865 19.9246 19.4247" stroke="#292929" stroke-miterlimit="10"/>
+                </svg>                    
             </a>
         </div>
     </div>
 </header>
 <style lang="scss">
     .header {
-        background-color: var(--cl-white);
+        background-color: var(--cl-bg);
         position: fixed;
         top: 0;
         left: 0;
@@ -77,6 +147,7 @@ const {content, lang} = Astro.props;
         box-shadow: 0 .4rem 1rem 0 rgba(0,0,0,.1);
         @media screen and (max-width: 767px) {
             padding-block: 1.4rem 1.3rem;
+            height: 6rem;
         }
         .container {
             display: flex;
@@ -90,6 +161,8 @@ const {content, lang} = Astro.props;
         }
         &-logo {
             height: 4.2rem;
+            z-index: 2;
+            position: relative;
             @media screen and (max-width: 767px) {
                 height: 3rem;
             }
@@ -103,33 +176,198 @@ const {content, lang} = Astro.props;
             justify-content: end;
             margin-bottom: .5rem;
             @media screen and (max-width: 767px) {
-                display: none;
+                position: fixed;
+                top: 6rem;
+                left: 0;
+                width: 100%;
+                height: calc(100vh - 6rem);
+                background-color: var(--cl-blue);
+                color: var(--cl-blue);
+                z-index: 1;
+                overflow-y: auto;
+                display: grid;
+                grid-template-columns: auto 1fr;
+                margin-bottom: 0;
+                justify-content: start;
+                padding-block: 4.2rem 5.4rem;
+                padding-inline: 3.2rem;
+                align-content: start;
+                opacity: 0;
+                pointer-events: none;
+                transform: translateX(100%);
+                transition: all 400ms ease;
+                &.active {
+                    transform: translateX(0);
+                    opacity: 1;
+                    pointer-events: all;
+                }
             }
             &-inner {
                 display: flex;
                 align-items: center;
                 column-gap: 1.6rem;
+                @media screen and (max-width: 767px) {
+                    flex-direction: column;
+                    grid-column: span 2;
+                    align-items: stretch;
+                    row-gap: 1.4rem;
+                    padding-bottom: 2.6rem;
+                    margin-bottom: 2.4rem;
+                    border-bottom: solid 1px var(--cl-bg);
+                }
+                &-item {
+                    position: relative;
+                    .header-menu-link {
+                        @media screen and (max-width: 767px) {
+                            color: var(--cl-bg);
+                            .header-menu-link-txt {
+                                font-size: 3.2rem;
+                            }
+                        }
+                    }
+                    &.active {
+                        @media screen and (max-width: 767px) {
+                            .header-menu-inner-drop {
+                                max-height: 20rem;
+                                pointer-events: all;
+                                opacity: 1;
+                            }
+                            .ic {
+                                transform: rotate(-90deg);
+                            }
+                        }
+                    }
+                    &:hover {
+                        .header-menu-inner-drop {
+                            opacity: 1;
+                            pointer-events: all;
+                        }
+                    }
+                    .header-menu-inner-drop {
+                        position: absolute;
+                        top: 100%;
+                        left: 0;
+                        padding-top: 1.8rem;
+                        opacity: 0;
+                        transition: all 400ms ease;
+                        pointer-events: none;
+                        @media screen and (max-width: 767px) {
+                            position: relative;
+                            top: auto;
+                            left: auto;
+                            padding-top: .9rem;
+                            opacity: 1;
+                            max-height: 0;
+                            overflow: hidden;
+                            transition: all 600ms linear;
+                        }
+                        .drop-inner {
+                            padding-block: 2rem 2.4rem;
+                            padding-inline: 2rem;
+                            border-radius: 1rem;
+                            border: solid 1px var(--cl-blue);
+                            background-color: var(--cl-bg);
+                            display: flex;
+                            flex-direction: column;
+                            row-gap: 1.4rem;
+                            color: var(--cl-blue);
+                            @media screen and (max-width: 767px) {
+                                padding: 0;
+                                padding-left: 1.2rem;
+                                row-gap: .8rem;
+                                border-radius: none;
+                                background-color: transparent;
+                                color: var(--cl-bg);
+                            }
+                            .drop-inner-item {
+                                white-space: nowrap;
+                                display: flex;
+                                align-items: center;
+                                column-gap: .2rem;
+                                @media screen and (max-width: 767px) {
+                                    white-space: wrap;
+                                }
+                                &:hover {
+                                    .ic {
+                                        opacity: 1;
+                                        transform: none;
+                                    }
+                                    .txt {
+                                        transform: none;
+                                    }
+                                }
+                                .ic {
+                                    opacity: 0;
+                                    transform: translateX(-1.2rem);
+                                    transition: all 400ms ease;
+                                    @media screen and (max-width: 767px) {
+                                        display: none;
+                                    }
+                                }
+                                .txt {
+                                    transform: translateX(-1.2rem);
+                                    transition: all 400ms ease;
+                                    @media screen and (max-width: 767px) {
+                                        transform: none;
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
             }
             &-link {
                 display: flex;
                 align-items: center;
                 column-gap: .2rem;
+                @media screen and (max-width: 767px) {
+                    column-gap: .6rem;
+                }
                 .ic {
                     margin-bottom: .1rem;
+                    @media screen and (max-width: 767px) {
+                        transition: all 400ms ease;
+                        width: 1.2rem;
+                        height: 1.2rem;
+                    }
                 }
             }
         }
         &-dl-wrap {
             margin-left: 2.6rem;
+            @media screen and (max-width: 767px) {
+                margin-left: 0;
+            }
             .header-dl-btn {
                 padding: .4rem .7rem .5rem;
-                column-gap: .4rem
+                column-gap: .4rem;
+                @media screen and (max-width: 767px) {
+                    padding: 0 1.2rem;
+                    background-color: var(--cl-bg);
+                    color: var(--cl-blue);
+                    &:hover {
+                        border-color: var(--cl-bg);
+                    }
+                    .header-dl-btn-txt {
+                        font-size: 3.2rem;
+                    }
+                    .ic {
+                        width: 1.8rem;
+                        height: 1.8rem;
+                    }
+                }
             }
         }
         &-lang {
             margin-left: 1.2rem;
             &-wrap {
-                
+                position: relative;
+                &:hover {
+                    .header-lang-drop {
+                        opacity: 1;
+                        pointer-events: all;
+                    }
+                }
             }
             &-toggle {
                 display: flex;
@@ -137,18 +375,141 @@ const {content, lang} = Astro.props;
                 column-gap: .2rem;
                 padding: .3rem .5rem .2rem .9rem;
                 color: var(--cl-blue);
+                @media screen and (max-width: 767px) {
+                    display: none;
+                }
+            }
+            .header-lang-drop {
+                position: absolute;
+                top: 100%;
+                right: 0;
+                padding-top: .6rem;
+                opacity: 0;
+                transition: all 400ms ease;
+                pointer-events: none;
+                @media screen and (max-width: 767px) {
+                    position: relative;
+                    top: auto;
+                    right: auto;
+                    opacity: 1;
+                    pointer-events: auto;
+                    padding-top: 0;
+                }
+                .drop-inner {
+                    padding-block: .6rem;
+                    padding-inline: .6rem 1rem;
+                    border-radius: 1rem;
+                    border: solid 1px var(--cl-blue);
+                    background-color: var(--cl-bg);
+                    display: flex;
+                    flex-direction: column;
+                    row-gap: .6rem;
+                    color: var(--cl-blue);
+                    @media screen and (max-width: 767px) {
+                        padding: 0;
+                        column-gap: .4rem;
+                        border-radius: none;
+                        background-color: transparent;
+                        color: var(--cl-bg);
+                        flex-direction: row;
+                        justify-content: end;
+                    }
+                    .drop-inner-item {
+                        white-space: nowrap;
+                        display: flex;
+                        align-items: center;
+                        column-gap: .2rem;
+                        opacity: .5;
+                        transition: all 400ms ease;
+                        @media screen and (max-width: 767px) {
+                            white-space: wrap;
+                            padding: 0 .8rem;
+                            border-radius: .8rem;
+                            border: solid 1px var(--cl-bg);
+                            border-color: transparent;
+                            transition: all 400ms ease;
+                        }
+                        &:hover {
+                            opacity: 1;
+                        }
+                        &.active {
+                            border-color: var(--cl-bg);
+                            opacity: 1;
+                            pointer-events: none;
+                            .ic {
+                                opacity: 1;   
+                            }
+                        }
+                        .ic {
+                            opacity: 0;
+                            width: .8rem;
+                            height: .8rem;
+                            @media screen and (max-width: 767px) {
+                                display: none;
+                            }
+                        }
+                        .heading {
+                            @media screen and (max-width: 767px) {
+                                font-size: 3.2rem;
+                                line-height: 1.2em;
+                            }
+                        }
+                    }
+                }
             }
         }
         &-toggle {
             display: none;
             @media screen and (max-width: 767px) {
-                display: block;
                 display: flex;
                 align-items: center;
                 justify-content: center;
                 .header-toggle-ic {
                     width: 2.4rem;
                     height: 2.4rem;
+                    display: grid;
+                    .ic-open {
+                        grid-column: 1/2;
+                        grid-row: 1/2;
+                        transition: all 400ms ease;
+                        transform: scale(1);
+                        opacity: 1;
+                    }
+                    .ic-close {
+                        grid-column: 1/2;
+                        grid-row: 1/2;
+                        transition: all 400ms ease;
+                        transform: scale(0);
+                        opacity: 0;
+                    }
+                    &.active {
+                        .ic-open {
+                            opacity: 0;
+                            transform: scale(0);
+                        }
+                        .ic-close {
+                            opacity: 1;
+                            transform: scale(1);
+                        }
+                    }
+                }
+            }
+        }
+        &-address {
+            display: none;
+            @media screen and (max-width: 767px) {
+                grid-column: span 2;
+                border-top: solid 1px var(--cl-bg);
+                display: flex;
+                flex-direction: column;
+                margin-top: 2.4rem;
+                padding-top: 2.8rem;
+                color: var(--cl-bg);
+                .label {
+                    margin-bottom: .4rem;
+                }
+                .body:not(:last-child) {
+                    margin-bottom: .8rem;
                 }
             }
         }
@@ -157,7 +518,7 @@ const {content, lang} = Astro.props;
         .header {
             &-menu {
                 &-inner {
-                    column-gap: 1.5rem;
+                    column-gap: 1rem;
                 }
                 &-link {
                     &-txt {
@@ -185,3 +546,26 @@ const {content, lang} = Astro.props;
         }
     }
 </style>
+<script>
+    if (window.innerWidth < 767) {
+        document.querySelector('.header-toggle-ic').addEventListener('click', function(e) {
+            e.preventDefault()
+            if (document.querySelector('.header-menu').classList.contains('active')) {
+                document.querySelector('.header-menu').classList.remove('active')
+                document.querySelector('.header-toggle-ic').classList.remove('active')
+                document.querySelector('.body').classList.remove('lockscroll')
+            } else {
+                document.querySelector('.header-menu').classList.add('active')
+                document.querySelector('.header-toggle-ic').classList.add('active')
+                document.querySelector('.body').classList.add('lockscroll')
+            }
+        })
+        document.querySelectorAll('.header-menu-link.type-drop').forEach((el, idx) => {
+            el.addEventListener('click', function(e) {
+                e.preventDefault();
+                el.closest('.header-menu-inner-item').classList.toggle('active')
+            })
+        })
+    }
+</script>
+
