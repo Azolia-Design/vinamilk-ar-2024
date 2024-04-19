@@ -12,7 +12,8 @@
   "dependencies": {
     "@types/aos": "^3.0.7",
     "aos": "^2.3.4",
-    "astro": "^4.5.9"
+    "astro": "^4.5.9",
+    "countup.js": "^2.8.0"
   },
   "devDependencies": {
     "sass": "^1.72.0"

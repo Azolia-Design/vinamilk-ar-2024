@@ -1,0 +1,108 @@
+---
+import { Image } from "astro:assets";
+import chairman from '../../assets/chutich.png'
+---
+<section class="mess-hero" id="Sc1">
+    <div class="container grid">
+        <div class="mess-hero-content">
+            <h1 class="heading txt-74 txt-up txt-bold mess-hero-title" data-aos="fade-up-right">
+                CHAIRMAN'S MESSAGE
+            </h1>
+            <div class="line line-decor" data-aos="fade-up-right"></div>
+            <div class="txt txt-26 mess-hero-sub" data-aos="fade-up-right" data-aos-delay="200">
+                VINAMILK'S BRAND VALUE CLIMBED TO USD 3 BILLION, UP FROM USD 2.8 BILLION THE PREVIOUS YEAR, CEMENTING OUR SPOT AS THE NO. 1 FOOD BRAND IN VIETNAM AND THE 6TH LARGEST DAIRY BRAND IN THE WORLD. 
+            </div>
+        </div>
+        <div class="mess-hero-img-wrap">
+            <div class="mess-hero-img" data-aos="fade-up-left">
+                <Image src={chairman} alt="" class="img-fill"/>
+            </div>
+            <div class="heading txt-36 txt-up txt-bold mess-hero-img-name" data-aos="fade-up-left" data-aos-delay="200">
+                Mr. Nguyen Hanh Phuc
+            </div>
+        </div>
+    </div>
+    <div class="line line-decor line-section"></div>
+</section>
+<style lang="scss">
+    .mess-hero {
+        background-color: var(--cl-blue-3);
+        color: var(--cl-blue);
+        position: relative;
+        &-content {
+            grid-column: 1/6;
+            padding-block: 27.1rem 7.6rem;
+            max-width: 48.3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            @media screen and (max-width: 767px) {
+                grid-column: 1/-1;
+                padding-block: 10.9rem 4.8rem;
+            }
+        }
+        &-title {
+            margin-bottom: 2.8rem;
+            @media screen and (max-width: 767px) {
+                font-size: 4.2rem;
+                line-height: 4.2rem;
+                margin-bottom: 2rem;
+            }
+        }
+        &-sub {
+            text-align: justify;
+            @media screen and (max-width: 767px) {
+                font-size: 1.7rem;
+                line-height: 1.2em;
+            }
+        }
+        &-img-wrap {
+            grid-column: 7/13;
+            padding-block: 17.6rem 6rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            @media screen and (max-width: 767px) {
+                grid-column: 1/-1;
+                padding-block: 0 5.4rem;
+            }
+        }
+        &-img {
+            width: 52rem;
+            @media screen and (max-width: 767px) {
+                width: 23.7rem;
+            }
+            &-name {
+                margin-top: 3rem;
+                @media screen and (max-width: 767px) {
+                    margin-top: 1.4rem;
+                    font-size: 1.7rem;
+                    line-height: 1.2em;
+                }
+            }
+        }
+        .line-decor {
+            height: .4rem;
+            background-size: auto .4rem;
+            background-repeat: repeat-x;
+            margin-bottom: 3.2rem;
+            @media screen and (max-width: 767px) {
+                margin-bottom: 2rem;
+            }
+        }
+        .line-section {
+            height: 1.1rem;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-size: auto 1.1rem;
+            background-repeat: repeat-x;
+            margin-bottom: 0;
+            @media screen and (max-width: 767px) {
+                height: .6rem;
+                background-size: auto .6rem;
+            }
+        }
+    }
+</style>

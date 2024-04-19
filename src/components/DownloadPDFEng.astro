@@ -1,0 +1,40 @@
+---
+---
+<section class="down-pdf">
+    <div class="container">
+        <div class="btn-wrap" data-aos="fade-up">
+            <a href={Astro.props.link} class="btn">
+                <span class="heading txt-32 txt-med">View full report here</span>
+                <div class="ic ic-20">    
+                    <svg width="100%" viewBox="0 0 20 20" fill="none" xmlns="http://www.w3.org/2000/svg">
+                        <path d="M4.5 17.3545H15.5" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                        <path d="M9.92501 1.85449V12.3167M9.92501 12.3167L14.35 7.74491M9.92501 12.3167L5.5 7.74491" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+                    </svg>                    
+                </div>
+            </a>
+        </div>
+    </div>
+</section>
+<style lang="scss">
+        .btn-wrap {
+            padding-bottom: 11rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            @media screen and (max-width: 767px) {
+                padding-bottom: 6rem;
+            }
+            .btn {
+                padding-block: .2rem;
+                padding-inline: 1.7rem;
+                column-gap: .6rem;
+                @media screen and (max-width: 767px) {
+                    border-radius: .8rem;
+                    padding-inline: 1.4rem;
+                    .heading {
+                        font-size: 2.4rem;
+                    }
+                }
+            }
+        }
+</style>

@@ -1,0 +1,104 @@
+---
+import { Image } from "astro:assets";
+import ContactHeroLogo from '../../assets/ctc-hero-logo.png';
+import ContactHeroImg from '../../assets/ctcHero.png';
+---
+<section class="contact-hero">
+    <div class="container grid">
+        <div class="contact-hero-logo" data-aos="fade-up-right">
+            <Image src={ContactHeroLogo} alt="" />
+        </div>
+        <div class="contact-hero-content" data-aos="fade-up-left" data-aos-delay="200">
+            <div class="heading txt-40 txt-bold label">
+                HEADQUARTER
+            </div>
+            <div class="txt txt-20 body">
+                10 Tan Trao, Tan Phu Ward, District 7, Ho Chi Minh City, Vietnam
+            </div>
+            <div class="txt txt-20 body">
+                Tel: <a href="tel:(+84. 28) 54 155 555" target="_blank" class="txt-link">(+84. 28) 54 155 555</a>
+            </div>
+            <div class="txt txt-20 body">
+                Fax: <a href="tel:(+84. 28) 54 161 226" target="_blank" class="txt-link">(+84. 28) 54 161 226</a>
+            </div>
+            <div class="txt txt-20 body">
+                Website: <a href="www.vinamilk.com.vn/" target="_blank" class="txt-link">www.vinamilk.com.vn/</a><br>
+                <a href="www.vuoncaovietnam.com/" target="_blank" class="txt-link">www.vuoncaovietnam.com/</a><br>
+                <a href="www.youtube.com/user/vinamilk" target="_blank" class="txt-link">www.youtube.com/user/vinamilk</a>
+            </div>
+        </div>
+        <div class="contact-hero-img" data-aos="fade-up" data-aos-delay="300">
+            <Image src={ContactHeroImg} alt="" class="img-h img-fit img-fit-bot"/>
+        </div>
+    </div>
+    <div class="line line-decor"></div>
+</section>
+
+<style lang="scss">
+    .contact-hero {
+        padding-top: 9rem;
+        height: 100vh;
+        contain: paint;
+        background-color: var(--cl-purple-light);
+        @media screen and (max-width: 767px) {
+            padding-top: 11.8rem;
+        }
+        .container {
+            position: relative;
+            height: 100%;
+            align-content: start;
+        }
+        &-img {
+            position: absolute;
+            z-index: 1;
+            top: -6.3rem;
+            left: 0;
+            width: 100%;
+            height: calc(100% + 6.3rem);
+            pointer-events: none;
+            @media screen and (max-width: 767px) {
+                width: 180%;                
+                margin-inline: -55%;
+            }
+        }
+        & > .line-decor {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1.1rem;
+            z-index: 2;
+            background-size: auto 1.1rem;
+            background-repeat: repeat-x;
+            @media screen and (max-width: 767px) {
+                height: .6rem;
+                background-size: auto .6rem;
+            }
+        }
+        &-logo {
+            grid-column: 1/6;
+            margin-top: 9.3rem;
+            @media screen and (max-width: 767px) {
+                grid-column: 1/-1;
+                margin-top: 0;
+                width: 17.5rem;
+            }
+        }
+        &-content {
+            grid-column: 7/13;
+            display: flex;
+            position: relative;
+            z-index: 2;
+            flex-direction: column;
+            align-items: start;
+            padding-top: 8.4rem;
+            color: var(--cl-blue);
+            row-gap: 1.4rem;
+            @media screen and (max-width: 767px) {
+                grid-column: 1/-1;
+                padding-top: 3.2rem;
+                row-gap: .8rem;
+            }
+        }
+    }
+</style>

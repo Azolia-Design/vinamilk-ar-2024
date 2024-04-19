@@ -4,7 +4,7 @@ import Chap2Sum1 from '../../assets/Chap2Sum1.png'
 import Chap2Sum2 from '../../assets/Chap2Sum2.png'
 import Chap2Sum3 from '../../assets/Chap2Sum3.png'
 ---
-<section class="chap2-sum">
+<section class="chap2-sum" id="Sc1">
     <div class="container">
         <h2 class="heading txt-78 txt-bold chap2-sum-title" data-aos="fade-up">
             Tổng quan ngành sữa Việt Nam năm 2023
@@ -40,7 +40,7 @@ import Chap2Sum3 from '../../assets/Chap2Sum3.png'
                             <div class="line line-ver"></div>
                             <div class="value-wrap">
                                 <div class="heading txt-162 txt-bold txt-up number-value">
-                                    2
+                                    <span data-counter>2</span>
                                 </div>
                                 <div class="heading txt-64 txt-bold txt-up number-unit">
                                     %
@@ -58,13 +58,13 @@ import Chap2Sum3 from '../../assets/Chap2Sum3.png'
                             <Image src={Chap2Sum2} alt="" />
                         </div>
                         <div class="content-wrap">
-                            <div class="txt txt-36 label">
-                                Ngành sữa giảm nhẹ
+                            <div class="txt txt-17 label">
+                                Ngành sữa <br>giảm nhẹ
                             </div>
                             <div class="line line-ver"></div>
                             <div class="value-wrap">
                                 <div class="heading txt-162 txt-bold txt-up number-value">
-                                    1
+                                    <span data-counter>1</span>
                                 </div>
                                 <div class="heading txt-64 txt-bold txt-up number-unit">
                                     %
@@ -87,7 +87,7 @@ import Chap2Sum3 from '../../assets/Chap2Sum3.png'
                             </div>
                             <div class="value-wrap">
                                 <div class="heading txt-162 txt-bold txt-up number-value">
-                                    7,1
+                                    <span data-counter>7,1</span>
                                 </div>
                                 <div class="heading txt-64 txt-bold txt-up number-unit">
                                     %
@@ -246,18 +246,17 @@ import Chap2Sum3 from '../../assets/Chap2Sum3.png'
                             .content-wrap {
                                 display: flex;
                                 align-items: center;
-                                margin-top: -3.5rem;
+                                margin-top: -2.3rem;
                                 margin-bottom: -2.5rem;
                                 width: 100%;
                                 .label {
-                                    max-width: 17.5rem;
-                                    @media screen and (max-width: 767px) {
-                                        font-size: 2.8rem;
-                                    }
+                                    width: 100%;
+                                    max-width: 14.9rem;
+                                    line-height: 2rem;
                                 }
                                 .line-ver {
                                     background-color: var(--cl-blue);
-                                    margin-inline: 1.9rem 2.7rem;
+                                    margin-inline: .6rem 2.6rem;
                                     height: 14.2rem;
                                     margin-top: 2.6rem;
                                 }
@@ -265,7 +264,7 @@ import Chap2Sum3 from '../../assets/Chap2Sum3.png'
                                     display: flex;
                                     align-items: end;
                                     .number-unit {
-                                        margin-bottom: 2.5rem;
+                                        margin-bottom: 2.6rem;
                                         margin-left: 1.7rem;
                                     }
                                 }

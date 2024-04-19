@@ -1,0 +1,126 @@
+---
+import { Image } from "astro:assets";
+import chap6HeroImg from '../../assets/chap6HeroImg.jpg';
+---
+<section class="chap6-hero">
+    <div class="container grid">
+        <div class="chap6-hero-content">
+            <h1 class="heading txt-96 txt-bold txt-up title" data-aos="fade-up-right">
+                Financial Statements
+            </h1>
+            <div class="hero-btn-list" data-aos="fade-up-right" data-aos-delay="200">
+                <a href="#" class="btn btn-outline hero-btn-list-item">
+                    <span class="heading txt-32 txt-med">Financial statements under VAS</span>
+                    <div class="ic ic-20">    
+                        <svg width="100%" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 20.5H16.8" stroke="currentColor" stroke-width="2.51875" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.8996 5V15.4622M10.8996 15.4622L15.3246 10.8904M10.8996 15.4622L6.47461 10.8904" stroke="currentColor" stroke-width="2.51875" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                                             
+                    </div>
+                </a>
+                <a href="#" class="btn btn-outline hero-btn-list-item">
+                    <span class="heading txt-32 txt-med">Financial statements under IFRS</span>
+                    <div class="ic ic-20">    
+                        <svg width="100%" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M5 20.5H16.8" stroke="currentColor" stroke-width="2.51875" stroke-linecap="round" stroke-linejoin="round"/>
+                            <path d="M10.8996 5V15.4622M10.8996 15.4622L15.3246 10.8904M10.8996 15.4622L6.47461 10.8904" stroke="currentColor" stroke-width="2.51875" stroke-linecap="round" stroke-linejoin="round"/>
+                        </svg>                                             
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="chap6-hero-img" data-aos="fade-up" data-aos-delay="300">
+            <Image src={chap6HeroImg} alt="" class="img-h img-fit img-fit-bot"/>
+        </div>
+    </div>
+    <div class="line line-decor"></div>
+</section>
+
+<style lang="scss">
+    .chap6-hero {
+        padding-top: 9rem;
+        margin-bottom: 7.6rem;
+        height: 100vh;
+        contain: paint;
+        @media screen and (max-width: 767px) {
+            padding-top: 10.9rem;
+            min-height: 62.5rem;
+        }
+        .container {
+            position: relative;
+            height: 100%;
+        }
+        &-img {
+            position: absolute;
+            z-index: 1;
+            top: -6.3rem;
+            left: 0;
+            width: 100%;
+            height: calc(100% + 6.3rem);
+            pointer-events: none;
+            @media screen and (max-width: 767px) {
+                width: 200%;                
+                margin-left: -100%;
+            }
+        }
+        & > .line-decor {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 1.1rem;
+            z-index: 2;
+            background-size: auto 1.1rem;
+            background-repeat: repeat-x;
+            @media screen and (max-width: 767px) {
+                height: .6rem;
+                background-size: auto .6rem;
+            }
+        }
+        &-content {
+            grid-column: 1/9;
+            display: flex;
+            position: relative;
+            z-index: 2;
+            flex-direction: column;
+            align-items: start;
+            padding-top: 9.7rem;
+            color: var(--cl-blue);
+            @media screen and (max-width: 767px) {
+                grid-column: 1/-1;
+                padding-top: 0;
+            }
+            .title {
+                margin-bottom: 3.9rem;
+                line-height: 8.5rem;
+                margin-right: -1rem;
+                @media screen and (max-width: 767px) {
+                    font-size: 4.2rem;
+                    line-height: 1.2em;
+                    margin-bottom: 2rem;
+                }
+            }
+            .hero-btn-list {
+                display: flex;
+                flex-direction: column;
+                align-items: start;
+                row-gap: 1.5rem;
+                @media screen and (max-width: 767px) {
+                    width: 100%;
+                    row-gap: 1rem;
+                }
+            }
+            .hero-btn-list-item {
+                align-items: center;
+                padding-block: .2rem .4rem;
+                padding-inline: 1.8rem 1rem;
+                column-gap: .5rem;
+                @media screen and (max-width: 767px) {
+                    .heading {
+                        font-size: 2rem;
+                    }
+                }
+            }
+        }
+    }
+</style>

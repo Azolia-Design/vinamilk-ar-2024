@@ -1,0 +1,104 @@
+---
+import { Image } from "astro:assets";
+import chairwoman from '../../assets/chair-woman.png'
+---
+<section class="mess-hero" id="Sc2">
+    <div class="container grid">
+        <div class="mess-hero-content">
+            <h1 class="heading txt-74 txt-up txt-bold mess-hero-title" data-aos="fade-up-right">
+                CEO's Message
+            </h1>
+            <div class="line line-decor" data-aos="fade-up-right"></div>
+            <div class="txt txt-26 mess-hero-sub" data-aos="fade-up-right" data-aos-delay="200">
+                Ended up 2023, Vinamilk recorded a total consolidated revenue of VND 60,479 billion, a YoY increase by VND 404 billion, completing 95% of annual plan. The consolidated net profit reached VND 9,019 billion, up by VND 472 billion YoY, surpassing the target by 5%, thanks to effective management of production and operational costs.
+            </div>
+        </div>
+        <div class="mess-hero-img-wrap">
+            <div class="mess-hero-img" data-aos="fade-up-left">
+                <Image src={chairwoman} alt="" class="img-fill"/>
+            </div>
+            <div class="heading txt-36 txt-up txt-bold mess-hero-img-name" data-aos="fade-up-left" data-aos-delay="200">
+                Ms. Mai Kieu Lien
+            </div>
+        </div>
+    </div>
+    <div class="line line-decor line-section"></div>
+</section>
+<style lang="scss">
+    .mess-hero {
+        background-color: var(--cl-pink);
+        color: var(--cl-blue);
+        position: relative;
+        &-content {
+            grid-column: 1/6;
+            padding-block: 16.9rem 7.2rem;
+            max-width: 48.3rem;
+            display: flex;
+            flex-direction: column;
+            justify-content: end;
+            @media screen and (max-width: 767px) {
+                grid-column: 1/-1;
+                padding-block: 4.3rem 2.7rem;
+            }
+        }
+        &-title {
+            margin-bottom: 2.8rem;
+            @media screen and (max-width: 767px) {
+                font-size: 4.2rem;
+                line-height: 4.2rem;
+                margin-bottom: 2rem;
+            }
+        }
+        &-sub {
+            text-align: justify;
+            @media screen and (max-width: 767px) {
+                font-size: 1.7rem;
+                line-height: 1.2em;
+            }
+        }
+        &-img-wrap {
+            grid-column: 7/13;
+            padding-block: 7rem 5.6rem;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            @media screen and (max-width: 767px) {
+                grid-column: 1/-1;
+                padding-block: 0 5.4rem;
+            }
+        }
+        &-img {
+            width: 52rem;
+            @media screen and (max-width: 767px) {
+                width: 23.7rem;
+            }
+            &-name {
+                margin-top: 3rem;
+                @media screen and (max-width: 767px) {
+                    margin-top: 1.4rem;
+                    font-size: 1.7rem;
+                    line-height: 1.2em;
+                }
+            }
+        }
+        .line-decor {
+            height: .4rem;
+            background-size: auto .4rem;
+            background-repeat: repeat-x;
+            margin-bottom: 3.2rem;
+            @media screen and (max-width: 767px) {
+                margin-bottom: 2rem;
+            }
+        }
+        .line-section {
+            height: 1.1rem;
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            background-size: auto 1.1rem;
+            background-repeat: repeat-x;
+            margin-bottom: 0;
+        }
+    }
+</style>

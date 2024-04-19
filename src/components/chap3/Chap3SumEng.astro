@@ -1,0 +1,195 @@
+---
+import { Image } from "astro:assets";
+import Chap3Sum1 from '../../assets/Chap3Sum1.jpg'
+---
+<section class="chap3-sum" id="Sc1">
+    <div class="container">
+        <h2 class="heading txt-78 txt-bold chap3-sum-title">
+            Development Strategy In 2022-2026
+        </h2>
+        <div class="chap3-sum-main">
+            <div class="box-content" data-aos="fade-up-right">
+                <div class="bg-stripe top"></div>
+                <div class="box-inner">
+                    <div class="txt txt-28 txt-med title">
+                        Develop superior products and experiences for consumers
+                    </div>
+                    <p class="txt txt-17 txt-inter body">
+                        • Restructure the product portfolio based on the brand structure for the long term; <br><br>
+                        • Review product quality and optimize the process of launching new products;<br><br>
+                        • Improve the price structure, packaging specifications by each channel and each region to optimize the product structure based on market demand and future growth potential;<br><br>
+                        • Build a new product portfolio prepares for portfolio expansion over the next 5-year period.
+                    </p>
+                </div>
+                <div class="bg-stripe bottom"></div>
+            </div>
+            <div class="box-content" data-aos="fade-up-left">
+                <Image src={Chap3Sum1} alt=""  class="img-fill"/>
+            </div>
+            <div class="box-content" data-aos="fade-up-right">
+                <div class="bg-stripe top"></div>
+                <div class="box-inner">
+                    <div class="txt txt-28 txt-med title">
+                        Create new business opportunities 
+                    </div>
+                    <p class="txt txt-17 txt-inter body">
+                        • Optimize operational capacity and expanding multi-channel distribution services directly to consumers; <br><br>
+                        • Build strategic cooperation with potential partners for opportunities to expand the product portfolio; <br><br>
+                        • Enhance trade promotion activities to find new export customers; <br><br>
+                        • Promote customer support to overcome difficult periods, maintain import and sales of Vinamilk's products;  <br><br>
+                        • Exploit opportunities in potential markets through joint venture investment, M&A;  <br><br>
+                        • Seek opportunities to expand production and business activities in markets that already have a presence such as the US, Cambodia, Philippines.
+                    </p>
+                </div>
+                <div class="bg-stripe bottom"></div>
+            </div>
+            <div class="box-content" data-aos="fade-up-left">
+                <div class="bg-stripe top"></div>
+                <div class="box-inner">
+                    <div class="txt txt-28 txt-med title">
+                        Promote the application of technology in sustainable agriculture
+                    </div>
+                    <p class="txt txt-17 txt-inter body">
+                        • Restructure the business model, focusing on adjusting functional requirements, capacity and evaluating the performance of the sales team; <br><br>
+                        • Restructure the distribution organization, focusing on adjusting the role and activities of distributors in Vinamilk's supply chain; <br><br>
+                        • Build a foundation of technology mastery, preparing for projects to optimize business operations with automation and data analysis; Get started with digital sales & marketing. 
+                    </p>
+                </div>
+                <div class="bg-stripe bottom"></div>
+            </div>
+            <div class="box-content" data-aos="fade-up-left">
+                <div class="bg-stripe top"></div>
+                <div class="box-inner">
+                    <div class="txt txt-28 txt-med title">
+                        Become a talent destination
+                    </div>
+                    <p class="txt txt-17 txt-inter body">
+                        • Build brand value and preparing the foundation for organizational restructuring, including re-evaluating the competency requirements of management positions, developing business planning mechanisms and evaluating performance.
+                    </p>
+                </div>
+                <div class="bg-stripe bottom"></div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style lang="scss">
+    .chap3-sum {
+        padding-block: 8rem 10.5rem;
+        @media screen and (max-width: 767px) {
+            padding-block: 3.5rem 7.6rem;
+        }
+        &-title {
+            text-align: center;
+            margin-bottom: 8.4rem;
+            color: var(--cl-blue);
+            @media screen and (max-width: 767px) {
+                font-size: 4.2rem;
+                line-height: 1em;
+                margin-bottom: 4.2rem;
+            }
+        }
+        &-main {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            grid-template-rows: auto 11.2rem auto auto;
+            column-gap: var(--grid-gap);
+            row-gap: var(--grid-gap);
+            @media screen and (max-width: 767px) {
+                grid-template-columns: 1fr;
+                grid-template-rows: unset;
+            }
+            .box-content {
+                border-radius: 1.4rem;
+                overflow: hidden;
+                position: relative;
+                min-height: 100%;
+                @media screen and (max-width: 767px) {
+                    grid-column: span 1 !important;
+                    grid-row: span 1 !important;
+                }
+                .box-inner {
+                    padding-block: 6rem;
+                    padding-inline: 5rem;
+                    height: 100%;
+                    display: flex;
+                    flex-direction: column;
+                    justify-content: center;
+                    @media screen and (max-width: 767px) {
+                        padding-block: 5.4rem;
+                        padding-inline: 1.8rem;
+                    }
+                    .title {
+                        color: var(--cl-blue);
+                        margin-bottom: 3rem;
+                        @media screen and (max-width: 767px) {
+                            font-size: 2rem;
+                            margin-bottom: 2rem;
+                        }
+                    }
+                    .body {
+                        max-width: 45.1rem;
+                        line-height: 2.8rem;
+                        color: var(--cl-txt)
+                    }
+                }
+                .bg-stripe {
+                    position: absolute;
+                    width: 100%;
+                    height: 1.8rem;
+                    --angle: 90deg;
+                    --gap: 3.4rem;
+                    --stroke: 6.8rem;
+                    &.top {
+                        top: 0;
+                        left: 0;
+                    }
+                    &.bottom {
+                        bottom: 0;
+                        left: 0;
+                    }
+                }
+                &:nth-child(1) {
+                    grid-row: span 2;
+                    background-color: var(--cl-purple-light);
+                    .bg-stripe {
+                        background-color: var(--cl-green-dark);
+                        --cl: var(--cl-green);
+                    }
+                }
+                &:nth-child(2) {
+                    @media screen and (max-width: 767px) {
+                        grid-row: 3/4 !important;
+                    }
+                }
+                &:nth-child(3) {
+                    grid-column: 1/2;
+                    grid-row: span 2;
+                    background-color: var(--cl-pink-3);
+                    .bg-stripe {
+                        background-color: var(--cl-pink-main);
+                        --cl: var(--cl-pink-real);
+                    }
+                }
+                &:nth-child(4) {
+                    grid-column: 2/3;
+                    grid-row: 2/4;
+                    background-color: var(--cl-cyan);
+                    .bg-stripe {
+                        background-color: var(--cl-green-dark);
+                        --cl: var(--cl-green-li);
+                    }
+                }
+                &:nth-child(5) {
+                    grid-column: 2/3;
+                    grid-row: 4/5;
+                    background-color: var(--cl-blue-3);
+                    .bg-stripe {
+                        background-color: var(--cl-blue);
+                        --cl: var(--cl-blue-2);
+                    }
+                }
+            }
+        }
+    }
+</style>

@@ -1,0 +1,16 @@
+---
+import { getImage } from "astro:assets";
+import Layout from "../../layouts/Layout.astro";
+import Chap2HeroEng from "../../components/chap2/Chap2HeroEng.astro";
+import Chap2SumEng from "../../components/chap2/Chap2SumEng.astro";
+import Chap2AwardEng from "../../components/chap2/Chap2AwardEng.astro";
+import Chap2ComEng from "../../components/chap2/Chap2ComEng.astro";
+import DownloadPDFEng from "../../components/DownloadPDFEng.astro";
+---
+<Layout title="Business review in 2023" lang="en">
+	<Chap2HeroEng />
+	<Chap2SumEng />
+	<Chap2AwardEng />
+	<Chap2ComEng />
+	<DownloadPDFEng link="#"/>
+</Layout>

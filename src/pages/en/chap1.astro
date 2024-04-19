@@ -1,14 +1,14 @@
 ---
 import { getImage } from "astro:assets";
 import Layout from "../../layouts/Layout.astro";
-import Chap1Hero from "../../components/chap1/Chap1Hero.astro";
-import Chap1His from "../../components/chap1/Chap1His.astro";
-import Chap1Bis from "../../components/chap1/Chap1Bis.astro";
-import Chap1Chart from "../../components/chap1/Chap1Chart.astro";
-import Chap1Table from "../../components/chap1/Chap1Table.astro";
-import Chap1Member from "../../components/chap1/Chap1Member.astro";
-import Chap1Popup from "../../components/chap1/Chap1Popup.astro";
-import DownloadPDF from "../../components/DownloadPDF.astro";
+import Chap1HeroEng from "../../components/chap1/Chap1HeroEng.astro";
+import Chap1HisEng from "../../components/chap1/Chap1HisEng.astro";
+import Chap1BisEng from "../../components/chap1/Chap1BisEng.astro";
+import Chap1ChartEng from "../../components/chap1/Chap1ChartEng.astro";
+import Chap1TableEng from "../../components/chap1/Chap1TableEng.astro";
+import Chap1MemberEng from "../../components/chap1/Chap1MemberEng.astro";
+import Chap1PopupEng from "../../components/chap1/Chap1PopupEng.astro";
+import DownloadPDFEng from "../../components/DownloadPDFEng.astro";
 import chap1His1 from '../../assets/chap1His1.jpg'
 import chap1His2 from '../../assets/chap1His2.jpg'
 import chap1His3 from '../../assets/chap1His3.jpg'
@@ -23,84 +23,80 @@ import chap1His11 from '../../assets/chap1His11.jpg'
 import chap1His12 from '../../assets/chap1His12.jpg'
 
 const data = {
-	hero: {
-		title: 'Để tâm \nthay đổi',
-		sub: 'Báo cáo thường niên 2023'
-	},
 	his: {
 		title: 'Lịch sử hình thành và phát triển',
 		list: [
 			{
 				img: await getImage({src: chap1His1, format: 'webp', width: chap1His1.width / 2}),
-				year: 'Năm 1976',
-				sub: 'Vinamilk được thành lập với tên gọi Công ty Sữa - Cà Phê Miền Nam, tiếp quản 03 nhà máy sữa Thống Nhất, Trường Thọ, và sữa bột Dielac.'
+				year: '1976',
+				sub: 'Vinamilk was established under the name Southern Milk - Coffee Company, taking over 3 milk factories: Thong Nhat, Truong Tho, and Dielac powdered milk.'
 			},
 			{
 				img: await getImage({src: chap1His2, format: 'webp', width: chap1His1.width / 2}),
-				year: 'Năm 2003',
-				sub: 'Cổ phần hóa và đổi tên thành Công ty \nCổ phần (“CTCP”) Sữa Việt Nam'
+				year: '2003',
+				sub: 'The company was capitalized and renamed Vietnam Dairy Joint Stock Company.'
 			},
 			{
 				img: await getImage({src: chap1His3, format: 'webp', width: chap1His1.width / 2}),
-				year: 'Năm 2006',
-				sub: 'Niêm yết trên Sở Giao dịch \nChứng Khoán TP.HCM (“HOSE”).'
+				year: '2006',
+				sub: 'The company was listed on the Ho Chi Minh City Stock Exchange (HOSE).'
 			},
 			{
 				img: await getImage({src: chap1His4, format: 'webp', width: chap1His1.width / 2}),
-				year: 'Năm 2014',
-				sub: 'Góp vốn 51,0% thành lập Công ty  Angkor Dairy Products Co., Ltd.  (“Angkormilk”) tại Campuchia và tăng  lên 100% vào năm 2017.'
+				year: '2014',
+				sub: 'The company contributed 51% of capital to establish Angkor Dairy Products Co., Ltd. (“Angkormilk”) in Cambodia and increased to 100% in 2017.'
 			},
 			{
 				img: await getImage({src: chap1His5, format: 'webp', width: chap1His1.width / 2}),
-				year: 'Năm 2013',
-				sub: 'Đầu tư nắm giữ 96,1% cổ phần của công ty TNHH Bò sữa Thống Nhất Thanh Hóa, sau đó tăng lên 100% vào năm 2017; 70,0% cổ phần của Driftwood Dairy Holdings Corporation tại California, Hoa Kỳ và tăng lên 100% vào năm 2016.'
+				year: '2013',
+				sub: 'The company invested to hold 96.1% of shares in Thong Nhat Thanh Hoa Dairy Co., Ltd., then increased to 100% in 2017; 70% of shares in Driftwood Dairy Holdings Corporation in California, USA, and increased to 100% in 2016.'
 			},
 			{
 				img: await getImage({src: chap1His6, format: 'webp', width: chap1His1.width / 2}),
-				year: 'Năm 2010',
-				sub: 'Đầu tư 10 triệu USD nắm giữ 19,3% cổ phần của Miraka Holdings Limited tại New Zealand và tăng lên 22,8% vào năm 2015. Năm 2022-2023, Miraka đã tiến hành tăng vốn, pha loãng góp vốn của Vinamilk từ 22,8% xuống lần lượt 17,0% năm 2022 và 13,6% năm 2023.'
+				year: '2010',
+				sub: 'The company invested USD 10 million to hold 19.3% of shares in Miraka Holdings Limited in New Zealand and increased to 22.8% in 2015. In 2022-2023, Miraka increased its capital, diluting Vinamilk’s contribution from 22.8% to 17.0% in 2022 and 13.6% in 2023.'
 			},
 			{
 				img: await getImage({src: chap1His7, format: 'webp', width: chap1His1.width / 2}),
-				year: 'Năm 2016',
-				sub: 'Đầu tư nắm giữ 18,0% cổ phần của CTCP APIS. Năm 2018, công ty tăng tỷ lệ sở hữu lên 20,0%.'
+				year: '2016',
+				sub: 'The company invested to hold 18.0% of shares in APIS JSC. In 2018, the company increased its ownership ratio to 20.0%.'
 			},
 			{
 				img: await getImage({src: chap1His8, format: 'webp', width: chap1His1.width / 2}),
-				year: 'Năm 2017',
-				sub: 'Đầu tư nắm giữ 65,0% cổ phần của CTCP Đường Việt Nam và 25,0% cổ phần của CTCP Chế Biến Dừa Á Châu.'
+				year: '2017',
+				sub: 'The company invested to hold 65% of shares in Vietnam Sugar JSC and 25% of shares in Asia Coconut Processing JSC.'
 			},
 			{
 				img: await getImage({src: chap1His9, format: 'webp', width: chap1His1.width / 2}),
-				year: 'Năm 2018',
-				sub: 'Đầu tư nắm giữ 50,0% cổ phần của Lao-Jagro Development Xiengkhouang Co., Ltd. tại Lào.'
+				year: '2018',
+				sub: 'The company invested to hold 51% of shares in Lao-Jagro Development Xiengkhouang Co., Ltd. in Laos.'
 			},
 			{
 				img: await getImage({src: chap1His10, format: 'webp', width: chap1His1.width / 2}),
-				year: 'Năm 2022',
-				sub: 'Vinamilk đã tăng tỷ lệ sở hữu lên 87,3% tại Lao-Jagro Development Xiengkhouang Co., Ltd. Toàn bộ cổ phiếu GTNFoods do công ty sở hữu đã được hoán đổi với cổ phiếu của Tổng Công ty Chăn nuôi Việt Nam (“Vilico”) sau khi sáp nhập GTNFoods vào Villico.'
+				year: '2022',
+				sub: 'Vinamilk increased its ownership ratio to 87.3% at Lao-Jagro. All GTNFoods shares owned by the company were exchanged for shares of Vietnam Livestock Corporation (Vilico) after merging GTNFoods into Vilico.'
 			},
 			{
 				img: await getImage({src: chap1His11, format: 'webp', width: chap1His1.width / 2}),
-				year: 'Năm 2021',
-				sub: 'Góp vốn 50,0% thành lập liên doanh với Del Monte Philippines, Inc. - một doanh nghiệp thực phẩm và đồ uống tại Philippines và phân phối sản phẩm đến người tiêu dùng ở Philippines từ quý 4 năm 2021.'
+				year: '2021',
+				sub: 'The company contributed 50% of capital to establish a joint venture with Del Monte Philippines, Inc. - a food and beverage company in the Philippines and distributed products to consumers in the Philippines from Q4/2021.'
 			},
 			{
 				img: await getImage({src: chap1His12, format: 'webp', width: chap1His1.width / 2}),
-				year: 'Năm 2019',
-				sub: 'Đầu tư nắm giữ 75,0% cổ phần của CTCP GTNFoods, qua đó tham gia điều hành CTCP Giống Bò Sữa Mộc Châu với quy mô đàn bò 27.500 con.'
+				year: '2019',
+				sub: 'The company invested to hold 75% of shares in GTNFoods JSC, thereby participating in the management of Moc Chau Milk JSC with a herd size of 27,500 cows.'
 			},
 		]
 	},
 }
 ---
-<Layout title="Thông tin chung" lang="en">
-	<Chap1Hero />
-	<Chap1His content={data.his}/>
-	<Chap1Bis />
-	<Chap1Chart />
-	<Chap1Table />
-	<Chap1Member />
-	<Chap1Popup />
-	<DownloadPDF link="#"/>
+<Layout title="General information" lang="en">
+	<Chap1HeroEng />
+	<Chap1HisEng content={data.his}/>
+	<Chap1BisEng />
+	<Chap1ChartEng />
+	<Chap1TableEng />
+	<Chap1MemberEng />
+	<Chap1PopupEng />
+	<DownloadPDFEng link="#"/>
 </Layout>

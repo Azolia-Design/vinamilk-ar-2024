@@ -1,0 +1,614 @@
+---
+import { Image } from 'astro:assets'
+import chap1HisIc1 from '../../assets/chap1HisIc1.png'
+import chap1HisIc2 from '../../assets/chap1HisIc2.png'
+import chap1HisAwardIc1 from '../../assets/chap1HisAwardIc1.png'
+import chap1HisAwardIc2 from '../../assets/chap1HisAwardIc2.png'
+const {content} = Astro.props;
+---
+<section class="chap1-his" id="Sc1">
+    <div class="container">
+        <h2 class="heading txt-78 txt-bold txt-blue chap1-his-title" data-aos="fade-up">
+            Vinamilk In A Brief
+        </h2>
+        <div class="chap1-his-main">
+            {content.list.map((el,idx) => (
+                <div class="chap1-his-item" data-aos="fade-up" data-aos-delay={idx % 3 == 0 ? '100' : idx % 3 == 1 ? '200' : '300'}>
+                    <div class="img-wrap">
+                        <Image src={el.img.src} alt='' {...el.img.attributes} class='img-fill'/>
+                    </div>
+                    <div class="year-wrap">
+                        <div class="heading txt-40 txt-bold txt-blue year">
+                            {el.year}
+                        </div>
+                        <div class="year-line-wrap">
+                            <div class="line line-dash"></div>
+                            <div class="year-dot"></div>
+                        </div>
+                    </div>
+                    <div class="txt txt-17 label txt-inter">
+                        <Fragment set:html={el.sub.replaceAll('\n','<br/>')} />
+                    </div>
+                </div>
+            ))}
+            <div class="chap1-his-line-wrap line-1" data-aos="fade-up" data-aos-delay="300">
+                <div class="chap1-his-line-inner left"></div>
+            </div>
+            <div class="chap1-his-line-wrap line-2" data-aos="fade-up" data-aos-delay="100">
+                <div class="chap1-his-line-inner right">
+                    <div class="year-dot"></div>
+                </div>
+            </div>
+            <div class="chap1-his-line-wrap line-3" data-aos="fade-up" data-aos-delay="300">
+                <div class="chap1-his-line-inner left"></div>
+            </div>
+            <div class="chap1-his-line-wrap line-4" data-aos="fade-up">
+                <div class="chap1-his-line-inner right">
+                    <div class="blank"></div>
+                </div>
+            </div>
+            <div class="chap1-his-lg-item">
+                <div class="heading txt-64 txt-bold lg-title" data-aos="fade-up">
+                    <div class="year-line-wrap">
+                        <div class="line line-dash"></div>
+                        <div class="year-dot"></div>
+                    </div>
+                    <span>2023</span>
+                    <div class="year-line-wrap holder"></div>
+                </div>
+                <div class="item-wrap">
+                    <div class="item left" data-aos="fade-up">
+                        <div class="box-content">
+                            <div class="heading txt-64 txt-up txt-bold title">
+                                USD 6 BILLION 
+                            </div>
+                            <div class="txt txt-20 txt-med label">
+                                Market capitalization
+                            </div>
+                            <div class="txt txt-17 txt-inter sub">
+                                The largest food & beverage company on the Ho Chi Minh City Stock Exchange (HOSE).
+                            </div>
+                        </div>
+                        <div class="img-wrap">
+                            <Image src={chap1HisIc1} alt='' />
+                        </div>
+                    </div>
+                    <div class="item right" data-aos="fade-up" data-aos-delay="200">
+                        <div class="box-content">
+                            <div class="heading txt-64 txt-up txt-bold title">
+                                USD 3 BILLION 
+                            </div>
+                            <div class="txt txt-20 txt-med label">
+                                Brand value
+                            </div>
+                            <div class="txt txt-16 txt-ari txt-italic sub">
+                                According to Brand Finance
+                            </div>
+                        </div>
+                        <div class="img-wrap">
+                            <Image src={chap1HisIc2} alt='' />
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="chap1-his-sum" data-aos="fade-up">
+            <div class="box-left">
+                <div class="img-wrap">
+                    <Image src={chap1HisAwardIc1} alt='' />
+                </div>
+                <div class="heading txt-128 txt-up txt-bold title">
+                    No. 1
+                </div>
+                <div class="txt txt-17 txt-inter sub">
+                    in the Vietnamese dairy industry according to market share with:
+                </div>
+                <div class="txt txt-16 txt-ari txt-italic label">
+                    According to AC Nielsen
+                </div>
+                <div class="line-ver"></div>
+            </div>
+            <div class="box-right">
+                <div class="box-item">
+                    <div class="heading txt-64 txt-up txt-bold title">
+                        <span data-counter>15</span>
+                    </div>
+                    <div class="txt txt-17 txt-inter sub">
+                        Dairy farms
+                    </div>
+                </div>
+                <div class="box-item">
+                    <div class="heading txt-64 txt-up txt-bold title">
+                        <span data-counter>140,000</span>
+                    </div>
+                    <div class="txt txt-17 txt-inter sub">
+                        Cows under management
+                    </div>
+                </div>
+                <div class="box-item">
+                    <div class="heading txt-64 txt-up txt-bold title">
+                        <span data-counter>250</span> SKUs
+                    </div>
+                    <div class="txt txt-17 txt-inter sub">
+                        In the product portfolio
+                    </div>
+                </div>
+                <div class="box-item mod-lg">
+                    <div class="heading txt-82 txt-up txt-bold title">
+                        <span data-counter>16</span>
+                    </div>
+                    <div class="txt txt-17 txt-inter sub">
+                        Modern dairy factories domestically and globally
+                    </div>
+                </div>
+                <div class="box-item mod-mg">
+                    <div class="heading txt-64 txt-up txt-bold title">
+                        <span data-counter>200,000</span>
+                    </div>
+                    <div class="txt txt-17 txt-inter sub">
+                        Sales points in the distribution system
+                    </div>
+                </div>
+                <div class="box-img">
+                    <Image src={chap1HisAwardIc2} alt='' />
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style lang="scss">
+    .chap1-his {
+        padding-top: 10.8rem;
+        padding-bottom: 8.8rem;
+        @media screen and (max-width: 767px) {
+            padding-top: 4.4rem;
+            padding-bottom: 5.2rem;
+        }
+        &-title {
+            text-align: center;
+            margin-bottom: 6.9rem;
+            @media screen and (max-width: 767px) {
+                font-size: 4.2rem;
+                line-height: 1em;
+                margin-bottom: 4.4rem;
+            }
+        }
+        &-main {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            column-gap: var(--grid-gap);
+            row-gap: 5.6rem;
+            @media screen and (max-width: 767px) {
+                grid-template-columns: 1fr;
+                row-gap: 3rem;
+            }
+            position: relative;
+            .chap1-his-line-wrap {
+                position: absolute;
+                margin-top: 23.2rem;
+                margin-bottom: -29rem;
+                height: calc(100% - 23.2rem + 29rem);
+                @media screen and (max-width: 767px) {
+                    display: none;
+                }
+                .chap1-his-line-inner {
+                    height: 100%;
+                    --border-cl: var(--cl-blue);
+                    --border-w: max(.2rem, 2px);
+                    margin-top: max(-.1rem, -1px);
+                    border-top: dashed var(--border-w) var(--border-cl);
+                    border-bottom: dashed var(--border-w) var(--border-cl);
+                    width: 3.4rem;
+                    position: relative;
+                    &.left {
+                        border-right: dashed var(--border-w) var(--border-cl);
+                        border-top-right-radius: 1.2rem;
+                        border-bottom-right-radius: 1.2rem;
+                    }
+                    &.right {
+                        border-left: dashed var(--border-w) var(--border-cl);
+                        border-top-left-radius: 1.2rem;
+                        border-bottom-left-radius: 1.2rem;
+                        position: relative;
+                        .year-dot {
+                            position: absolute;
+                            z-index: 2;
+                            right: 0;
+                            bottom: 0;
+                            width: .8rem;
+                            height: .8rem;
+                            background-color: var(--cl-blue);
+                            transform: translate(50%, 50%) rotate(45deg);
+                        }
+                    }
+                }
+                &.line-1 {
+                    right: -3.4rem;
+                    grid-row: 1/2;
+                }
+                &.line-2 {
+                    left: -5rem;
+                    grid-row: 2/3;
+                }
+                &.line-3 {
+                    right: -3.4rem;
+                    grid-row: 3/4;
+                }
+                &.line-4 {
+                    left: -5rem;
+                    grid-row: 4/5;
+                    margin-bottom: -9.6rem;
+                    height: calc(100% - 23.2rem + 9.6rem);
+                    .chap1-his-line-inner {
+                        width: 5rem;
+                        .blank {
+                            position: absolute;
+                            top: -.8rem;
+                            background-color: var(--cl-bg);
+                            right: 0;
+                            width: 1.6rem;
+                            height: 1.6rem;
+                        }
+                    }
+                }
+            }
+        }
+        
+        &-item {
+            .img-wrap {
+                overflow: hidden;
+                border-radius: 1.2rem;
+                height: 20rem;
+                margin-bottom: 1.2rem;
+            }
+            .year-wrap {
+                display: flex;
+                align-items: center;
+                margin-bottom: .7rem;
+                .year {
+                    margin-right: 2.7rem;
+                    flex: none;
+                }
+                .year-line-wrap {
+                    flex: 1;
+                    display: flex;
+                    position: relative;
+                    align-items: center;
+                    margin-bottom: .8rem;
+                    .year-dot {
+                        position: absolute;
+                        z-index: 2;
+                        right: 0;
+                        width: .8rem;
+                        height: .8rem;
+                        background-color: var(--cl-blue);
+                        transform: translateX(50%) rotate(45deg);
+                    }
+                }
+            }
+            &:nth-child(6n + 3) {
+                .year-dot {
+                    display: none;
+                    @media screen and (max-width: 767px) {
+                        display: block;
+                    }
+                }
+            }
+            &:nth-child(6n + 4), &:nth-child(6n + 5), &:nth-child(6n + 6) {
+                .year-wrap {
+                    .year-line-wrap {
+                        .year-dot {
+                            right: auto;
+                            left: 0;
+                            transform: translateX(-50%) rotate(45deg);
+                            @media screen and (max-width: 767px) {
+                                left: auto;
+                                right: 0;
+                                transform: translateX(50%) rotate(45deg);
+                            }
+                        }
+                    }
+                }
+            }
+        }
+        @media screen and (max-width: 767px) {
+            .chap1-his-item {
+                &:nth-child(1) {grid-row: 1/2;}
+                &:nth-child(2) {grid-row: 2/3;}
+                &:nth-child(3) {grid-row: 3/4;}
+                &:nth-child(6) {grid-row: 4/5;}
+                &:nth-child(5) {grid-row: 5/6;}
+                &:nth-child(4) {grid-row: 6/7;}
+                &:nth-child(7) {grid-row: 7/8;}
+                &:nth-child(8) {grid-row: 8/9;}
+                &:nth-child(9) {grid-row: 9/10;}
+                &:nth-child(12) {grid-row: 10/11;}
+                &:nth-child(11) {grid-row: 11/12;}
+                &:nth-child(10) {grid-row: 12/13;}
+            }
+        }
+        &-lg-item {
+            grid-column: span 3;
+            width: 100%;
+            margin-inline: auto;
+            margin-bottom: 3rem;
+            @media screen and (max-width: 767px) {
+                grid-column: span 1;
+                margin-bottom: 5.8rem;
+            }
+            .lg-title {
+                margin-bottom: 4.8rem;
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                text-align: center;
+                color: var(--cl-blue);
+                @media screen and (max-width: 767px) {
+                    font-size: 4.2rem;
+                    line-height: 1em;
+                    margin-bottom: 3.8rem;
+                }
+                span {
+                    display: inline-block;
+                    margin-inline: 2rem;
+                }
+                .year-line-wrap {
+                    flex: 1;
+                    display: flex;
+                    position: relative;
+                    align-items: center;
+                    margin-top: .4rem;
+                    &.holder {
+                        opacity: 0;
+                        pointer-events: none;
+                    }
+                    .year-dot {
+                        position: absolute;
+                        z-index: 2;
+                        right: 0;
+                        width: .8rem;
+                        height: .8rem;
+                        background-color: var(--cl-blue);
+                        transform: translateX(50%) rotate(45deg);
+                    }
+                }
+
+            }
+            .item-wrap {
+                max-width: 79rem;
+                width: 100%;
+                margin-inline: auto;
+                display: grid;
+                grid-template-columns: repeat(2, 1fr);
+                column-gap: var(--grid-gap);
+                @media screen and (max-width: 767px) {
+                    grid-template-columns: 1fr;
+                    row-gap: 1.2rem;
+                }
+                .item {
+                    border-radius: 1.4rem;
+                    color: var(--cl-bg);
+                    position: relative;
+                    .box-content {
+                        display: flex;
+                        flex-direction: column;
+                        align-items: start;
+                        padding-block: 1.6rem 2.3rem;
+                        padding-inline: 2.3rem;
+                        height: 100%;
+                        .title {
+                            margin-bottom: -1rem;
+                            @media screen and (max-width: 767px) {
+                                font-size: 4.8rem;
+                            }
+                        }
+                        .label {
+                            margin-bottom: 2.8rem;
+                            @media screen and (max-width: 767px) {
+                                font-size: 1.4rem;
+                            }
+                        }
+                        .sub {
+                            margin-top: auto;
+                        }
+                    }
+                    .img-wrap {
+                        position: absolute;
+                    }
+                    &.left {
+                        background-color: var(--cl-blue-3);
+                        .title {
+                            font-size: 4.8rem;
+                            @media screen and (max-width: 767px) {
+                                font-size: 4rem !important;
+                            }
+                        }
+                        .img-wrap {
+                            width: 12rem;
+                            top: -3.1rem;
+                            right: 2.5rem;
+                            @media screen and (max-width: 767px) {
+                                width: 8.8rem;
+                                top: .9rem;
+                                right: 4rem;
+                            }
+                        }
+                    }
+                    &.right {
+                        background-color: var(--cl-green);
+                        .img-wrap {
+                            width: 11rem;
+                            top: 3.2rem;
+                            right: 3.4rem;
+                            @media screen and (max-width: 767px) {
+                                width: 8.3rem;
+                                top: 1.8rem;
+                                right: 4rem;
+                            }
+                        }
+                    }
+                }
+            }
+            
+        }
+        &-sum {
+            border-radius: 1.4rem;
+            background-color: var(--cl-blue);
+            color: var(--cl-bg);
+            display: grid;
+            grid-template-columns: 27fr 73fr;
+            @media screen and (max-width: 767px) {
+                grid-template-columns: 1fr;
+            }
+            .box-left {
+                display: flex;
+                padding-inline: 4.4rem;
+                padding-bottom: 4.2rem;
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                position: relative;
+                @media screen and (max-width: 767px) {
+                    padding-inline: 4.2rem;
+                    padding-block: 0 1.8rem;
+                    margin-top: -4rem;
+                }
+                .img-wrap {
+                    width: 11rem;
+                    margin-top: 2.9rem;
+                    margin-bottom: 1.3rem;
+                    @media screen and (max-width: 767px) {
+                        width: 8rem;
+                        margin-bottom: -1.8rem;
+                        margin-top: 0;
+                    }
+                }
+                .title {
+                    margin-bottom: -2rem;
+                    text-wrap: nowrap;
+                    @media screen and (max-width: 767px) {
+                        margin-bottom: -1.8rem;
+                    }
+                }
+                .sub {
+                    margin-bottom: 2.4rem;
+                    @media screen and (max-width: 767px) {
+                        margin-bottom: .7rem;
+                    }
+                }
+                .label {
+                    margin-top: auto;
+                    @media screen and (max-width: 767px) {
+                        font-size: 1rem;
+                    }
+                }
+                .line-ver {
+                    position: absolute;
+                    top: 5.7rem;
+                    bottom: 4.6rem;
+                    right: 0;
+                    height: auto;
+                    background-color: var(--cl-bg);
+                    @media screen and (max-width: 767px) {
+                        width: auto;
+                        height: 1px;
+                        top: auto;
+                        bottom: 0;
+                        left: 2rem;
+                        right: 2rem;
+                    }
+                }
+            }
+            .box-right {
+                display: grid;
+                grid-template-columns: 22fr 39fr 39fr;
+                column-gap: 6rem;
+                row-gap: 2.8rem;
+                padding-inline: 6rem 4rem;
+                padding-block: 4.4rem;
+                @media screen and (max-width: 767px) {
+                    grid-template-columns: 1fr 1fr;
+                    padding-block: 1rem 0;
+                    padding-inline: 2rem 1.2rem;
+                    column-gap: 2rem;
+                    row-gap: 2rem;
+                }
+                .box-item {
+                    display: flex;
+                    flex-direction: column;
+                    align-items: start;
+                    @media screen and (max-width: 767px) {
+                        grid-column: span 2;
+                    }
+                    &:nth-child(1) {
+                        @media screen and (max-width: 767px) {
+                            .sub {
+                                margin-right: -1rem;
+                            }
+                        }
+                    }
+                    &:nth-child(1), &:nth-child(2) {
+                        @media screen and (max-width: 767px) {
+                            grid-column: span 1;
+                        }
+                    }
+                    &:nth-child(3) {
+                        @media screen and (max-width: 767px) {
+                            .sub {
+                                max-width: 15rem
+                            }
+                        }
+                    }
+                    &:nth-child(5) {
+                        @media screen and (max-width: 767px) {
+                            .sub {
+                                max-width: 17.3rem;
+                            }
+                        }
+                    }
+                    &:nth-child(4) {
+                        @media screen and (max-width: 767px) {
+                            flex-direction: row;
+                            align-items: end;
+                            grid-row: 2/3;
+                            margin-top: -2rem;
+                            .title {
+                                margin-bottom: 0;
+                            }
+                            .sub {
+                                margin-bottom: 1.5rem;
+                                margin-left: 1.4rem;
+                            }
+                        }
+                    }
+                    .title {
+                        margin-bottom: .4rem;
+                        &.txt-82 {
+                            margin-bottom: -.6rem;
+                            @media screen and (max-width: 767px) {
+                                margin-bottom: 0;
+                            }
+                        }
+                    }
+                    &.mod-mg {
+                        margin-top: 1.6rem;
+                        @media screen and (max-width: 767px) {
+                            margin-top: 0;
+                        }
+                    }
+                }
+                .box-img {
+                    max-width: 25.5rem;
+                    @media screen and (max-width: 767px) {
+                        grid-column: span 2;
+                        width: 20rem;
+                        margin-left: auto;
+                        margin-bottom: 1.4rem;
+                        margin-top: -2rem;
+                    }
+                }
+            }
+        }
+    }
+</style>

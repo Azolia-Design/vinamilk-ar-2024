@@ -51,16 +51,12 @@ const data = {
 							id: 'Sc1'
 						},
 						{
-							text: 'Báo cáo của HĐQT và Ban Điều Hành',
+							text: 'Giải thưởng và danh hiệu',
 							id: 'Sc2'
 						},
 						{
-							text: 'Giải thưởng và danh hiệu 2022',
-							id: 'Sc3'
-						},
-						{
 							text: 'Trách nhiệm xã hội & Hoạt động cộng đồng',
-							id: 'Sc4'
+							id: 'Sc3'
 						},
 					]
 				},
@@ -87,11 +83,11 @@ const data = {
 				{text: "Messages", url: "./messages", type: 'drop',
 					items: [
 						{
-							text: 'Thông điệp từ Chủ tịch HĐQT',
+							text: "Chairman's Message",
 							id: 'Sc1'
 						},
 						{
-							text: 'Thông điệp của Tổng giám đốc',
+							text: "CEO's Message",
 							id: 'Sc2'
 						},
 					]
@@ -99,19 +95,19 @@ const data = {
 				{text: "General information", url: "./chap1", type: 'drop',
 					items: [
 						{
-							text: 'Lịch sử hình thành và phát triển',
+							text: 'Vinamilk In A Brief',
 							id: 'Sc1'
 						},
 						{
-							text: 'Mô hình kinh doanh của Vinamilk',
+							text: "Vinamilk's business model",
 							id: 'Sc2'
 						},
 						{
-							text: 'Tóm tắt thông tin tài chính',
+							text: 'Financial Performance summary',
 							id: 'Sc3'
 						},
 						{
-							text: 'Giới thiệu HĐQT và Ban Điều Hành',
+							text: 'Profile of bod and key management',
 							id: 'Sc4'
 						},
 					]
@@ -119,20 +115,16 @@ const data = {
 				{text: "Business review in 2023", url: "./chap2", type: 'drop',
 					items: [
 						{
-							text: 'Tổng quan ngành sữa',
+							text: 'Vietnam Dairy Industry',
 							id: 'Sc1'
 						},
 						{
-							text: 'Báo cáo của HĐQT và Ban Điều Hành',
+							text: 'Awards And Honors',
 							id: 'Sc2'
 						},
 						{
-							text: 'Giải thưởng và danh hiệu 2022',
+							text: 'Community activities in 2023',
 							id: 'Sc3'
-						},
-						{
-							text: 'Trách nhiệm xã hội & Hoạt động cộng đồng',
-							id: 'Sc4'
 						},
 					]
 				},
@@ -208,7 +200,7 @@ const data = {
 <html lang={props.lang || 'vn'}>
 	<head>
 		<meta charset="utf-8" />
-		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" type="image/x-icon">
 		<meta name="viewport" content="width=device-width" />
 		<meta name="generator" content={Astro.generator} />
 		<title>{props.title}</title>
@@ -219,6 +211,8 @@ const data = {
 		<Header content={props.lang == 'en' ? data.header.en : data.header.vn} lang={props.lang || 'vn'}/>
         <slot />
 		<Footer content={props.lang == 'en' ? data.footer.en : data.footer.vn} lang={props.lang || 'vn'}/>
+		
+		<script src="../js/main.js"></script>
 	</body>
-    <script src="../js/main.js"></script>
+    
 </html>

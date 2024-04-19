@@ -1,0 +1,478 @@
+---
+import { getImage } from "astro:assets";
+import chartPattern from '../../assets/chart-pattern.svg';
+const chartPatternBg = await getImage({src: chartPattern, format: 'webp', width: chartPattern.width})
+---
+<section class="chap1-cha" style={`--chart-bg: url(${chartPatternBg.src})`} id="Sc3">
+    <div class="container">
+        <h2 class="heading txt-78 txt-bold txt-up txt-blue chap1-cha-title" data-aos="fade-up">
+            Financial Performance in 2019-2023
+        </h2>
+        <div class="chap1-cha-main">
+            <div class="cha-item">
+                <div class="txt txt-17 label-wrap" data-aos="fade-up">
+                    <div class="label-txt">Revenue</div>
+                    <div class="label-unit">(Billion VND)</div>
+                </div>
+                <div class="cha-main" style="--col-bg: #D3E1FF">
+                    <div class="cha-col">
+                        <div class="cha-col-inner" style="--col-h: 68.6%" data-aos="zoom-in-up">
+                            <div class="txt txt-14 cha-value">
+                                <span data-counter>56.400</span>
+                            </div>
+                        </div>
+                        <div class="txt txt-14 cha-year">
+                            2019
+                        </div>
+                    </div>
+                    <div class="cha-col">
+                        <div class="cha-col-inner" style="--col-h: 77.8%" data-aos="zoom-in-up">
+                            <div class="txt txt-14 cha-value">
+                                <span data-counter>59.723</span>
+                            </div>
+                        </div>
+                        <div class="txt txt-14 cha-year">
+                            2020
+                        </div>
+                    </div>
+                    <div class="cha-col">
+                        <div class="cha-col-inner" style="--col-h: 80%" data-aos="zoom-in-up">
+                            <div class="txt txt-14 cha-value">
+                                <span data-counter>61.012</span>
+                            </div>
+                        </div>
+                        <div class="txt txt-14 cha-year">
+                            2021
+                        </div>
+                    </div>
+                    <div class="cha-col">
+                        <div class="cha-col-inner" style="--col-h: 77%" data-aos="zoom-in-up">
+                            <div class="txt txt-14 cha-value">
+                                <span data-counter>60.075</span>
+                            </div>
+                        </div>
+                        <div class="txt txt-14 cha-year">
+                            2022
+                        </div>
+                    </div>
+                    <div class="cha-col">
+                        <div class="cha-col-inner last" style="--col-h: 78%" data-aos="zoom-in-up">
+                            <div class="txt txt-14 cha-value">
+                                <span data-counter>60.479</span>
+                            </div>
+                        </div>
+                        <div class="txt txt-14 cha-year">
+                            2023
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <div class="cha-item">
+                <div class="txt txt-17 label-wrap" data-aos="fade-up">
+                    <div class="label-txt">EBITDA</div>
+                    <div class="label-unit">(Billion VND)</div>
+                </div>
+                <div class="cha-main" style="--col-bg: #2DFFB4">
+                    <div class="cha-col">
+                        <div class="cha-col-inner" style="--col-h: 53%" data-aos="zoom-in-up">
+                            <div class="txt txt-14 cha-value">
+                                <span data-counter>14.853</span>
+                            </div>
+                        </div>
+                        <div class="txt txt-14 cha-year">
+                            2019
+                        </div>
+                    </div>
+                    <div class="cha-col">
+                        <div class="cha-col-inner" style="--col-h: 57%" data-aos="zoom-in-up">
+                            <div class="txt txt-14 cha-value">
+                                <span data-counter>15.871</span>
+                            </div>
+                        </div>
+                        <div class="txt txt-14 cha-year">
+                            2020
+                        </div>
+                    </div>
+                    <div class="cha-col">
+                        <div class="cha-col-inner" style="--col-h: 54%" data-aos="zoom-in-up">
+                            <div class="txt txt-14 cha-value">
+                                <span data-counter>15.132</span>
+                            </div>
+                        </div>
+                        <div class="txt txt-14 cha-year">
+                            2021
+                        </div>
+                    </div>
+                    <div class="cha-col">
+                        <div class="cha-col-inner" style="--col-h: 45.6%" data-aos="zoom-in-up">
+                            <div class="txt txt-14 cha-value">
+                                <span data-counter>12.757</span>
+                            </div>
+                        </div>
+                        <div class="txt txt-14 cha-year">
+                            2022
+                        </div>
+                    </div>
+                    <div class="cha-col">
+                        <div class="cha-col-inner last" style="--col-h: 47.8%" data-aos="zoom-in-up">
+                            <div class="txt txt-14 cha-value">
+                                <span data-counter>13.377</span>
+                            </div>
+                        </div>
+                        <div class="txt txt-14 cha-year">
+                            2023
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <div class="cha-item">
+                <div class="txt txt-17 label-wrap" data-aos="fade-up">
+                    <div class="label-txt">Net Profit After Tax (“NPAT”)</div>
+                    <div class="label-unit">(Billion VND)</div>
+                </div>
+                <div class="cha-main" style="--col-bg: #D5C2FA">
+                    <div class="cha-col">
+                        <div class="cha-col-inner" style="--col-h: 50%" data-aos="zoom-in-up">
+                            <div class="txt txt-14 cha-value">
+                                <span data-counter>10.554</span>
+                            </div>
+                        </div>
+                        <div class="txt txt-14 cha-year">
+                            2019
+                        </div>
+                    </div>
+                    <div class="cha-col">
+                        <div class="cha-col-inner" style="--col-h: 52.2%" data-aos="zoom-in-up">
+                            <div class="txt txt-14 cha-value">
+                                <span data-counter>11.236</span>
+                            </div>
+                        </div>
+                        <div class="txt txt-14 cha-year">
+                            2020
+                        </div>
+                    </div>
+                    <div class="cha-col">
+                        <div class="cha-col-inner" style="--col-h: 50.5%" data-aos="zoom-in-up">
+                            <div class="txt txt-14 cha-value">
+                                <span data-counter>10.633</span>
+                            </div>
+                        </div>
+                        <div class="txt txt-14 cha-year">
+                            2021
+                        </div>
+                    </div>
+                    <div class="cha-col">
+                        <div class="cha-col-inner" style="--col-h: 40.4%" data-aos="zoom-in-up">
+                            <div class="txt txt-14 cha-value">
+                                <span data-counter>8.578</span>
+                            </div>
+                        </div>
+                        <div class="txt txt-14 cha-year">
+                            2022
+                        </div>
+                    </div>
+                    <div class="cha-col">
+                        <div class="cha-col-inner last" style="--col-h: 42.6%" data-aos="zoom-in-up">
+                            <div class="txt txt-14 cha-value">
+                                <span data-counter>9.019</span>
+                            </div>
+                        </div>
+                        <div class="txt txt-14 cha-year">
+                            2023
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <div class="cha-item">
+                <div class="txt txt-17 label-wrap" data-aos="fade-up">
+                    <div class="label-txt">Total Assets</div>
+                    <div class="label-unit">(Billion VND)</div>
+                </div>
+                <div class="cha-main" style="--col-bg: #FFEE53">
+                    <div class="cha-col">
+                        <div class="cha-col-inner" style="--col-h: 76%" data-aos="zoom-in-up">
+                            <div class="txt txt-14 cha-value">
+                                <span data-counter>44.700</span>
+                            </div>
+                        </div>
+                        <div class="txt txt-14 cha-year">
+                            2019
+                        </div>
+                    </div>
+                    <div class="cha-col">
+                        <div class="cha-col-inner" style="--col-h: 81.7%" data-aos="zoom-in-up">
+                            <div class="txt txt-14 cha-value">
+                                <span data-counter>48.432</span>
+                            </div>
+                        </div>
+                        <div class="txt txt-14 cha-year">
+                            2020
+                        </div>
+                    </div>
+                    <div class="cha-col">
+                        <div class="cha-col-inner" style="--col-h: 90%" data-aos="zoom-in-up">
+                            <div class="txt txt-14 cha-value">
+                                <span data-counter>53.332</span>
+                            </div>
+                        </div>
+                        <div class="txt txt-14 cha-year">
+                            2021
+                        </div>
+                    </div>
+                    <div class="cha-col">
+                        <div class="cha-col-inner" style="--col-h: 81.7%" data-aos="zoom-in-up">
+                            <div class="txt txt-14 cha-value">
+                                <span data-counter>48.483</span>
+                            </div>
+                        </div>
+                        <div class="txt txt-14 cha-year">
+                            2022
+                        </div>
+                    </div>
+                    <div class="cha-col">
+                        <div class="cha-col-inner last" style="--col-h: 91.1%" data-aos="zoom-in-up">
+                            <div class="txt txt-14 cha-value">
+                                <span data-counter>52.673</span>
+                            </div>
+                        </div>
+                        <div class="txt txt-14 cha-year">
+                            2023
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <div class="cha-item">
+                <div class="txt txt-17 label-wrap" data-aos="fade-up">
+                    <div class="label-txt">Earnings Per Share</div>
+                    <div class="label-unit">(VND)</div>
+                </div>
+                <div class="cha-main" style="--col-bg: #F1D6C0">
+                    <div class="cha-col">
+                        <div class="cha-col-inner" style="--col-h: 70.1%" data-aos="zoom-in-up">
+                            <div class="txt txt-14 cha-value">
+                                <span data-counter>4.565</span>
+                            </div>
+                        </div>
+                        <div class="txt txt-14 cha-year">
+                            2019
+                        </div>
+                    </div>
+                    <div class="cha-col">
+                        <div class="cha-col-inner" style="--col-h: 73.9%" data-aos="zoom-in-up">
+                            <div class="txt txt-14 cha-value">
+                                <span data-counter>4.770</span>
+                            </div>
+                        </div>
+                        <div class="txt txt-14 cha-year">
+                            2020
+                        </div>
+                    </div>
+                    <div class="cha-col">
+                        <div class="cha-col-inner" style="--col-h: 70%" data-aos="zoom-in-up">
+                            <div class="txt txt-14 cha-value">
+                                <span data-counter>4.517</span>
+                            </div>
+                        </div>
+                        <div class="txt txt-14 cha-year">
+                            2021
+                        </div>
+                    </div>
+                    <div class="cha-col">
+                        <div class="cha-col-inner" style="--col-h: 56%" data-aos="zoom-in-up">
+                            <div class="txt txt-14 cha-value">
+                                <span data-counter>3.632</span>
+                            </div>
+                        </div>
+                        <div class="txt txt-14 cha-year">
+                            2022
+                        </div>
+                    </div>
+                    <div class="cha-col">
+                        <div class="cha-col-inner last" style="--col-h: 58.6%" data-aos="zoom-in-up">
+                            <div class="txt txt-14 cha-value">
+                                <span data-counter>3.796</span>
+                            </div>
+                        </div>
+                        <div class="txt txt-14 cha-year">
+                            2023
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+            </div>
+            <div class="cha-item">
+                <div class="txt txt-17 label-wrap" data-aos="fade-up">
+                    <div class="label-txt">Payout Ratio (Expected)</div>
+                    <div class="label-unit">(%)</div>
+                </div>
+                <div class="cha-main" style="--col-bg: #F2ABC4">
+                    <div class="cha-col">
+                        <div class="cha-col-inner" style="--col-h: 70%" data-aos="zoom-in-up">
+                            <div class="txt txt-14 cha-value">
+                                <span data-counter>74</span>
+                            </div>
+                        </div>
+                        <div class="txt txt-14 cha-year">
+                            2019
+                        </div>
+                    </div>
+                    <div class="cha-col">
+                        <div class="cha-col-inner" style="--col-h: 66.9%" data-aos="zoom-in-up">
+                            <div class="txt txt-14 cha-value">
+                                <span data-counter>71</span>
+                            </div>
+                        </div>
+                        <div class="txt txt-14 cha-year">
+                            2020
+                        </div>
+                    </div>
+                    <div class="cha-col">
+                        <div class="cha-col-inner" style="--col-h: 72.2%" data-aos="zoom-in-up">
+                            <div class="txt txt-14 cha-value">
+                                <span data-counter>76</span>
+                            </div>
+                        </div>
+                        <div class="txt txt-14 cha-year">
+                            2021
+                        </div>
+                    </div>
+                    <div class="cha-col">
+                        <div class="cha-col-inner" style="--col-h: 89.6%" data-aos="zoom-in-up">
+                            <div class="txt txt-14 cha-value">
+                                <span data-counter>94</span>
+                            </div>
+                        </div>
+                        <div class="txt txt-14 cha-year">
+                            2022
+                        </div>
+                    </div>
+                    <div class="cha-col">
+                        <div class="cha-col-inner last" style="--col-h: 86%" data-aos="zoom-in-up">
+                            <div class="txt txt-14 cha-value">
+                                <span data-counter>91</span>
+                            </div>
+                        </div>
+                        <div class="txt txt-14 cha-year">
+                            2023
+                        </div>
+                    </div>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<style lang="scss">
+    .chap1-cha {
+        padding-bottom: 9rem;
+        @media screen and (max-width: 767px) {
+            padding-bottom: 4rem;
+        }
+        &-title {
+            margin-bottom: 6.8rem;
+            max-width: 100rem;
+            line-height: 8.5rem;
+            width: 100%;
+            margin-inline: auto;
+            text-align: center;
+            @media screen and (max-width: 767px) {
+                font-size: 4.2rem;
+                line-height: 1em;
+                margin-bottom: 2.4rem;
+            }
+        }
+        &-main {
+            max-width: 99.4rem;
+            margin-inline: auto;
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            column-gap: var(--grid-gap);
+            row-gap: 4.4rem;
+            @media screen and (max-width: 767px) {
+                grid-template-columns: 1fr;
+                row-gap: 2.5rem;
+            }
+            .cha-item {
+                color: var(--cl-blue-2);
+                .label-wrap {
+                    line-height: 1.2em;
+                    margin-bottom: 3.2rem;
+                    @media screen and (max-width: 767px) {
+                        .label-txt, .label-unit {
+                            font-size: 1.4rem;
+                            display: inline;
+                        }
+                    }
+                }
+                .cha-main {
+                    height: 23rem;
+                    display: flex;
+                    justify-content: space-between;
+                    position: relative;
+                    padding-inline: 3rem;
+                    @media screen and (max-width: 767px) {
+                        height: 18rem;
+                        padding-inline: 2rem;
+                    }
+                    .line {
+                        background-color: var(--cl-blue);
+                        position: absolute;
+                        left: 0;
+                        bottom: 2.21rem;
+                    }
+                    .cha-col {
+                        height: 100%;
+                        display: flex;
+                        flex-direction: column;
+                        align-items: center;
+                        justify-content: end;
+                        &-inner {
+                            width: 4.8rem;
+                            height: var(--col-h);
+                            background-color: var(--col-bg);
+                            position: relative;
+                            text-align: center;
+                            display: flex;
+                            justify-content: center;
+                            @media screen and (max-width: 767px) {
+                                width: 4rem;
+                            }
+                            &.last {
+                                position: relative;
+                                &::after {
+                                    content: '';
+                                    display: block;
+                                    position: absolute;
+                                    inset: 0;
+                                    background-image: var(--chart-bg);
+                                    background-size: 100% auto;
+                                    mix-blend-mode: color-dodge;
+                                    opacity: .7;
+                                    filter: invert(1);
+                                    @media screen and (max-width: 767px) {
+                                        background-size: 102% auto;
+                                    }
+                                }
+                                
+                                
+                            }
+                            .cha-value {
+                                position: absolute;
+                                bottom: 100%;
+                                margin-bottom: 1rem;
+                            }
+                        }
+                        .cha-year {
+                            margin-top: .5rem;
+                        }
+                    }
+                }
+            }
+        }
+    }
+</style>
