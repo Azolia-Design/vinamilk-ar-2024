@@ -2,6 +2,8 @@
 import { getRelativeLocaleUrl } from 'astro:i18n';
 import { Image } from "astro:assets";
 import logoImg from '../../assets/logo-img.png';
+import pdfFull_Vn from '../../../public/pdf/vn/Vinamilk BCTN 2023.pdf';
+import pdfFull_En from '../../../public/pdf/en/VINAMILK-ANNUAL-REPORT-2023.pdf';
 const {content, lang} = Astro.props;
 ---
 <header class="header" data-lang={lang} data-aos="fade-down">
@@ -49,7 +51,7 @@ const {content, lang} = Astro.props;
                 ))}
             </div>
             <div class="header-dl-wrap">
-                <a href="#" target="_blank" class="btn header-dl-btn">
+                <a href={lang == 'en' ? pdfFull_En : pdfFull_Vn} target="_blank" class="btn header-dl-btn">
                     <span class="heading h-19 txt-med header-dl-btn-txt">{content.dl.text}</span>
                     <div class="ic ic-10">
                         <svg width="100%" viewBox="0 0 10 10" fill="none" xmlns="http://www.w3.org/2000/svg">

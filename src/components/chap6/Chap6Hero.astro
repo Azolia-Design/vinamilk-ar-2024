@@ -1,6 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import chap6HeroImg from '../../assets/chap6HeroImg.jpg';
+import pdfChap6_1_Vn from '../../../public/pdf/vn/Báo cáo Tài chính theo VAS_Vinamilk BCTN 2023.pdf';
+import pdfChap6_2_Vn from '../../../public/pdf/vn/Báo cáo Tài chính theo IFRS_Vinamilk BCTN 2023.pdf';
 ---
 <section class="chap6-hero">
     <div class="container grid">
@@ -9,8 +11,8 @@ import chap6HeroImg from '../../assets/chap6HeroImg.jpg';
                 Báo cáo tài chính
             </h1>
             <div class="hero-btn-list" data-aos="fade-up-right" data-aos-delay="200">
-                <a href="#" class="btn btn-outline hero-btn-list-item">
-                    <span class="heading txt-32 txt-med">Tải báo cáo báo cáo Tài chính theo VAS</span>
+                <a href={pdfChap6_1_Vn} target="_blank" class="btn btn-outline hero-btn-list-item">
+                    <span class="heading txt-32 txt-med">Tải Báo cáo Tài chính theo VAS</span>
                     <div class="ic ic-20">    
                         <svg width="100%" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5 20.5H16.8" stroke="currentColor" stroke-width="2.51875" stroke-linecap="round" stroke-linejoin="round"/>
@@ -18,8 +20,8 @@ import chap6HeroImg from '../../assets/chap6HeroImg.jpg';
                         </svg>                                             
                     </div>
                 </a>
-                <a href="#" class="btn btn-outline hero-btn-list-item">
-                    <span class="heading txt-32 txt-med">Tải báo cáo Tài chính theo IFRS</span>
+                <a href={pdfChap6_2_Vn} target="_blank" class="btn btn-outline hero-btn-list-item">
+                    <span class="heading txt-32 txt-med">Tải Báo cáo Tài chính theo IFRS</span>
                     <div class="ic ic-20">    
                         <svg width="100%" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
                             <path d="M5 20.5H16.8" stroke="currentColor" stroke-width="2.51875" stroke-linecap="round" stroke-linejoin="round"/>

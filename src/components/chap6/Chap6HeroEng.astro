@@ -1,6 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import chap6HeroImg from '../../assets/chap6HeroImg.jpg';
+import pdfChap6_1_En from '../../../public/pdf/en/Financial Statements Under VAS_Vinamilk AR 2023.pdf';
+import pdfChap6_2_En from '../../../public/pdf/en/Financial Statements Under IFRS_Vinamilk AR 2023.pdf';
 ---
 <section class="chap6-hero">
     <div class="container grid">
@@ -9,7 +11,7 @@ import chap6HeroImg from '../../assets/chap6HeroImg.jpg';
                 Financial Statements
             </h1>
             <div class="hero-btn-list" data-aos="fade-up-right" data-aos-delay="200">
-                <a href="#" class="btn btn-outline hero-btn-list-item">
+                <a href={pdfChap6_1_En} target="_blank" class="btn btn-outline hero-btn-list-item">
                     <span class="heading txt-32 txt-med">Financial statements under VAS</span>
                     <div class="ic ic-20">    
                         <svg width="100%" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -18,7 +20,7 @@ import chap6HeroImg from '../../assets/chap6HeroImg.jpg';
                         </svg>                                             
                     </div>
                 </a>
-                <a href="#" class="btn btn-outline hero-btn-list-item">
+                <a href={pdfChap6_2_En} target="_blank" class="btn btn-outline hero-btn-list-item">
                     <span class="heading txt-32 txt-med">Financial statements under IFRS</span>
                     <div class="ic ic-20">    
                         <svg width="100%" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">

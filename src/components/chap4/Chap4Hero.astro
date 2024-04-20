@@ -1,6 +1,8 @@
 ---
 import { Image } from "astro:assets";
 import chap4HeroImg from '../../assets/chap4HeroImg.jpg';
+import pdfChap4_1_Vn from '../../../public/pdf/vn/Báo cáo Quản trị Công ty_Vinamilk BCTN 2023.pdf';
+import pdfChap4_2_Vn from '../../../public/pdf/vn/Báo cáo Quản trị rủi ro_Vinamilk BCTN 2023.pdf';
 ---
 <section class="chap4-hero">
     <div class="container grid">
@@ -9,7 +11,7 @@ import chap4HeroImg from '../../assets/chap4HeroImg.jpg';
                 Quản trị công ty
             </h1>
             <div class="hero-btn-list" data-aos="fade-up-right" data-aos-delay="200">
-                <a href="#" class="btn btn-outline hero-btn-list-item">
+                <a href={pdfChap4_1_Vn} target="_blank" class="btn btn-outline hero-btn-list-item">
                     <span class="heading txt-32 txt-med">Tải báo cáo Quản trị công ty</span>
                     <div class="ic ic-20">    
                         <svg width="100%" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -18,7 +20,7 @@ import chap4HeroImg from '../../assets/chap4HeroImg.jpg';
                         </svg>                                             
                     </div>
                 </a>
-                <a href="#" class="btn btn-outline hero-btn-list-item">
+                <a href={pdfChap4_2_Vn} target="_blank" class="btn btn-outline hero-btn-list-item">
                     <span class="heading txt-32 txt-med">Tải báo cáo Quản trị rủi ro</span>
                     <div class="ic ic-20">    
                         <svg width="100%" viewBox="0 0 22 22" fill="none" xmlns="http://www.w3.org/2000/svg">
