@@ -40,7 +40,9 @@ const {content, lang} = Astro.props;
                                                         <path d="M8.5 4.13397C9.16667 4.51887 9.16667 5.48113 8.5 5.86603L4 8.4641C3.33334 8.849 2.5 8.36788 2.5 7.59808L2.5 2.40192C2.5 1.63212 3.33333 1.151 4 1.5359L8.5 4.13397Z" fill="#0213B0"/>
                                                     </svg>
                                                 </div>
-                                                <span class="txt txt-17">{item.text}</span>
+                                                <span class="txt txt-17">
+                                                    <Fragment set:html={item.text.replaceAll('\n','<br>')} />
+                                                </span>
                                             </a> 
                                         ))}
                                     </div>
@@ -137,7 +139,7 @@ const {content, lang} = Astro.props;
         </div>
     </div>
 </header>
-<style lang="scss">
+<style lang="scss" is:global>
     .header {
         background-color: var(--cl-bg);
         position: fixed;
@@ -309,6 +311,12 @@ const {content, lang} = Astro.props;
                                 .txt {
                                     transform: translateX(-1.2rem);
                                     transition: all 400ms ease;
+                                    > br {
+                                        display: none;
+                                        @media screen and (max-width: 767px) {
+                                            display: unset;
+                                        }
+                                    }
                                     @media screen and (max-width: 767px) {
                                         transform: none;
                                     }
