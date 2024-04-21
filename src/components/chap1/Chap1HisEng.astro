@@ -437,14 +437,20 @@ const {content} = Astro.props;
                     }
                     &.right {
                         background-color: var(--cl-green);
+                        .title {
+                            font-size: 4.8rem;
+                            @media screen and (max-width: 767px) {
+                                font-size: 4rem !important;
+                            }
+                        }
                         .img-wrap {
                             width: 11rem;
                             top: 3.2rem;
-                            right: 3.4rem;
+                            right: 2rem;
                             @media screen and (max-width: 767px) {
                                 width: 8.3rem;
                                 top: 1.8rem;
-                                right: 4rem;
+                                right: 3rem;
                             }
                         }
                     }
